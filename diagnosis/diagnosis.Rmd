@@ -1,0 +1,60 @@
+---
+title: "diagnosis"
+author: "Xulong Wang"
+date: "April 6, 2016"
+output: html_document
+---
+
+### ADSP WGS
+
+```{r}
+
+rm(list = ls())
+setwd("~/Dropbox/GitHub/Adsp")
+
+load("./data/mdata.rdt")
+
+eigenvec <- read.table("./gwas/plink.eigenvec")[-c(1:2)]
+names(eigenvec) <- paste0("PC", 1:20)
+eigenval <- read.table("./gwas/plink.eigenval")
+
+barplot(eigenval$V1); abline(0, 0)
+barplot(eigenvec$PC1)
+barplot(eigenvec$PC2)
+
+x = eigenval$V1
+par(mfrow = c(1, 2))
+plot(x / sum(x) * 100, type = "b", ylab = "variance %")
+barplot(eigenvec$PC1)
+
+meta_extra <- read.xlsx("./docs/adsp_subject_and_experiment_metadata.xlsx", startRow = 2, sheetIndex = 1)
+mdata$Center <- meta_extra$LSAC[match(mdata$SRR, meta_extra$SRR)]
+mdata$Ethnicity <- meta_extra$Ethnicity[match(mdata$SRR, meta_extra$SRR)]
+mdata$Ethnicity[mdata$Ethnicity == "0"] = "Not-Latino"
+mdata$Ethnicity[mdata$Ethnicity == "1"] = "Latino"
+mdata$Ethnicity[mdata$Ethnicity == "null"] = "Null"
+
+mdata$Race[mdata$Race == "4"] = "Black"
+mdata$Race[mdata$Race == "5"] = "White"
+mdata$Race[mdata$Race == "6"] = "Other"
+mdata$Race[mdata$Race == "null"] = "Null"
+
+mdata$Race = factor(mdata$Race, levels = c("Black", "White", "Other", "Null"))
+
+colors = c("blue", "red", "black")
+mdata$Center <- factor(mdata$Center, levels = c("Baylor", "Broad", "WashU"))
+barplot(eigenvec$PC1, col = colors[as.numeric(mdata$Center)]); abline(0, 0)
+legend("topright", legend = levels(mdata$Center), fill = colors)
+
+mdata$Ethnicity <- factor(mdata$Ethnicity, levels = c("Latino", "Not-Latino", "Null"))
+barplot(eigenvec$PC1, col = colors[as.numeric(mdata$Ethnicity)]); abline(0, 0)
+legend("topright", legend = levels(mdata$Ethnicity), fill = colors)
+
+colors = c("blue", "red", "black", "yellow")
+barplot(eigenvec$PC1, col = colors[as.numeric(mdata$Race)]); abline(0, 0)
+legend("topright", legend = levels(mdata$Race), fill = colors)
+
+barplot(eigenvec$PC1, col = colors[as.numeric(mdata$Sex)]); abline(0, 0)
+legend("topright", legend = levels(mdata$Sex), fill = colors)
+
+```

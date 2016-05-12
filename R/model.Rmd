@@ -1,0 +1,261 @@
+---
+title: "Model Performance"
+author: "Xulong Wang"
+date: "December 27, 2015"
+output: pdf_document
+---
+
+```{r, include = F}
+
+library(rstan)
+library(parallel)
+library(clusterGeneration)
+library(dplyr)
+
+```
+
+```{r}
+
+rm(list = ls())
+setwd("~/Dropbox/GitHub/glmm")
+
+load("./data/mdata.rdt")
+load("./data/kinship.rdt")
+
+cov <- mdata[c("Age", "Sex")]
+cov$Sex <- as.integer(cov$Sex) - 1
+
+Ad <- as.numeric(mdata$AD2)
+N0 <- 576
+
+Sigma <- kinship$autosome
+Sigma[Sigma < 0] <- 0
+L <- t(chol(Sigma))
+
+g0 <- rep(0, length(Ad))
+model <- stan_model("./Stan/glmm.stan") 
+model <- stan_model("./Stan/glmm2.stan") 
+model <- stan_model("./Stan/glmm_prior.stan") 
+data = list(N = 576, K = 4, D = 2, cov = cov, L = L, g = g0, prior = 0, Ad = Ad)
+data$sigma = 0.25
+data$sigma = 1
+
+fit1 = optimizing(model, data = data)
+fit2 = sampling(model, data = data, chains = 3, cores = 3, iter = 600, warmup = 200)
+
+u = fit1$par[paste0("u[", 1:576, "]")]
+cor(mdata$AD1, u)
+
+plot(fit2, pars = c("p", "beta[1]", "beta[2]", "c[1]", "c[2]", "c[3]", "t", "sigma", "sigma2"))
+print(fit2, pars = c("p", "beta[1]", "beta[2]", "c[1]", "c[2]", "c[3]", "t", "sigma", "sigma2"))
+print(fit2, pars = c("u[1]", "u[2]", "u[3]", "u[4]", "u[5]"))
+print(fit2, pars = c("z[1]", "z[2]", "z[3]", "z[4]", "z[5]"))
+
+```
+
+### Binary and categorical
+
+```{r}
+
+model.b <- stan_model("./Stan/model_b.stan") # ordered
+model.c <- stan_model("./Stan/model_c.stan") # ordered
+
+dat.c = list(N = N0, K = 4, D = 2, cov = cov, L = L, g = g0, prior = p0, Ad = Ad)
+
+Ad2 <- rep(0, length(Ad))
+Ad2[Ad %in% c(3, 4)] <- 1
+dat.b = list(N = N0, D = 2, cov = cov, L = L, g = g0, prior = p0, Ad = Ad2)
+
+init.b <- init$b
+init.c <- init$c
+
+# ---
+
+g0 = c(g0, g0)
+cov = rbind(cov, cov)
+Ad = c(Ad, Ad)
+Ad2 = c(Ad2, Ad2)
+N0 = N0 * 2
+
+Sigma = genPositiveDefMat("eigen",dim = N0, lambdaLow = 0.1)$Sigma
+L <- t(chol(Sigma))
+
+dat.b = list(N = N0, D = 2, cov = cov, L = L, g = g0, prior = p0, Ad = Ad2)
+dat.c = list(N = N0, K = 4, D = 2, cov = cov, L = L, g = g0, prior = p0, Ad = Ad)
+
+zb = optimizing(model.b, data = dat.b)
+zc = optimizing(model.c, data = dat.c)
+
+init.b = list(p = 0, beta = zb$par[paste0("beta[", 1:2, "]")], z = zb$par[paste0("z[", 1:N0, "]")])
+init.c = list(p = 0, beta = zc$par[paste0("beta[", 1:2, "]")], c = zc$par[paste0("c[", 1:3, "]")], z = zc$par[paste0("z[", 1:N0, "]")])
+
+#---
+
+t1 <- Sys.time()
+replicate(1e2, optimizing(model.b, data = dat.b, init = init.b))
+t2 <- Sys.time()
+replicate(1e2, optimizing(model.c, data = dat.c, init = init.c))
+t3 <- Sys.time()
+
+t2 - t1
+as.numeric(t2 - t1)
+
+x1 = c(t1, t2, t3)
+x2 = c(t1, t2, t3)
+x3 = c(t1, t2, t3)
+
+y = rbind(N1 = c(x1[2] - x1[1], x1[3] - x1[2]),
+          N2 = c(x2[2] - x2[1], x2[3] - x2[2]),
+          N3 = c(x3[2] - x3[1], x3[3] - x3[2]))
+
+y[3, ] = y[3, ] * 60
+
+y = y / 100
+
+colnames(y) = c("Binary", "Categorical")
+
+pdf("./model/perform.pdf", height = 4, width = 6)
+
+pos = c(N0, N0 * 2, N0 * 4)
+plot(pos, y[, 1], type = "b", col = "blue", lwd = 2, cex = 2, xaxt = "n", xlab = "Sample Number", ylab = "Seconds")
+lines(pos, y[, 2], type = "b", col = "red", lwd = 2, cex = 2)
+axis(side = 1, at = pos, labels = pos)
+legend("topleft", c("Binary", "Categorical"), col = c("blue", "red"), pch = 1)
+
+dev.off()
+
+save(y, file = "./model/perform.rdt")
+
+```
+
+## Effect of a variant's prior on its posterior estiamtions
+## Statistical power of an association study was greatly boosted by integrating prior estimations. 
+
+1. Posterior effect size was a compromise between effect sizes of the prior and the data
+2. Posterior standard error (se) of the effect size was smaller than se of the prior and the data
+3. We see both up and down regulation of P-values from the prior
+4. Variants that showed smaller or opposite effects in the data would get smaller posteriro P-values
+5. Variants that showed bigger effects in the data would get smaller posterior P-value. P-values of these variants inferred only from the data might be big because of small sample size.
+5. Integrating known results as prior greatly boosted the new study's statistical power. Conversely, additional information of the new study could decrease both type-I and type-II error rates of the known results.
+
+```{r}
+
+load("./igap/igap_t1k.rdt")
+
+igap = igap_t1k$igap
+geno = igap_t1k$geno
+
+p1 = as.matrix(igap[, c("Beta", "SE")])
+
+dat1 = within(dat0, {g = geno[1, ]; prior = p0})
+dat2 = within(dat0, { g = geno[1, ]; prior = p1[1, ] })
+
+dat1 = within(dat, {g = geno[1e3, ]; prior = p0})
+dat2 = within(dat, { g = geno[1e3, ]; prior = p1[1e3, ] })
+
+fit0 = optimizing(model, hessian = T, algorithm = "LBFGS", data = dat0)
+fit1 = optimizing(model, hessian = T, algorithm = "LBFGS", data = dat1)
+fit2 = optimizing(model, hessian = T, algorithm = "LBFGS", data = dat2)
+
+(log0 = sum(fit0$par[paste0("lp[", 1:576, "]")]))
+(log1 = sum(fit1$par[paste0("lp[", 1:576, "]")]))
+(log2 = sum(fit2$par[paste0("lp[", 1:576, "]")]))
+
+par = c("p", paste0("c[", 1:3, "]"), "beta[1]", "beta[1]")
+
+(fit0$par[par])
+(fit1$par[par])
+(fit2$par[par])
+
+(se0 = sqrt(diag(solve(-fit0$hessian)))[1:6])
+(se1 = sqrt(diag(solve(-fit1$hessian)))[1:6])
+(se2 = sqrt(diag(solve(-fit2$hessian)))[1:6])
+
+(pvalue = pnorm(abs(fit0$par["p"]), sd = se0["p"], lower.tail = F) * 2)
+(pvalue = pnorm(abs(fit1$par["p"]), sd = se1["p"], lower.tail = F) * 2)
+(pvalue = pnorm(abs(fit2$par["p"]), sd = se2["p"], lower.tail = F) * 2)
+
+```
+
+## Model test using Alz variants
+
+```{r}
+
+load("./data/alzgenes.rdt")
+geno = alzgenes$geno
+
+g1 = geno[17, ]
+p1 = c(-0.254, 0.1)
+p1 = c(-0.54, 0.1)
+p1 = c(0.254, 0.1)
+
+dat0 = within(dat, {g = g0; prior = p0})
+dat0 = within(dat, {g = g1; prior = p0})
+dat1 = within(dat, {g = g0; prior = p1})
+dat1 = within(dat, {g = g1; prior = p1})
+
+fit0 = sampling(model, data = dat0, chain = 3, cores = 3, iter = 400, warmup = 200)
+fit1 = sampling(model, data = dat1, chain = 3, cores = 3, iter = 400, warmup = 200)
+
+print(fit0, pars = c("p", "c", "beta"))
+print(fit1, pars = c("p", "c", "beta"))
+
+plot(fit0, pars = c("p", "c", "beta"))
+
+y1$summary[[i]] = summary(fit, pars = c("c", "beta"))$summary
+y1$waic[[i]] = Waic(fit)$WAIC
+
+fit0 = optimizing(model, verbose = FALSE, algorithm = "LBFGS", data = dat0)
+fit1 = optimizing(model, verbose = FALSE, algorithm = "LBFGS", data = dat1)
+(log0 = sum(fit0$par[paste0("lp[", 1:576, "]")]))
+(log1 = sum(fit1$par[paste0("lp[", 1:576, "]")]))
+
+log1 - log0
+
+fit0$par[c("p", "sigma")]
+fit1$par[c("p", "sigma")]
+
+fit0$par["p"]
+fit1$par["p"]
+
+# Both LOD and BF are sensitive to the priors, therefore not reasonable.
+# What about WAIC?
+
+source("./R/waic.R")
+
+dat0 = within(dat, {g = g0; prior = p0})
+dat1 = within(dat, {g = g1; prior = p0})
+dat2 = within(dat, {g = g0; prior = p1})
+dat3 = within(dat, {g = g1; prior = p1})
+
+fit0 = sampling(model, data = dat0, chain = 3, cores = 3, iter = 400, warmup = 200)
+fit1 = sampling(model, data = dat1, chain = 3, cores = 3, iter = 400, warmup = 200)
+fit2 = sampling(model, data = dat2, chain = 3, cores = 3, iter = 400, warmup = 200)
+fit3 = sampling(model, data = dat3, chain = 3, cores = 3, iter = 400, warmup = 200)
+
+Waic(fit0)
+Waic(fit1)
+Waic(fit2)
+Waic(fit3)
+
+# Priors are not necessarily deterizing the WAIC, so that WAIC could be independent of the priors
+
+myGWAS_optimizing <- function(geno) {
+
+  N1 = nrow(geno)
+  vId = rownames(geno)
+  pId = c("p", paste0("beta[", 1:2, "]"))
+  p1 = as.matrix(igap[vId, ])
+
+  y = matrix(nrow = N1, ncol = 4, dimnames = list(vId, c(pId, "lp")))
+
+  for (i in 1:N1) {
+    dat1 = within(dat, {g = geno[i, ]; prior = p1[i, ]})
+    fit1 = optimizing(model, verbose = FALSE, algorithm = "LBFGS", init = init, data = dat1)
+    loglik = sum(fit1$par[paste0("lp[", 1:576, "]")])
+    y[i, ] = c(fit1$par[pId], loglik)
+  }
+  return(y)
+}
+
+```

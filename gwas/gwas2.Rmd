@@ -1,0 +1,205 @@
+--
+title: "Final: ADSP WGS GWAS results"
+author: "Xulong Wang"
+date: "January 18, 2016"
+output: pdf_document
+---
+
+## Extract MCMC results and Manhattan
+
+```{r, eval = F}
+
+setwd("/data/xwang/glmm/sampling")
+setwd("/data/xwang/glmm/sampling_prior")
+
+mcmc <- lapply(dir(), function(x) { load(x); y })
+mcmc <- lapply(mcmc, function(x) { lapply(x, function(y) y$summary ) })
+mcmc <- lapply(mcmc, function(x) { lapply(x, function(y) sapply(y, function(z) z["p", ])) })
+mcmc <- lapply(mcmc, function(x) do.call(cbind, x))
+mcmc <- t(do.call(cbind, mcmc))
+
+# mcmc = list(mcmc, meta, vep) # Save in list
+
+save(mcmc, file = "~/Dropbox/GitHub/glmm/data/mcmc.rdt")
+
+library(dplyr)
+library(ggplot2)
+
+chrlen <- read.delim("~/Dropbox/GitHub/X/genomes/human.hg19.genome", header = F)
+chrlen <- chrlen[match(paste0("chr", 1:22), chrlen$V1), ]
+chrlen <- cumsum(as.numeric(chrlen$V2)) * 1e-6  # Mb
+names(chrlen) <- c(1:22)
+chrmid <- diff(c(0, chrlen)) * 0.5 + c(0, chrlen[-length(chrlen)])
+
+fit = as.data.frame(mcmc)
+
+vId = rownames(fit)
+pse = pnorm(abs(fit$mean), sd = fit$sd, lower.tail = F) * 2
+
+chr <- as.numeric(gsub("-.*", "", vId))
+pos <- as.numeric(gsub(".*-", "", vId)) * 1e-6  # Mb
+pos <- c(0, chrlen)[chr] + pos
+
+manhattan <- data.frame(uid = vId, chr = chr, pos = pos, pse = -log10(pse))
+manhattan$col <- rep("o", nrow(manhattan))
+manhattan$col[chr %% 2 == 1] <- "e"
+
+png("~/Dropbox/GitHub/glmm/gwas/manhattan_mcmc_prior.png", width = 2e3, height = 1e3, res = 200)
+
+ggplot(manhattan, aes(x = pos, y = pse, color = col)) +
+  geom_point(alpha = 0.9) + # geom_hline(yintercept = 7.3, color = "black") +
+  scale_x_continuous(breaks = chrmid, labels = names(chrlen), limits = c(0, max(pos))) +
+  scale_color_manual(values = c("dodgerblue3", "firebrick1")) + # ylim(c(1, 8)) +
+  theme_bw() + xlab("") + ylab("-log10(P)") + guides(shape = F, color = F) +
+  theme(legend.key = element_blank())
+
+dev.off()
+
+```
+
+## Analysis, interpretation, and graphs 
+
+```{r}
+
+rm(list = ls())
+load("~/Dropbox/GitHub/glmm/data/mcmc.rdt")
+load("~/Dropbox/GitHub/glmm/data/mcmc_prior.rdt")
+
+fit = as.data.frame(mcmc$mcmc); meta = mcmc$meta; vep = mcmc$vep
+fit = as.data.frame(mcmc_prior$mcmc); meta = mcmc_prior$meta; vep = mcmc_prior$vep
+
+names(vep) = gsub("X.Uploaded_variation", "UID", names(vep))
+fit$P = pnorm(abs(fit$mean), sd = fit$sd, lower.tail = F) * 2
+
+fit$sign <- as.factor(sign(fit$mean))
+
+gwas = cbind(meta, fit[meta$UID, ])
+
+gwas4 <- filter(gwas, P < 1e-4) 
+gwas5 <- filter(gwas, P < 1e-5) 
+gwas6 <- filter(gwas, P < 1e-6) 
+gwas7 <- filter(gwas, P < 1e-7) 
+gwas8 <- filter(gwas, P < 5e-8) 
+
+gwas = gwas5
+
+group <- list(); group[[1]] <- gwas[1, ]; group_idx <- 1
+
+for (i in 2:nrow(gwas)) {
+  chromosome = gwas$CHR[i] == gwas$CHR[i-1]
+  position = gwas$POS[i] - gwas$POS[i-1] < 1e6
+  other = abs(gwas$mean[i] - gwas$mean[i-1]) < 1
+  
+  if ( all(chromosome, position, other) )
+    group[[group_idx]] = rbind(group[[group_idx]], gwas[i, ])
+  else {
+    group_idx = group_idx + 1
+    group[[group_idx]] = gwas[i, ]
+  }
+}
+
+group <- do.call(rbind, lapply(group, function(x) cbind(PEAK = x$UID[which.min(x$P)], x)))
+
+as.character(unique(group$PEAK))
+
+pdf("~/Dropbox/GitHub/glmm/Manu/glmm.pdf", width = 6, height = 4, family = "Helvetica")
+
+ggplot(gwas, aes(x = MAF, y = mean, colour = sign, size = -log10(P))) + 
+  geom_point(shape = 111, alpha = 0.7) + scale_size(range = c(1, 5)) +
+  theme_bw() + xlab("MAF") + ylab("Effect") + guides(color = F, text = F) + 
+  scale_color_manual(values = c("dodgerblue3", "firebrick1")) + 
+  theme(axis.line = element_line(size = .5), legend.key = element_blank()) 
+
+dev.off() # annotations???
+
+## Prior, post
+load("~/Dropbox/GitHub/glmm/igap/igap.rdt")
+
+new = cbind(gwas, igap_s1[match(gwas$UID, igap_s1$UID), ])
+
+ggplot(new, aes(x = Beta, y = mean)) + geom_point()
+ggplot(new, aes(x = -log10(Pvalue), y = -log10(P))) + geom_point()
+
+```
+
+## Variant effects
+
+```{r}
+
+vep_p <- filter(vep, UID %in% gwas$UID)
+table(vep_p$Consequence)
+
+vep_p[vep_p$Consequence == "missense_variant", ]
+
+so <- read.delim("~/Dropbox/GitHub/X/so.txt", stringsAsFactors = F); so <- gsub(" ", "", so$SO.term)
+cons <- sapply(so, function(y) sum(grepl(y, vep_p$Consequence))); cons <- cons[! cons == 0]
+
+sort(cons / sum(cons), decreasing = T)
+
+pdf("~/Dropbox/GitHub/glmm/Manu/cons.pdf", width = 10, height = 6)
+
+op <- par(mar = c(5, 20, 4, 3))
+bar <- barplot(cons, xlim = c(0, max(cons) + 2e2), 
+               axes = F, border = NA, horiz = T, las = 1, space = 0.75)
+abline(v = 0, lwd = 1, col = "black")
+text(y = bar, x = cons + 3e1, labels = cons)
+
+dev.off()
+
+gwasTable <- cbind(vep_p, group[match(vep_p$UID, group$UID), ])
+gwasTable <- gwasTable[-1]
+
+```
+
+## Consequences
+
+```{r}
+
+missense <- filter(gwasTable, grepl("missense_variant", Consequence))
+unique(missense$UID)
+
+intron <- filter(gwasTable, grepl("intron_variant", Consequence))
+(intron_gene <- intron$Symbol %>% unique)
+
+source("~/Dropbox/GitHub/X/function.R")
+intron_gene_gk <- hsGK(intron_gene)
+
+upstream <- filter(gwasTable, grepl("upstream", Consequence))
+unique(upstream$UID)
+y = vep_p[vep_p$UID %in% unique(upstream$UID), ]
+
+so_coding <- names(cons)[1:6]
+vep_coding <- vep[apply(sapply(so_coding, function(x) grepl(x, vep$Consequence)), 1, any), ]
+vep_coding <- vep_coding[! duplicated(paste0(vep_coding$UID, vep_coding$Symbol)), ]
+gwas_coding <- cbind(vep_coding, gwas[match(vep_coding$UID, gwas$UID), ])
+gwas_coding <- gwas_coding[order(gwas_coding$LOD, decreasing = T), ]
+
+gwas_coding <- gwas_coding[with(gwas_coding, abs(pSnp) > 0.2), ]
+gwas_coding <- gwas_coding[with(gwas_coding, pSnp + pApoe2 + pEpis < -1), ]
+gwas_coding <- gwas_coding[with(gwas_coding, pSnp + pApoe4 + pEpis > 1), ]
+rownames(gwas_coding) <- NULL
+
+geneId <- vep_coding$Symbol %>% unique
+summary <- queryMany(geneId, scopes="symbol", species="human", fields = c("name", "summary"))
+summary <- summary[! duplicated(summary$query), c("query", "name", "summary")] %>% as.data.frame
+gwas_coding$summary = summary$summary[match(gwas_coding$Symbol, summary$query)]
+
+# non_coding_transcript_exon_variant
+
+non_coding <- filter(vep.lod, grepl("non_coding_transcript_variant", Consequence))
+non_coding <- filter(vep.lod, grepl("non_coding_transcript_exon_variant", Consequence))
+non_coding <- non_coding[! duplicated(paste0(non_coding$UID, non_coding$Symbol)), ]
+non_coding <- cbind(non_coding, gwas[match(non_coding$UID, gwas$UID), ])
+non_coding <- non_coding[order(non_coding$LOD, decreasing = T), ]
+
+non_coding <- non_coding[with(non_coding, abs(pSnp) > 0.2), ]
+
+y = intron_gene_gk[[1]][1]
+y[grepl("metabolic", y$Term), ]$Symbols %>% c %>% unique
+
+# regulatory_region_variant
+
+filter(vep.lod, grepl("regulatory_region_variant", Consequence))
+ensembl_regulation = useMart(biomart="ENSEMBL_MART_FUNCGEN",host="www.ensembl.org",dataset="hsapiens_motif_feature")
+
+```

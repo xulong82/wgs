@@ -1,0 +1,224 @@
+%%
+% Please see https://bitbucket.org/rivanvx/beamer/wiki/Home for obtaining beamer.
+%%
+\documentclass{beamer}
+\usepackage{graphics}
+\usepackage{xcolor}
+
+\begin{document}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+\title{Novel Genomic Variants for Late-onset Alzheimer's Disease}
+\author{Xulong Wang}
+\date{\today}
+
+\frame{\titlepage}
+%\frame{\frametitle{Table of contents}\tableofcontents}
+
+\section{Alzheimer's Disease} 
+\subsection{Late-onset Alzheimer's Disease}
+
+\frame{\frametitle{Late-onset Alzheimer's Disease} 
+\begin{figure}
+\includegraphics<1>[height=5cm]{../Figures/alzBrain.jpg}
+\caption{Alzheimer's disease is the most common form of dementia affecting over 35 million people worldwide.}
+\end{figure}
+}
+
+\frame{\frametitle{Late-onset Alzheimer's Disease} 
+\begin{itemize}
+\item Late-onset Alzheimer's disease usually occurs after age 65, and accounts for about 90\% of total AD cases. \newline
+\item Top LOAD associated genes by GWAS study: \textcolor{red}{APOE $\epsilon2/3/4$, BIN1, CLU, ABCA7, CR1, PICALM, MS4A6A, CD33, MS4A4E, CD2AP} (Data from www.alzgene.org).
+\end{itemize}
+}
+\subsection{Alzheimer's Disease Sequencing Project}
+
+\frame{\frametitle{Alzheimer's Disease Sequencing Project}
+Objective: To identify new genomic variants that increase and decrease the risk of developing AD. \newline
+%\vspace{-.5cm}
+\begin{figure}
+\includegraphics<1>[height=2cm]{../Figures/adsp.pdf}
+\end{figure}
+}
+
+\frame{\frametitle{Alzheimer's Disease Sequencing Project}
+\begin{figure}
+\includegraphics<1>[height=6cm]{../Figures/adPie1.pdf}
+\caption{AD diagnosis for 584 people across 111 families. \color{red} Results in this presentation are analyzed from 137 people across 32 families.}
+\end{figure}
+}
+
+\frame{\frametitle{Alzheimer's Disease Sequencing Project}
+APOE (apolipoprotein E) on chromosome 19 makes protein that helps helps carry cholesterol in the bloodstream.
+\vspace{-1cm}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\includegraphics<1>[height=6cm]{../Figures/apoePie1.pdf}
+\end{figure}
+\end{column}
+\hspace{-.5cm}
+\begin{column}{0.6\textwidth}
+\vspace{.5cm}
+\footnotesize
+\begin{itemize}
+\item APOE $\epsilon2$ is rare and may protect against AD  
+\item APOE $\epsilon3$ is the most common allele and plays a neutral role
+\item APOE $\epsilon4$ present in about 25 to 30 \% of population and in about 40 \% of people with LOAD.
+\end{itemize} 
+\end{column}
+\end{columns}
+}
+
+\frame{\frametitle{Alzheimer's Disease Sequencing Project}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\includegraphics<1>[height=5cm]{../Figures/ageBox1.pdf}
+\caption{Age distribution by AD status.}
+\end{figure}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\includegraphics<1>[height=5cm]{../Figures/ageHist1.pdf}
+\caption{Age distribution.}
+\end{figure}
+\end{column}
+\end{columns}
+}
+
+\frame{\frametitle{Alzheimer's Disease Sequencing Project}
+\begin{figure}
+\includegraphics<1>[height=6cm]{../Figures/familyBar1.pdf}
+\caption{Sample number per family}
+\end{figure}
+}
+
+
+\section{Association study} 
+\frame{\frametitle{What are the genomic variants that are significant associated with AD?}
+\vspace{-1cm}
+\begin{eqnarray}
+AD \sim Sex + Age + SNP \\
+AD \sim Sex + Age + APOE + SNP \\
+AD \sim Sex + Age + + SNP + (1|Family) \\
+AD \sim Sex + Age + APOE + SNP + (1|Family)
+\end{eqnarray}
+}
+
+\frame{\frametitle{Summary of Null Models}
+\vspace{-1cm}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\includegraphics<1>[height=6cm]{../Figures/model1.pdf}
+\end{figure}
+\end{column}
+\begin{column}{0.5\textwidth}
+\vspace{.5cm}
+\footnotesize
+\begin{itemize}
+\item Intercepts high. Most samples are probable (0.5).  
+\item APOE $\epsilon34$ drops intercepts, increases AD risk.
+\item APOE $\epsilon24$ and $\epsilon33$ decrease AD risk in model4.
+\item Age and Sex have little effects
+\end{itemize} 
+\end{column}
+\end{columns}
+}
+
+\frame{\frametitle{Family level effects on intercepts}
+\begin{figure}
+\includegraphics<1>[height=6cm]{../Figures/model2.pdf}
+\caption{Family level effects on intercepts generally small.}
+\end{figure}
+}
+
+\frame{\frametitle{Summary statistics for SNP}
+\vspace{-1cm}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\includegraphics<1>[height=6cm]{../Figures/mafHist.pdf}
+\end{figure}
+\end{column}
+\begin{column}{0.5\textwidth}
+\footnotesize
+\begin{tabular}{l l}
+$\sim 4M$ SNPs per sample & \\
+$\sim 14M$ in total & \\
+& \\
+\color{red} MAF $<$ .05 & \\
+6690312 & 7820739 \\
+& \\
+\color{red} 0/1 $>$ .95 & \\
+59381 & 7743948
+\end{tabular}
+\end{column}
+\end{columns}
+}
+
+\frame{\frametitle{Permutation}
+$AD \sim Sex + Age + APOE + p(SNP) + (1|Family)$
+%\vspace{-1cm}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\vspace{.5cm}
+\footnotesize
+\begin{enumerate}
+\item Randomly pick 1M SNP.  
+\item Run full model on permuted SNP.
+\item Save maximal LRT value.
+\item Repeat 1-3 2000 times
+\item Set threshold as .95 quantile of maximal LRTs
+\end{enumerate}
+\end{column}
+\begin{column}{0.6\textwidth}
+\begin{figure}
+\includegraphics<1>[height=6cm]{../Figures/lrtPmt1.pdf}
+\end{figure}
+\end{column}
+\end{columns}
+}
+
+
+\frame{\frametitle{LRT line}
+\begin{figure}
+\includegraphics<1>[height=5.5cm]{../Figures/lineLrt1.pdf}
+\caption{$AD \sim Sex + Age + APOE + SNP + (1|Family)$}
+\end{figure}
+}
+
+\frame{\frametitle{LocusZoom}
+\begin{figure}
+\includegraphics<1>[height=5.5cm]{../Figures/rs11768450.png}
+\caption{$AD \sim Sex + Age + APOE + SNP + (1|Family)$}
+\end{figure}
+}
+
+\frame{\frametitle{To do list}
+\begin{itemize}
+\item Run models 1-4 on full data
+\item Bayesian inference on multilevel ordered categorical model
+\item Pair-wise regression
+\end{itemize}
+}
+
+%\frame{\frametitle{table}
+%\begin{tabular}{c c c}
+%A & B & C \\ 1 & 2 & 3 \\  A & B & C \\ 
+%\end{tabular} }
+%
+%\frame{\frametitle{blocs}
+%\begin{block}{title of the bloc}
+%bloc text
+%\end{block}
+%\begin{exampleblock}{title of the bloc}
+%bloc text
+%\end{exampleblock}
+%\begin{alertblock}{title of the bloc}
+%bloc text
+%\end{alertblock}
+%}
+
+\end{document}

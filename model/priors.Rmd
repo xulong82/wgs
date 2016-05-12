@@ -1,0 +1,152 @@
+---
+title: "Effects of prior on $p/se(p)$ in real data"
+author: "Xulong Wang"
+date: "January 20, 2016"
+output: pdf_document
+---
+
+```{r}
+
+library(rstan)
+library(dplyr)
+
+rm(list = ls())
+
+setwd("~/Dropbox/GitHub/glmm")
+
+load("./data/alzgenes.rdt")
+load("./data/glmList.rdt")
+load("./data/mdata.rdt")
+load("./data/kinship.rdt")
+load("./igap/igap.rdt")
+
+model <- stan_model("./Stan/model_test5.stan")
+
+cov <- mdata[c("Age", "Sex", "Apoe2", "Apoe4")]
+cov$Sex <- as.integer(cov$Sex) - 1
+Ad <- as.numeric(mdata$AD2)
+
+fit = alzgenes$fit
+(fit = fit[order(fit$LOD, decreasing = T), ]) %>% head
+
+fit[1, ] # tested, reasonable
+fit[2, ] # tested, reasonable
+(vid = fit[2, "UID"])
+
+alzgenes$lmm
+alzgenes$alz[alzgenes$alz$Polymorphism == "rs1801133", ]
+
+g1 = alzgenes$geno[vid, ]
+(p1 <- igap_s1[igap_s1$UID == vid, c("Beta", "SE")] %>% as.matrix)
+
+# - ADSP top
+gwas = glmList$gwas
+(gwas = gwas[order(gwas$LOD, decreasing = T), ]) %>% head
+
+vid = "10-120789413"  # NANOS1
+(vid = gwas$UID[7])
+g1 = glmList$geno[vid, ]
+
+(p1 <- igap_s1[igap_s1$UID == vid, c("Beta", "SE")] %>% as.matrix)
+
+chr <- "chr4"
+Sigma <- kinship[[paste0("no_", chr)]]
+Sigma[Sigma < 0] <- 0
+L <- t(chol(Sigma))
+
+g0 = rep(0, 576)
+dat = list(N = 576, K = 4, D = 4, cov = cov, L = L, g = g0, prior = 0, Ad = Ad)
+
+zc = optimizing(model, data = dat)
+init = list(beta = zc$par[paste0("beta[", 1:4, "]")], c = zc$par[paste0("c[", 1:3, "]")], z = zc$par[paste0("z[", 1:576, "]")])
+
+init$sigma = 1
+init$t = init$p = 0
+
+t1 = seq(-7, 7, 0.1)
+
+test = sapply(t1, function(t1) { cat(t1, "\n")
+  dat = within(dat, { g = g1; prior = t1 })
+  fit = optimizing(model, hessian = T, algorithm = "LBFGS", init = init, data = dat)
+  se = sqrt(diag(solve(-fit$hessian)))["p"]
+  c(fit$par[c("p", "t", "sigma")], se = se)
+})
+
+(test = as.data.frame(t(test))) %>% head
+
+t2 = test$p / test$se.p
+t0 = t2[t1 == 0]
+
+plot(t1, t2, pch = 3, col = as.numeric(abs(t2) > abs(t0)) + 1)
+abline(v = max(t1[abs(t2) < abs(t0)]))
+abline(v = min(t1[abs(t2) < abs(t0)]))
+legend("topleft", c("abs(t2) > abs(t0)", "abs(t2) < abs(t0)"), fill = c("red", "black"))
+abline(h = t0)
+
+```
+
+## All reasonable, but, prior is pretty conserved this way
+
+## Strong data evidence is harder to modulate by priors
+
+## Common variants at MS4A4/MS4A6E, CD2AP, CD33 and EPHA1 are associated with late-onset Alzheimer's disease
+## Naj et al., 2011
+
+```{r}
+
+igap_s1 %>% filter(MarkerName == "rs4938933")
+
+options(stringsAsFactors = F)
+adgc <- read.xlsx("./adgc/table5.xls", sheetName = "X", startRow = 2)
+
+```
+
+## ADGC vs IGAP vs ADSP
+
+```{r}
+
+table(adgc$SNP %in% igap_s1$MarkerName)
+share = intersect(adgc$SNP, igap_s1$MarkerName)
+
+adgc = adgc[match(share, adgc$SNP), ]
+igap = igap_s1[match(share, igap_s1$MarkerName), ]
+
+plot(-log10(adgc$Pvalue), -log10(igap$Pvalue))
+abline(0, 1)
+
+load("./gwas/c_wo_prior.rdt") # LOD
+table(igap$UID %in% names(z))
+adsp = z[ igap$UID ]
+adsp = pchisq(adsp, df = 1, lower.tail = F)
+min(adsp, na.rm = T)
+
+plot(-log10(adgc$Pvalue), -log10(adsp))
+
+```
+
+## Genotypes of the shaerd variants
+
+```{r}
+
+head(igap[order(igap$Pvalue), ])
+
+xx = mutate(mdata, geno = apoe["19-45631816", ])
+ggplot(xx, aes(x = AD2, fill = as.factor(geno))) + geom_bar(position = "fill")
+table(xx2$geno, xx2$AD2)
+
+```
+
+## Two variants 100K away from APOE was not tested in IGAP
+
+```{r}
+
+filter(gwas, LOD > 15 & CHR == 19)
+
+xx = c("rs201897835", "rs34827707")
+filter(igap_s1, MarkerName %in% xx)
+
+```
+
+### Out of the reported loci, we identified the very variants.
+
+## Binarize AD status decrease LRT scores

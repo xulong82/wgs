@@ -1,0 +1,78 @@
+make.locus.200k <- function(type, name, marker.df, gene.df) {
+  #--- extract locus
+  if (type == "gene") {
+    entry <- gene.df[gene.df$NAME == name, ]
+  } else if (type == "marker") {
+    entry <- marker.df[marker.df$UID == name, ]
+  } else {
+    stop("type = marker | name")
+  }
+  chromosome <- entry$CHR
+  position <- entry$POS
+  
+  #--- locus in kb unit ---
+  position <- position * 1e-3
+  marker.df$POS <- marker.df$POS * 1e-3
+  gene.df$START <- gene.df$START * 1e-3
+  gene.df$END <- gene.df$END * 1e-3
+  gene.df$POS <- gene.df$POS * 1e-3
+  
+  min.pos <- position - 100
+  max.pos <- position + 100 
+  
+  #--- marker and genes in the locus ---
+  marker <- subset(marker.df, marker.df$CHR == chromosome &
+                     marker.df$POS >= min.pos & 
+                     marker.df$POS <= max.pos)
+  marker <- marker[order(marker$POS), ]
+  
+  gene <- subset(gene.df, gene.df$CHR == chromosome &
+                   ((gene.df$START >= min.pos & gene.df$START <= max.pos) | 
+                      (gene.df$END >= min.pos & gene.df$END <= max.pos)))
+  gene <- gene[order(gene$POS), ]
+  
+  if ( type == "marker" ) hit = marker[marker$UID == name, ]
+  if ( type == "gene" ) hit = marker[marker$LOD == max(marker$LOD), ]
+  if (nrow(hit) > 1) hit = hit[1, ]
+  
+  #--- graphing ---
+    par(mar = c(4, 4, 3, 4))
+    # marker points
+    plot(marker$POS, marker$LOD, type = "p", pch = 23, cex = 1.5, bg = "red", 
+         main = "", xlab = "", ylab = "", xlim = c(min.pos, max.pos), ylim = c(-15, 25), axes = F)
+    # box and lines
+    box()
+    lines(c(min.pos, max.pos), c(0, 0), lty = "dotted", lwd = 1, col = "black")
+#   lines(c(min.pos, max.pos), c(25, 25), lty = "dotted", lwd = 1, col = "blue")
+    # top marker
+    points(hit$POS, hit$LOD, pch = 5, cex = 2.5, lwd = 2.5, col = "blue")
+    text(hit$POS, hit$LOD, labels = hit$ID, pos = 3, offset = 1, font = 2)
+    # axis
+    axis(1, at = c(min.pos, position, max.pos), 
+         labels = round(c(min.pos, position, max.pos)), las = 1) 
+    mtext(paste("Chromosome", chromosome, "Position (Kb)", sep=" "), side = 1, line = 2.5, font = 2)
+    axis(2, at = c(0, 5, 10, 15, 20, 25), labels = c(0, 5, 10, 15, 20, 25), las=1) 
+    mtext("LOD", side = 2, at = 9, line = 2, font = 2)
+    # genes
+    if (nrow(gene) != 0) {
+      for (i in 1:nrow(gene)) {  # plot the genes
+        adj.arrow <- -(i %% 5 + 1) * 2.5 
+        adj.text <- -(i %% 5 + 1) * 2.5 - 1 
+        if (gene[i, ]$END - gene[i, ]$START > 1) {
+          if (gene[i, ]$STRAND == "+" ) {
+            arrows(max(gene[i, ]$START, min.pos), adj.arrow, min(gene[i, ]$END, max.pos), adj.arrow, 
+                   length = 0.05, lwd = 2, code = 2, lty = "solid", col = "darkgreen")
+          } else {    
+            arrows(max(gene[i, ]$START, min.pos), adj.arrow, min(gene[i, ]$END, max.pos), adj.arrow, 
+                   length = 0.05, lwd = 2, code = 1, lty = "solid", col = "darkgreen")
+          }
+        } else {
+          points(gene[i, ]$POS, adj.arrow, pch = 16, col = "darkgreen")
+        }
+        
+        if (!is.na(gene[i, ]$NAME)) {
+          text(gene[i, ]$POS, adj.text, labels = gene[i, ]$NAME, cex = .6, pos = 1, offset = 0, font = 2)
+        }
+      }
+    }  
+}

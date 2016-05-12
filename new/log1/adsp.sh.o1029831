@@ -1,0 +1,16 @@
+
+
+--------------------------------------------------------------------------------
+|  JAX TORQUE EPILOGUE
+|
+|  Job ID: 1029831.cadillac-master.jax.org
+|  Exit Status: 0
+|  Requested Resources:
+|      nodes=1:ppn=1,walltime=05:00:00
+|  Resources Consumed:
+|      cput=03:30:54,mem=6248kb,vmem=249072kb,walltime=03:35:52
+|  Walltime accuracy: 72.0%
+|
+| Epilogue Host (TORQUE Mother Superior): cadillac013
+|
+--------------------------------------------------------------------------------

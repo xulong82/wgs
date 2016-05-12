@@ -1,0 +1,61 @@
+---
+title: "gwas_catelog"
+author: "Xulong Wang"
+date: "December 19, 2015"
+output: html_document
+---
+
+```{r}
+
+library(dplyr)
+library(gwascat)
+(cur = makeCurrentGwascat()) 
+
+options(stringsAsFactors = F)
+gwascat <- read.delim("~/Dropbox/GitHub/glmm/GWAS_catelog/gwas_catalog_v1.0-downloaded_2015-07-22.tsv")
+
+names(gwascat)
+
+table(gwascat$DISEASE.TRAIT) %>% sort %>% tail
+
+gwas_genes <- gwascat$MAPPED_GENE %>% unique
+gwas_genes <- lapply(gwas_genes, function(x) unlist(strsplit(x, ", "))) 
+gwas_genes <- lapply(gwas_genes, function(x) unlist(strsplit(x, " - "))) 
+gwas_genes <- unlist(gwas_genes) %>% unique
+
+(x = intersect(intron_gene, gwas_genes))
+y = lapply(gwascat$MAPPED_GENE, function(x) unlist(strsplit(x, ", "))) 
+y = lapply(y, function(i) unlist(strsplit(i, " - "))) 
+idx = sapply(y, function(i) any(i %in% x))
+
+gwas_select = gwascat[idx, ]
+table(gwas_select$CONTEXT)
+sort(table(gwas_select$DISEASE.TRAIT), decreasing = T)[1:10]
+
+gwas_select[grepl("cholesterol", gwas_select$DISEASE.TRAIT), ]
+gwas_select[grepl("Triglycerides", gwas_select$DISEASE.TRAIT), c("DISEASE.TRAIT", "MAPPED_GENE")]
+gwas_select[grepl("Adiponectin levels", gwas_select$DISEASE.TRAIT), c("DISEASE.TRAIT", "MAPPED_GENE")]
+gwas_select[grepl("Alzheimer's disease", gwas_select$DISEASE.TRAIT), c("DISEASE.TRAIT", "MAPPED_GENE")]
+gwas_select[grepl("IgG glycosylation", gwas_select$DISEASE.TRAIT), c("DISEASE.TRAIT", "MAPPED_GENE")]
+gwas_select[grepl("Type 2 diabetes", gwas_select$DISEASE.TRAIT), c("DISEASE.TRAIT", "MAPPED_GENE")]
+
+disease = "Rheumatoid arthritis"
+disease = "Alzheimer's disease"
+disease = "IgG glycosylation"
+disease = "Obesity-related traits"
+disease = "Type 2 diabetes"
+
+gwas_select %>% filter(grepl(disease, DISEASE.TRAIT))
+gwas_select$MAPPED_GENE[grepl(disease, gwas_select$DISEASE.TRAIT)]
+
+gene = "NANOS1"
+
+ensembl = useMart("ensembl",dataset = "hsapiens_gene_ensembl")
+getBM("name_1006", "external_gene_name", gene, ensembl)
+
+keggFind("pathway", "Long-term potentiation")  # KEGG: LTR
+
+nanos1 = read.csv("NANOS1/metatargetome.csv", stringsAsFactors = F)
+nanos1_gk = myGK(nanos1$Target.Gene)
+
+```

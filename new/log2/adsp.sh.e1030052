@@ -1,0 +1,14 @@
+
+VCFtools - v0.1.12a
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf ../adsp/chr7_both_passed.vcf.recode.vcf
+	--maf 0.01
+	--out chr7
+	--recode
+
+After filtering, kept 578 out of 578 Individuals
+Outputting VCF file...
+After filtering, kept 598032 out of a possible 1474966 Sites
+Run Time = 3945.00 seconds

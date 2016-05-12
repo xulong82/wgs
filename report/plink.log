@@ -1,0 +1,20 @@
+PLINK v1.90b2o 64-bit (25 Nov 2014)
+3 arguments: --bfile autosome --pca
+Hostname: cadillac
+Working directory: /hpcdata/xwang/Adsp/plink2
+Start time: Fri Feb  5 13:22:29 2016
+
+Random number seed: 1454696549
+64391 MB RAM detected; reserving 32195 MB for main workspace.
+34739081 variants loaded from .bim file.
+576 people (222 males, 354 females) loaded from .fam.
+576 phenotype values loaded from .fam.
+Using up to 15 threads (change this with --threads).
+Before main variant filters, 576 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+34739081 variants and 576 people pass filters and QC.
+Phenotype data is quantitative.
+Relationship matrix calculation complete.
+--pca: Results saved to plink.eigenval and plink.eigenvec .
+
+End time: Fri Feb  5 13:28:18 2016

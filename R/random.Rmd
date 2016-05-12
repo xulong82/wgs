@@ -1,0 +1,21 @@
+---
+title: "The Random Term"
+author: "Xulong Wang"
+date: "January 4, 2016"
+output: pdf_document
+---
+
+## No prior
+
+## Prunned variants only
+
+## No kinship 
+
+## Fix the random by pre-estimation
+
+## Full estimation
+
+```{r}
+
+
+```

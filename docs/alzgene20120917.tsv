@@ -1,0 +1,154 @@
+Rank	Gene	Polymorphism	Allele contrast	Ethnicity	N studies	N samples	OR	Lower CI	Upper CI	p-value	p <= 0.05	Venice amount	N minor	Venice replication	I2	Venice bias	Bias reason	Venice overall	BF
+1	APOE	APOE_e2/3/4	4 vs. 3	All	36	9413	3.685	3.3	4.115	0	significant	A	4167	n.a.	30	A		A	>50
+2	BIN1	rs744373	G vs. A	All	10	49650	1.166	1.133	1.199	1.59E-26	significant	A	30665	n.a.	0	n.a.		A	23.4
+3	CLU	rs11136000	A vs. G	C	18	72432	0.879	0.857	0.902	3.37E-23	significant	A	56799	n.a.	0	n.a.	Low OR	A	20.1
+4	ABCA7	rs3764650	G vs. T	All	10	60569	1.229	1.178	1.282	8.17E-22	significant	A	12056	n.a.	0	n.a.		A	18.8
+5	CR1	rs3818361	T vs. C	C	9	47052	1.174	1.135	1.213	4.72E-21	significant	A	19510	n.a.	0	n.a.		A	18.1
+6	PICALM	rs3851179	A vs. G	C	12	65711	0.879	0.855	0.903	2.85E-20	significant	A	46849	n.a.	0	n.a.	Low OR	A	17.3
+7	MS4A6A	rs610932	T vs. G	All	11	63026	0.904	0.877	0.931	1.81E-11	significant	A	52136	n.a.	23	n.a.	"Low OR, Regr"	A	8.7
+8	CD33	rs3865444	A vs. C	All	5	37767	0.893	0.863	0.925	2.04E-10	significant	A	22214	n.a.	0	n.a.	Low OR	A	7.7
+9	MS4A4E	rs670139	T vs. G	All	11	64577	1.079	1.053	1.106	9.51E-10	significant	A	52911	n.a.	2	n.a.	Low OR	A	6.9
+10	CD2AP	rs9349407	C vs. G	All	5	35840	1.117	1.077	1.158	2.75E-09	significant	A	20076	n.a.	0	n.a.	Low OR	A	6.6
+11	SORL1	rs2282649	T vs. C	A	3	1666	1.303	1.131	1.5	0.000174	significant	A	1734	A	0	A		A	
+12	ACE	rs1800764	C vs. T	C	7	3934	0.843	0.768	0.925	0.000312	significant	A	3496	A	0	C	F	C	
+13	GWA_14q32.13	rs11622883	A vs. T	All	5	3568	0.842	0.765	0.927	0.000338	significant	A	3174	A	0	A		A	
+14	TNK1	rs1554948	A vs. T	All	5	3712	0.841	0.761	0.93	0.000564	significant	A	3538	A	12	A		A	
+15	DAPK1	rs4878104	T vs. C	All	7	5789	0.884	0.818	0.956	0.00156	significant	A	4219	A	0	C	"Low OR, Regr"	C	
+16	GAB2	rs2373115	T vs. G	All	12	12577	0.847	0.76	0.944	0.00227	significant	A	6275	C	60	C	Regr	C
+17	TF	rs1049296	C2 vs. C1	All	16	9233	1.176	1.056	1.309	0.00248	significant	A	3326	A	22	C	Regr	C
+18	PCDH11X	rs5984894-Women	G vs. A	C	8	7358	0.795	0.685	0.923	0.00253	significant	A	7265	C	63	C	Regr	C
+19	MTHFR	rs1801133	T vs. C	All	26	8604	1.131	1.041	1.23	0.00311	significant	A	7064	A	22	C	Low OR	C
+20	EPHA1	rs11767557	C vs. T	All	5	39085	0.892	0.827	0.963	0.00336	significant	A	14925	C	70	C	"Low OR, F"	C
+21	IL8	rs4073	A vs. T	All	4	1593	1.273	1.077	1.504	0.00381	significant	A	1157	A	0	A		A
+22	LOC651924	rs6907175	A vs. G	All	6	4882	0.887	0.816	0.965	0.00439	significant	A	5073	A	0	C	Low OR	C
+23	hCG2039140	rs1903908	T vs. C	All	4	2865	1.234	1.056	1.443	0.00703	significant	B	768	A	0	A		B
+24	CHRNB2	rs4845378	T vs. G	All	4	1363	0.672	0.499	0.904	0.00729	significant	B	227	A	0	A		B
+25	OTC	rs5963409-Women	A vs. G	All	5	2864	1.173	1.039	1.325	0.00842	significant	A	1547	A	0	C	F	C
+26	ADAM10	rs17269348	G vs. A	All	4	10982	1.148	1.032	1.277	0.00981	significant	A	2679	A	23	C	Low OR	C
+27	NEDD9	rs760678	G vs. C	All	8	6697	0.889	0.809	0.976	0.0116	significant	A	5336	B	39	C	"Low OR, F, Regr"	C
+28	CH25H	rs13500	T vs. C	All	7	3413	1.442	1.071	1.94	0.0137	significant	B	729	C	65	C	Regr	C
+29	IDE	rs7910977	T vs. C	All	4	4676	0.838	0.726	0.967	0.0153	significant	A	1152	A	11	C	F	C
+30	LOC439999	rs498055	G vs. A	All	7	5285	1.152	1.024	1.296	0.0161	significant	A	5288	B	49	C	HWE	C
+31	SORCS1	rs600879	min vs. maj	All	4	2856	1.238	1.036	1.481	0.0168	significant	B	567	A	0	A		B
+32	GRN	rs5848	A vs. G	All	4	3711	1.128	1.019	1.248	0.0173	significant	A	2373	A	0	C	Low OR	C
+33	TNF	rs4647198	C vs. T	A	3	771	1.37	1.049	1.791	0.0185	significant	B	301	A	0	A		B
+34	IL33	rs7044343	C vs. T	All	4	9865	0.848	0.734	0.979	0.0213	significant	A	7122	C	57	A		C
+35	IL1B	rs1143634	T vs. C	C	6	2720	1.16	1.02	1.32	0.0214	significant	A	1450	A	0	C	HWE	C
+36	CCR2	rs1799864	A vs. G	C	3	1426	0.734	0.558	0.965	0.0239	significant	B	308	A	0	A		B
+37	ARID5B	rs4948288	A vs. G	All	4	20616	1.069	1.007	1.135	0.0278	significant	A	16755	B	29	C	Low OR	C
+38	PGBD1	rs3800324	A vs. G	All	7	6670	1.213	1.018	1.446	0.0279	significant	B	550	A	0	C	Regr	C
+39	THRA	rs939348	T vs. C	All	6	5841	1.096	1.007	1.192	0.0296	significant	A	3248	A	0	C	"Low OR, Regr"	C
+40	CALHM1	rs2986017	T vs. C	C	13	13203	1.12	1.011	1.24	0.0297	significant	A	7185	C	66	C	"Low OR, F"	C
+41	ENTPD7	rs911541	G vs. A	All	4	7172	1.104	1.006	1.212	0.0336	significant	A	2241	A	1	C	"Low OR, F"	C
+42	TFAM	rs2306604	G vs. A	All	6	2336	0.861	0.746	0.993	0.0364	significant	A	1983	A	17	C	F	C
+43	IL1A	rs1800587	T vs. C	C	19	8212	1.086	1.003	1.176	0.0386	significant	A	4985	A	20	C	"Low OR, F"	C
+44	LDLR	rs5930	A vs. G	All	4	1501	0.847	0.722	0.994	0.0386	significant	A	1228	A	1	A		A
+45	CST3	rs1064039	A vs. G	C	8	3014	1.156	1.001	1.333	0.0434	significant	A	1203	A	13	A		A
+46	ECE1	rs213045	A vs. C	All	5	3691	0.863	0.745	0.999	0.0443	significant	A	1952	B	42	C	F	C
+47	PRNP	rs1799990	G vs. A	C	11	6301	0.921	0.849	1	0.0445	significant	A	4089	A	6	C	"Low OR, F, HWE"	C
+48	GAPDHS	rs4806173	G vs. C	All	4	3462	0.867	0.75	1.002	0.0478	significant	A	2623	C	51	A		C
+49	CTSD	rs17571	T vs. C	C	19	14113	1.174	0.995	1.385	0.0517	not significant							
+50	GALP	rs3745833	C vs. G	All	6	5714	1.134	0.994	1.293	0.0557	not significant							
+51	GOLM1	rs10868366	T vs. G	All	4	5864	0.813	0.654	1.01	0.0562	not significant							
+52	LRAT	rs156501	A vs. G	All	4	5463	1.096	0.994	1.208	0.0597	not significant							
+53	PSEN1	rs165932	G vs. T	A	11	3415	0.823	0.669	1.012	0.0598	not significant							
+54	PON1	rs662	C (R) vs. T (Q)	A	3	1301	0.858	0.729	1.01	0.0598	not significant							
+55	PCGF5	rs1057971	T vs. C	All	4	2853	1.276	0.983	1.656	0.0621	not significant							
+56	PLAU	rs2227566	C vs. T	C	7	2066	1.144	0.986	1.327	0.0699	not significant							
+57	A2M	rs3832852	del vs. ins	A	10	3032	0.735	0.526	1.028	0.0717	not significant							
+58	HMGCS2	rs532208	T vs. G	All	8	5519	0.932	0.862	1.008	0.0722	not significant							
+59	ALDH18A1	rs4417206	G vs. T	All	5	4560	0.885	0.771	1.015	0.0738	not significant							
+60	MAPT/STH	rs2471738	T vs. C	All	8	6117	1.143	0.983	1.329	0.0763	not significant							
+61	LMNA	rs505058	C vs. T	All	6	5678	1.227	0.965	1.559	0.0883	not significant							
+62	GSTT1	GSTT1_indel	del vs. ins	All	4	958	1.545	0.927	2.574	0.0884	not significant							
+63	ABCA1	rs2230808	A vs. G	All	10	7051	1.097	0.982	1.225	0.0962	not significant							
+64	LPL	rs328	G vs. C	All	5	2420	0.827	0.657	1.041	0.0982	not significant
+65	MYH13	rs2074877	T vs. C	All	6	5761	1.084	0.983	1.195	0.0991	not significant
+66	SERPINA3	SERPINA3_A10	A10+ vs. A10-	All	4	1086	1.153	0.968	1.374	0.104	not significant
+67	VR22	rs10997691	C vs. T	All	4	1352	1.216	0.955	1.55	0.106	not significant
+68	DLST	rs1799900	T vs. C	A	3	1639	1.124	0.973	1.299	0.106	not significant
+69	CHAT	rs868750	A vs. G	All	4	2627	1.207	0.952	1.53	0.113	not significant
+70	NOS3	rs1799983	T vs. G	All	17	7598	0.909	0.806	1.026	0.115	not significant
+71	SOAT1	rs1044925	C vs. A	C	4	2107	1.199	0.952	1.511	0.116	not significant
+72	IDE	rs1887922	C vs. T	All	6	3531	1.181	0.954	1.461	0.119	not significant
+73	FAM63A	rs41310885	A vs. T	All	6	5748	0.811	0.619	1.062	0.119	not significant
+74	LRP1	rs1799986	T vs. C	All	30	14556	0.915	0.816	1.027	0.123	not significant
+75	VLDLR	VLDLR_repeat	5 vs. non-5	A	4	1060	1.151	0.957	1.385	0.128	not significant
+76	ABCA2	rs908832	T vs. C	All	4	3723	1.616	0.855	3.052	0.132	not significant
+77	ARMS2	rs10490924	T vs. G	All	4	4168	0.922	0.827	1.027	0.133	not significant
+78	OLR1	rs1050283	T vs. C	All	4	3964	0.868	0.718	1.048	0.134	not significant
+79	IL10	rs1800896	G vs. A	All	12	4678	0.893	0.768	1.039	0.134	not significant
+80	PPARG	rs1805192	G vs. C	All	5	3214	1.144	0.953	1.372	0.14	not significant
+81	GWA_7p15.2	rs1859849	C vs. T	All	6	5702	1.114	0.962	1.29	0.14	not significant
+82	APBB2	rs13133980	G vs. C	All	5	2873	0.907	0.793	1.038	0.147	not significant
+83	ESR1	rs9340799	X vs. x	A	6	1734	1.288	0.909	1.826	0.147	not significant
+84	APOA1	rs670	A vs. G	All	4	2411	1.121	0.957	1.314	0.15	not significant
+85	HMGCR	rs3761740	A vs. C	All	4	4291	1.204	0.927	1.565	0.156	not significant
+86	BDNF	BDNF_270C/T	T vs. C	A	5	2640	1.5	0.844	2.663	0.158	not significant
+87	APH1B	rs1047552	G vs. T	All	4	1705	1.519	0.828	2.786	0.168	not significant
+88	MAPK8IP1	rs1554338	G vs. A	All	4	3511	1.149	0.937	1.41	0.172	not significant
+89	CTSS	rs41271951	A vs. G	All	6	5720	0.84	0.651	1.085	0.173	not significant
+90	NPC2	rs1860108	C vs. T	All	6	2804	1.114	0.948	1.309	0.18	not significant
+91	BCR	rs9608099	C vs. T	All	6	5716	1.094	0.954	1.254	0.188	not significant
+92	PCK1	rs8192708	G vs. A	All	8	7242	1.132	0.931	1.375	0.205	not significant
+93	ACAN	rs2882676	A vs. C	All	6	5700	1.079	0.956	1.218	0.209	not significant
+94	UBQLN1	rs12344615	C vs. T	All	11	14022	1.058	0.963	1.161	0.24	not significant
+95	HFE	rs1799945	G vs. C	All	11	4612	0.896	0.742	1.081	0.243	not significant
+96	EIF2AK2	rs2254958	T vs. C	All	4	3342	0.934	0.826	1.055	0.263	not significant
+97	GSTM1	GSTM1_indel	ins vs. del	All	5	1017	1.184	0.871	1.611	0.271	not significant
+98	CCL2	rs1024611	G vs. A	C	4	1908	1.226	0.843	1.783	0.277	not significant
+99	MTR	rs1805087	G vs. A	All	8	5005	0.897	0.734	1.097	0.281	not significant
+100	CFH	rs1061170	C vs. T	All	4	11108	1.047	0.961	1.141	0.283	not significant
+101	HTR2A	rs6313	T vs. C	All	6	3832	0.952	0.866	1.046	0.293	not significant
+102	PSEN2	rs8383	T vs. C	All	5	1540	0.892	0.717	1.109	0.293	not significant
+103	UBD	rs444013	C vs. G	All	6	5714	0.937	0.825	1.063	0.302	not significant
+104	PIN1	rs2233678	C vs. G	All	4	3061	1.229	0.812	1.859	0.32	not significant
+105	SH3PXD2A	rs3740473	A vs. G	All	5	5480	0.906	0.741	1.109	0.329	not significant
+106	EBF3	rs11016976	C vs. T	All	7	7151	1.081	0.919	1.271	0.337	not significant
+107	BLMH	rs1050565	G vs. A	All	10	4444	1.097	0.9	1.337	0.348	not significant
+108	CYP46A1	rs754203	C vs. T	C	17	7917	1.052	0.942	1.176	0.356	not significant
+109	MYST4	rs1551067	A vs. G	All	4	3443	1.073	0.919	1.253	0.363	not significant
+110	HSPG2	rs3767140	A vs. C	C	3	1599	1.08	0.909	1.283	0.372	not significant
+111	NOTCH4	rs367398	T vs. C	C	3	1665	0.899	0.703	1.149	0.384	not significant
+112	SERPINE1	rs1799889	del vs. ins	C	3	1043	1.239	0.747	2.057	0.397	not significant
+113	TFCP2	rs11550090	A vs. G	All	8	5776	0.857	0.595	1.234	0.398	not significant
+114	IGF1R	rs2229765	A vs. G	All	4	3509	1.043	0.944	1.154	0.398	not significant
+115	ABCG1	rs692383	G vs. A	All	6	2753	1.082	0.893	1.31	0.411	not significant
+116	NQO1	rs1800566	T vs. C	All	4	3609	1.053	0.927	1.195	0.419	not significant
+117	TRAK2	rs13022344	C vs. T	All	6	5712	1.069	0.905	1.264	0.424	not significant
+118	HTR6	rs1805054	T vs. C	All	5	1270	0.882	0.638	1.218	0.435	not significant
+119	ACAD8	rs570113	T vs. C	All	6	2809	1.047	0.931	1.177	0.437	not significant
+120	DNMBP	rs35715207	C vs. G	C	3	3919	0.964	0.878	1.059	0.438	not significant
+121	ALDH2	rs671	A vs. G	All	4	2021	1.233	0.719	2.114	0.438	not significant
+122	PON2	rs7493	G (C) vs. C (S)	All	5	3695	1.075	0.886	1.304	0.454	not significant
+123	CDK5	rs2069442	G vs. C	All	4	7595	1.043	0.932	1.167	0.455	not significant
+124	ACTA2	rs1441734	C vs. T	All	4	3334	1.037	0.94	1.146	0.458	not significant
+125	CYP2D6	CYP2D6*4	*4 vs. wt	All	11	1942	1.079	0.878	1.326	0.461	not significant
+126	BCHE	rs1803274	A vs. G	All	32	11069	1.047	0.925	1.184	0.463	not significant
+127	APBB1	rs1799755	del vs. ins	C	4	3053	0.885	0.634	1.236	0.465	not significant
+128	KCNMA1	rs35807	G vs. C	All	4	3395	1.036	0.938	1.144	0.475	not significant
+129	NCSTN	rs2274185	G vs. C	All	5	3662	0.903	0.676	1.206	0.481	not significant
+130	MME	rs701109	T vs. C	C	4	3003	0.961	0.859	1.076	0.484	not significant
+131	VCP	rs10972300	T vs. C	All	4	3151	1.066	0.885	1.284	0.492	not significant
+132	SLC6A4	rs4795541	long vs. short	A	3	773	1.093	0.843	1.418	0.492	not significant
+133	CYP19A1	rs700518	A vs. G	All	4	3560	1.034	0.937	1.142	0.494	not significant
+134	FDPS	rs2297480	C vs. A	All	6	2796	0.956	0.838	1.091	0.498	not significant
+135	VEGF	rs699947	A vs. C	All	7	5451	1.045	0.915	1.194	0.51	not significant
+136	GSTO1	rs4925	A vs. C	All	5	5725	0.974	0.897	1.059	0.531	not significant
+137	CCR5	CCR5_delta32	del vs. ins	All	4	2076	1.082	0.834	1.404	0.543	not significant
+138	CETP	rs708272	A vs. G	All	4	735	1.065	0.861	1.316	0.554	not significant
+139	BACE1	rs638405	G vs. C	C	10	4975	1.025	0.943	1.114	0.556	not significant
+140	GOT1	rs2234971	A vs. G	All	4	3397	1.067	0.85	1.34	0.567	not significant
+141	TGFB1	rs1800468	A vs. G	All	4	8657	1.046	0.892	1.226	0.575	not significant
+142	WWC1	rs17070145	T vs. C	All	6	3921	0.958	0.819	1.121	0.585	not significant
+143	GSTP1	rs1695	G vs. A	C	3	1191	0.898	0.602	1.341	0.592	not significant
+144	COMT	rs4680	A vs. G	All	4	1399	0.957	0.806	1.137	0.612	not significant
+145	ADAM12	rs11244787	C vs. T	All	5	5411	1.045	0.861	1.268	0.649	not significant
+146	ANK3	rs1551684	T vs. C	All	4	3371	1.03	0.893	1.188	0.68	not significant
+147	LIPA	rs1051338	C vs. A	All	4	1569	0.966	0.799	1.169	0.717	not significant
+148	GWA_14q31.2	rs11159647	A vs. G	All	4	4720	1.017	0.903	1.147	0.776	not significant
+149	FAS	rs1800682	G vs. A	C	8	2483	1.022	0.874	1.196	0.78	not significant
+150	RFTN1	rs6768991	C vs. G	All	6	2772	1.009	0.889	1.145	0.889	not significant
+151	MPO	rs2333227	A vs. G	C	6	2352	0.979	0.719	1.333	0.891	not significant
+152	MMP3	rs3025058	5A vs. 6A	C	5	7031	1.013	0.833	1.231	0.898	not significant
+153	HHEX	rs1544210	A vs. G	C	13	8234	0.998	0.937	1.064	0.959	not significant

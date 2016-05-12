@@ -1,0 +1,16 @@
+
+VCFtools - v0.1.12a
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--gzvcf /sdata/ADSP/dbGaP-6143/files/vcf_snv/c_all/combined/c_all_adsp.qc.wgs.chr9.578.consensus.2016_0114.snv.genotypes.vcf.gz
+	--out chr9_both_passed.vcf
+	--recode
+	--keep-filtered BOTH_passed
+
+Using zlib version: 1.2.3
+Versions of zlib >= 1.2.4 will be *much* faster when reading zipped VCF files.
+After filtering, kept 578 out of 578 Individuals
+Outputting VCF file...
+After filtering, kept 1102663 out of a possible 1207336 Sites
+Run Time = 8976.00 seconds

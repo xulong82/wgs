@@ -1,0 +1,69 @@
+###############################################################################
+#
+#
+# Description : IGAP meta-analysis results files
+#
+# Publication : Meta-analysis of 74,046 individuals identifies 11 new
+#               susceptibility loci for Alzheimer's disease.
+#
+# Reference   : Nat Genet. 2013 Dec;45(12):1452-8. doi: 10.1038/ng.2802.
+#
+# Date        : 2014-06-27
+#
+# Author      : IGAP consortium
+#
+#
+###############################################################################
+
+###############################################################################
+#
+# Filename    : IGAP_stage_1.txt
+#
+# Description : Contains IGAP Stage 1 results of SNPs either genotyped or
+#               successfully imputed in at least 40% of the AD cases and 40%
+#               of the control samples across all datasets (7,055,881 SNPs)
+#
+# md5sum      : bc89de2613f1c61537c7d1a8cff01b3d
+# sha1sum     : 5efcb61fd33814ab62aa294d81186fdba80423b2
+#
+###############################################################################
+
+# Column name   : Description
+#---------------:--------------------------------------------------------------
+- Chromosome    : Chromosome of the SNP (Build 37, Assembly Hg19)
+- Position      : Position of the SNP (Build 37, Assembly Hg19)
+- MarkerName    : SNP rsID or chromosome:position if rsID not available
+- Effect_allele : Reference allele (coded allele)
+- Other_allele  : Non reference allele (non-coded allele)
+- Beta          : Overall estimated effect size for the effect allele
+- SE            : Overall standard error for effect size estimate
+- Pvalue        : Meta-analysis Pvalue for stage 1
+
+
+
+###############################################################################
+#
+# Filename    : IGAP_stage_1_2_combined.txt
+#
+# Description : Contains IGAP combined results for
+#               11,632 SNPs considered for analysis after quality control
+#               procedures
+#
+# md5sum      : 7618a9ea7539f4c3344e4812146da88e
+# sha1sum     : bcd6e2e059d02ecdcc592f07e485eb2e00176581
+#
+###############################################################################
+
+# Column name           : Description
+#-----------------------:------------------------------------------------------
+- Chromosome            : Chromosome of the SNP (Build 37, Assembly Hg19)
+- Position              : Position of the SNP (Build 37, Assembly Hg19)
+- MarkerName            : SNP rsID or chromosome:position if rsID not available
+- Effect_allele         : Reference allele (coded allele)
+- Non_Effect_allele     : Non reference allele (non-coded allele)
+- Beta                  : Overall estimated effect size for Effect allele
+                          in the combined stage 1 and stage 2 datasets
+- SE                    : Overall standard error for effect size estimate in
+                          the combined stage 1 and stage 2 datasets
+- Pvalue                : Meta-analysis Pvalue for the combined stage 1 and
+                          stage 2

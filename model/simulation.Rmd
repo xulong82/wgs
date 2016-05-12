@@ -1,0 +1,156 @@
+---
+title: "Inspect how priors on $p/se(p)$ affect estimating a variant's effect by simulation"
+author: "Xulong Wang"
+date: "January 18, 2016"
+output: pdf_document
+---
+
+```{r, include = F}
+
+library(rstan)
+library(dplyr)
+
+```
+
+## Background
+
+Logistic model: $logit(p) \sim p * genotype$  
+Response: case and control in 0/1  
+Predictor: numerical genotypes in 0/1/2  
+
+## Model and data 
+
+```{r}
+
+rm(list = ls())
+setwd("~/GitHub/byglmm")
+
+N = 1e2
+
+set.seed(3)
+g = sample(0:2, N, replace = T)
+y = sample(0:1, N, replace = T)
+cor(g, y)
+
+mod = stan_model("./Stan/sim1.stan")
+dat = list(N = N, y = y, g = g, prior = 0)
+
+mod
+dat
+
+```
+
+## Fitting model with a flat prior: $p/se(p) = 0$
+
+```{r}
+
+fit = optimizing(mod, hessian = T, algorithm = "LBFGS", data = dat)
+se = sqrt(diag(solve(-fit$hessian)))["p"]
+(x = c(fit$par, se = se))
+
+```
+
+## Fitting model with testing priors
+
+```{r, message = F, warning = F}
+
+t1 = seq(-15, 15, 0.1)
+
+```
+
+```{r, include = F}
+
+test = sapply(t1, function(t1) {
+  cat(t1)
+  dat = within(dat, { prior = t1 })
+  fit = optimizing(mod, hessian = T, algorithm = "LBFGS", data = dat)
+  se = sqrt(diag(solve(-fit$hessian)))["p"]
+  c(fit$par, se = se)
+})
+
+```
+
+Ignoring codes for optimizing with t1.
+
+```{r}
+(test = as.data.frame(t(test))) %>% head
+```
+
+## Ouputs
+
+Absolutes of $p/se(p)$ were used for significance quantity. 
+
+Abbreviations of statistics:
+
+1. $t0$ is the estiamted $p/se(p)$ with a flat prior  
+2. $t1$ is the prior $p/se(p)$
+3. $t2$ is the estimated $p/se(p)$ with $t1$ priors
+
+```{r}
+
+t0 = x[1] / x[5]
+t2 = test$p / test$se.p
+
+```
+
+## Estimates with flat and $t1$ priors: t0 vs t2
+
+```{r}
+
+plot(t1, t2, pch = 3, col = as.numeric(abs(t2) > abs(t0)) + 1)
+abline(v = max(t1[abs(t2) < abs(t0)]))
+abline(v = min(t1[abs(t2) < abs(t0)]))
+legend("topleft", c("abs(t2) > abs(t0)", "abs(t2) < abs(t0)"), fill = c("red", "black"))
+abline(h = t0)
+
+```
+
+1. Posterior p-values improved when prior $t1$ was at the same direction of $t0$  
+2. Posterior p-values deteoriated when prior $t1$ was contradict with $t0$   
+3. Extreme prior $t1$ can dominate the data 
+
+## Prior and post: t1 vs t2
+
+Red: abs(t2) > abs(t1)
+Blk: abs(t2) < abs(t2)
+
+```{r}
+
+plot(t1, t2, col = as.numeric(abs(t2) > abs(t1)) + 1)
+abline(v = max(t1[abs(t2) > abs(t1)]), col = "red")
+abline(v = min(t1[abs(t2) > abs(t1)]), col = "red")
+legend("topleft", c("abs(t2) > abs(t1)", "abs(t2) < abs(t1)"), fill = c("red", "black"))
+abline(h = t0)
+
+# t1[abs(t2) > abs(t1)]
+
+```
+
+$abs(t2) > abs(t1)$ happened with weaker priors, where data dominated the estimations. 
+
+Took the last two graphs together, we saw situations where $abs(t2)$ was smaller than both $abs(t0)$ and $abs(t1)$, and it happend when the $t1$ was modestly contradict with $t0$.
+
+Graph below gave the estimated $se(p)$ versus prior $t1$. Red was abs(t2) > abs(t0). Blk was abs(t2) < abs(t0). Standard error was high when evidences from prior and data were comparable and contradicting.
+
+```{r}
+
+plot(t1, test$se.p, pch = 3, col = as.numeric(abs(t2) > abs(t0)) + 1)
+legend("topleft", c("abs(t2) > abs(t0)", "abs(t2) < abs(t0)"), fill = c("red", "black"))
+abline(h = x["se.p"])
+
+```
+
+```{r, include = F}
+plot(t1, test$t, pch = 3, col = as.numeric(abs(test$t) > t0) + 1)
+t1[ abs(test$t) > t0 ]
+
+# The t estimate leaned too much onto the prior
+
+plot(test$p)
+plot(test$se.p)
+abline(h = x[1])
+
+plot(t1, test$t)
+abline(0, 1)
+
+```

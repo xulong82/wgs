@@ -1,0 +1,113 @@
+---
+title: "Setting prior distributions for variant effects using IGAP results"
+author: "Xulong Wang"
+date: "December 11, 2015"
+output: pdf_document
+---
+
+## Reference: Meta-analysis of 74,046 individuals identifies 11 new susceptibility loci for Alzheimer's disease
+
+```{r}
+
+rm(list = ls())
+load("~/GitHub/byglmm/igap/igap.rdt")
+
+```
+
+## Build the reported "beta" and "se" as priors of variant effects
+
+IGAP reported for each variant (1) effect size, (2) standard error of effect size, and (3) P-value. 
+The P-value meant the probability to get more extrme values than the observed effect size from a normal distribution with expected mean zero and standard deviation the standard error. 
+
+```{r}
+
+igap = igap_s1[match(glmm$UID, igap_s1$UID), ]
+head(igap)
+
+pvalue = pnorm(abs(igap$Beta), sd = igap$SE, lower.tail = F) * 2
+plot(pvalue[1:1e3], igap$Pvalue[1:1e3], xlab = "Craft", ylab = "Report")
+
+```
+
+To integrate this inforamtion into the current GWAS for a given variant, prior distribution of variant effect size was set as normal with mean the effect size, and standard deviation the standard error.
+
+```{r}
+
+hist(igap$Beta, n = 1e3, xlab = "Effect size")
+hist(igap$SE, n = 1e3, xlab = "SE")
+
+table(igap$Beta > 1)
+table(igap$Beta < -1)
+
+head(sort(igap$SE), n = 10)
+tail(sort(igap$SE), n = 10)
+
+```
+
+How the top variants from IGAP improve the P-values of ADSP?
+
+
+### ---
+
+```{r, eval = F, include = F}
+
+library(dplyr)
+options(stringsAsFactors = F)
+
+igap_s1 = read.delim("~/GitHub/Adsp/IGAP/IGAP_stage_1.txt")
+igap_s1s2 = read.delim("~/GitHub/Adsp/IGAP/IGAP_stage_1_2_combined.txt")
+
+all(igap_s1s2$MarkerName %in% igap_s1$Ma)
+
+igap_s1$UID = with(igap_s1, paste(Chromosome, Position, sep = "-"))
+igap_s1s2$UID = with(igap_s1s2, paste(Chromosome, Position, sep = "-"))
+
+load("~/Desktop/GWAS/optimizing.rdt")
+glmm = do.call(rbind, glm.fit)
+glmm = filter(glmm, UID %in% igap_s1$UID)
+
+save(igap_s1, igap_s1s2, glmm, file = "~/GitHub/bgwas/igap/igap.rdt")
+
+setwd("/data/xwang/byglmm")
+
+load("./igap.rdt")
+igap <- igap_s1[match(glmm$UID, igap_s1$UID), ]
+igap <- igap[order(igap$Pvalue)[1:1e3], ]
+rownames(igap) <- igap$UID 
+igap$UID <- NULL
+
+geno <- lapply(1:22, function(chr) {
+  cat(chr, "\n")
+  load(paste0("./geno/chr", chr, ".rdt"))
+  geno[rownames(geno) %in% igap$UID, ]
+})
+
+geno <- do.call(rbind, geno)
+geno <- geno[rownames(igap), ]
+
+igap_t1k <- list(igap = igap, geno = geno)
+
+save(igap_t1k, file = "./igap_t1k.rdt")
+
+```
+
+## 6.76 million and 96% of IGAP variants appeared in ADSP
+
+```{r, eval = F, include = F}
+
+nrow(glmm)
+nrow(igap_s1)
+nrow(glmm) / nrow(igap_s1)
+
+```
+
+## Correlation between ADSP and IGAP was poor
+
+```{r, eval = F, include = F}
+
+igap = igap_s1[match(glmm$UID, igap_s1$UID), ]
+
+all(igap$UID == glmm$UID)
+plot(glmm$LOD[1:1e3], -log10(igap$Pvalue)[1:1e3], xlab = "GLMM LOD", ylab = "IGAP Pvalue", main = "First 1000 SNP")
+
+```
