@@ -1,111 +1,150 @@
 --
-title: "Final: ADSP WGS GWAS results"
+title: "ADSP WGS GWAS results"
 author: "Xulong Wang"
-date: "January 18, 2016"
+date: "May 3, 2016"
 output: pdf_document
 ---
 
 ```{r, eval = F}
 
-setwd("/data/xwang/glmm/noK")
+setwd("/data/xwang/adsp3/glm")
+setwd("/data/xwang/adsp3/glm2") # Binary
 
-noK <- lapply(dir(), function(x) { load(x); fit })
-noK <- lapply(dir(), function(x) { load(x); get(gsub(".rdt", "", x))})
-lrt = lapply(noK, function(x) {y = x[, "lp"]; y = y - min(y); names(y) = rownames(x); y})
+glm <- lapply(dir(), function(x) { load(x); fit })
+lrt <- lapply(glm, function(x) {y = x[, "lp"]; y = y - min(y); names(y) = rownames(x); y})
 
-noK <- as.data.frame(do.call(rbind, noK))
-noK$P <- pnorm(abs(noK$p), sd = noK$se, lower.tail = F) * 2
-noK_p0.01 <- noK[noK$P < 0.01, ]
+glm <- as.data.frame(do.call(rbind, glm))
+glm$P <- pnorm(abs(glm$p), sd = glm$se, lower.tail = F) * 2
 
-save(noK_p0.01, file = "/data/xwang/glmm/noK_p0.01.rdt")
+#---
 
-setwd("/data/xwang/Adsp/golden")
-meta <- lapply(1:22, function(x) {load(paste0("meta_chr", x, ".rdt")); meta})
-meta <- do.call(rbind, meta)
-meta <- meta[meta$MAF > 0.05, ]
+setwd("/data/xwang/adsp3/sampling")
+setwd("/data/xwang/adsp3/sampling2") # Binary
 
-noK <- noK[meta$UID, ]
+mcmc <- lapply(dir(), function(x) { load(x); fit })
+mcmc <- lapply(mcmc, function(x) { lapply(x, function(y) { sapply(y[all(! grepl("Error", y))], function(z) z["p", ]) }) })
 
-save(noK, file = "/data/xwang/glmm/noK.rdt")
+mcmc <- lapply(mcmc, function(x) do.call(cbind, x))
+mcmc <- t(do.call(cbind, mcmc[sapply(mcmc, function(x) dim(x)[1]) == 10]))
 
-setwd("/data/xwang/glmm/glmm")
-setwd("/data/xwang/glmm/glmm2")
-glmm <- lapply(dir(pattern = "*.rdt"), function(x) { load(x); fit })
-glmm <- as.data.frame(do.call(rbind, glmm))
+mcmc <- as.data.frame(mcmc)
+mcmc$P <- pnorm(abs(unlist(mcmc$mean)), sd = unlist(mcmc$sd), lower.tail = F) * 2
 
-glmm$P <- pnorm(abs(glmm$p), sd = glmm$se, lower.tail = F) * 2
-glmm_p0.01 <- glmm[glmm$P < 0.01, ]
-save(glmm_p0.01, file = "~/Dropbox/GitHub/glmm/gwas/glmm_p0.01.rdt")
+save(mcmc, file = "~/Dropbox/GitHub/wgs/gwas/sampling.rdt")
 
-save(noK_p0.01, file = "/data/xwang/glmm/noK_p0.01.rdt")
-save(glmm, file = "/data/xwang/glmm/glmm2.rdt")
+setwd("/data/xwang/adsp3/R")
+geno = lapply(1:22, function(x) { cat(x, "\n"); load(paste0("chr", x, ".rdt")); geno[rownames(geno) %in% rownames(mcmc), ] })
+geno = do.call(rbind, geno)
+save(geno, file = "~/Dropbox/GitHub/wgs/gwas/mcmc_geno.rdt")
 
-setwd("/data/xwang/glmm/glmm_prior")
-setwd("/data/xwang/glmm/glmm_prior2")
-setwd("/data/xwang/glmm/glmm_prior3")
-glmm_prior <- lapply(dir(pattern = "*.rdt"), function(x) { load(x); fit })
-glmm_prior <- as.data.frame(do.call(rbind, glmm_prior))
+#---
 
-glmm_prior$P <- pnorm(abs(glmm_prior$p), sd = glmm_prior$se, lower.tail = F) * 2
-glmm_prior_p0.01 <- glmm_prior[glmm_prior$P < 0.01, ]
-save(glmm_prior_p0.01, file = "~/Dropbox/GitHub/glmm/gwas/glmm_prior_p0.01.rdt")
-
-setwd("/data/xwang/glmm/glmm_prior_new")
-glmm_prior_new <- lapply(dir(pattern = "*.rdt"), function(x) { load(x); fit })
-glmm_prior_new <- as.data.frame(do.call(rbind, glmm_prior_new))
-
-```
-
-# Manhattan
-
-```{r}
+library(ggplot2)
+options(stringsAsFactors = F)
 
 chrlen <- read.delim("~/Dropbox/GitHub/X/genomes/human.hg19.genome", header = F)
 chrlen <- chrlen[match(paste0("chr", 1:22), chrlen$V1), ]
-chrlen <- cumsum(as.numeric(chrlen$V2)) * 1e-6  # Mb
-names(chrlen) <- c(1:22)
+chrlen <- cumsum(as.numeric(chrlen$V2)) * 1e-6; names(chrlen) <- c(1:22)
 chrmid <- diff(c(0, chrlen)) * 0.5 + c(0, chrlen[-length(chrlen)])
 
-```
+manhattan <- glm
+manhattan <- mcmc
 
-## Manhattan plot: GLM
+manhattan$CHR = as.numeric(gsub(":.*", "", rownames(manhattan)))
+manhattan$POS = as.numeric(gsub(".*:(.*)_.*", "\\1", rownames(manhattan)))
 
-```{r}
-
-library(ggplot2)
-
-fit = noK
-fit = glmm 
-fit = glmm_prior
-fit = glmm_prior_new
-
-vId = rownames(fit)
-pse = pnorm(abs(fit$p), sd = fit$se, lower.tail = F) * 2
-
-chr <- as.numeric(gsub("-.*", "", vId))
-pos <- as.numeric(gsub(".*-", "", vId)) * 1e-6  # Mb
-pos <- c(0, chrlen)[chr] + pos
-
-manhattan <- data.frame(uid = vId, chr = chr, pos = pos, p = fit$p, pse = -log10(pse))
-manhattan$eff <- rep("protective", nrow(manhattan)) 
-manhattan$eff[manhattan$p > 0] <- "risky"
-
+manhattan$POS2 <- c(0, chrlen)[manhattan$CHR] + manhattan$POS * 1e-6
 manhattan$col <- rep("o", nrow(manhattan))
-manhattan$col[chr %% 2 == 1] <- "e"
+manhattan$col[manhattan$CHR %% 2 == 1] <- "e"
 
-png("~/Dropbox/GitHub/glmm/gwas/manhattan_noK.png", width = 2e3, height = 1e3, res = 200)
-png("~/Dropbox/GitHub/glmm/gwas/manhattan_glmm2.png", width = 2e3, height = 1e3, res = 200)
-png("~/Dropbox/GitHub/glmm/gwas/manhattan_glmm_prior2.png", width = 2e3, height = 1e3, res = 200)
-png("~/Dropbox/GitHub/glmm/gwas/manhattan_glmm_prior_new.png", width = 2e3, height = 1e3, res = 200)
-png("~/Dropbox/GitHub/glmm/gwas/manhattan_glmm_prior3.png", width = 2e3, height = 1e3, res = 200)
+manhattan$P <- -log10(manhattan$P)
 
-ggplot(manhattan, aes(x = pos, y = pse, color = col)) +
-  geom_point(alpha = 0.9) + # geom_hline(yintercept = 7.3, color = "black") +
-  scale_x_continuous(breaks = chrmid, labels = names(chrlen), limits = c(0, max(pos))) +
-  scale_color_manual(values = c("dodgerblue3", "firebrick1")) + # ylim(c(0, 10)) +
+png("~/Dropbox/GitHub/Adsp/new/manhattan_mcmc.png", width = 2e3, height = 1e3, res = 200)
+png("~/Dropbox/GitHub/Adsp/new/manhattan_mcmc2.png", width = 2e3, height = 1e3, res = 200)
+
+ggplot(manhattan, aes(x = POS2, y = P, color = col)) + 
+  geom_point(alpha = 0.9) + geom_hline(yintercept = 7.3, color = "gold") +
+  scale_x_continuous(breaks = chrmid, labels = names(chrlen)) + 
+  scale_color_manual(values = c("dodgerblue3", "firebrick1")) + 
   theme_bw() + xlab("") + ylab("-log10(P)") + guides(shape = F, color = F) +
   theme(legend.key = element_blank())
 
+dev.off()
+
+```
+
+### Make a table with consequences
+
+```{r}
+
+load("~/Dropbox/GitHub/wgs/gwas/sampling.rdt")
+mcmc$UID = gsub(":", "-", gsub("_.*", "", rownames(mcmc)))
+
+load("~/Dropbox/GitHub/wgs/vep/vep.rdt")
+vep$UID = gsub(":", "-", gsub("-.*", "", vep$Location))
+
+vep[vep$Consequence == "missense_variant", ]
+unique(vep[vep$Consequence == "missense_variant", "SYMBOL"])
+
+gwas = mcmc[mcmc$P < 1e-3, ]
+gwas = mcmc[mcmc$P < 1e-4, ]
+gwas = mcmc[mcmc$P < 1e-5, ]
+gwas = mcmc[mcmc$P < 1e-6, ]
+gwas = mcmc[mcmc$P < 5e-8, ]
+
+vep1 = vep[vep$UID %in% gwas$UID, ]
+
+table(vep1$Consequence)
+vep1[vep1$Consequence == "missense_variant", ]
+
+gwas$CHR = as.numeric(gsub(":.*", "", rownames(gwas)))
+gwas$POS = as.numeric(gsub("^.*:(.*)_.*", "\\1", rownames(gwas)))
+
+grp <- list(); grp[[1]] <- gwas[1, ]; grp_idx <- 1
+for (i in 2:nrow(gwas)) {
+  chr = gwas$CHR[i] == gwas$CHR[i-1]; pos = gwas$POS[i] - gwas$POS[i-1] < 1e6
+  if ( all(chr, pos) ) grp[[grp_idx]] = rbind(grp[[grp_idx]], gwas[i, ])
+  else { grp_idx = grp_idx + 1; grp[[grp_idx]] = gwas[i, ] }
+}
+
+sapply(grp, nrow)
+gwas <- do.call(rbind, lapply(grp, function(x) cbind(PEAK = x$UID[which.min(x$P)], x)))
+
+(peaks = as.character(unique(gwas$PEAK)))
+
+table = cbind(gwas[match(vep1$UID, gwas$UID), ], vep1)
+write.xlsx(table, file = "~/Dropbox/GitHub/wgs/gwas/table(20160512).xlsx", sheetName = "P(1e-6)")
+
+```
+
+# Locus plot 
+
+```{r}
+
+source("~/Dropbox/GitHub/wgs/loci/loci200k.R")
+
+lapply(peaks, function(name) {
+  pdf(file = paste0("~/Dropbox/GitHub/wgs/loci/loci1e-6/", name, ".pdf"))
+  make.locus.200k(name, gwas)
+  dev.off()
+})
+
+#--- Significant variants by MCMC
+
+```{r}
+
+load("~/Dropbox/GitHub/Adsp/new/mdata.rdt")
+load("~/Dropbox/GitHub/Adsp/new/mcmc_geno.rdt")
+
+mcmc_geno = x[, mdata$ADSP.Sample.ID]
+y = within(mdata, { geno = geno[4, ] })
+
+table(y$AD1, y$geno)
+ggplot(y, aes(x = AD1, fill = as.factor(geno))) + geom_bar()
+
+pdf("~/Dropbox/GitHub/Adsp/new/loci.pdf", width = 5, height = 5)
+ggplot(y, aes(x = AD1, fill = as.factor(geno))) + 
+  geom_bar(position = "fill") + theme_bw() + xlab("") + ylab("Proportion") 
 dev.off()
 
 ```
@@ -135,344 +174,3 @@ glmm[uid, ]
 glmm_prior_p0.01[uid, ]
 
 ```
-
-### Consequences
-
-```{r}
-
-load("~/Desktop/GWAS/vepList.rdt"); vep = do.call(rbind, vepList)
-
-glmm = glmm_p0.01[glmm_p0.01$P < 1e-4, ]
-
-vep1 = vep[vep$X.Uploaded_variation %in% rownames(glmm), ]
-vep1[vep1$Consequence == "missense_variant", ]
-
-```
-
-x = manhattan[which(manhattan$pse > 7.3), ]
-x = x[x$chr != "19", ]
-vep_input = data.frame(chr = x$chr, start = gsub("*.-", "", x$uid))
-vep_input$end = vep_input$start
-vep_input$allele = "A/T"
-vep_input$strand = "+"
-
-write.table(vep_input, file = "~/Dropbox/GitHub/glmm/vep_input.txt", quote = F, sep = "\t", row.names = F)
-
-vep = read.table("./gwas/vep.txt", header = T)
-(genes = unique(vep$SYMBOL))
-
-```
-
-
-## Manhattan plot of prior
-
-```{r}
-
-load("./igap/igap.rdt")
-prior <- igap_s1[match(vId, igap_s1$UID), ]
-manhattan$prior = -log10(prior$Pvalue)
-
-```
-
-## Post-Pvalue w/o priors
-
-```{r}
-
-load("./gwas/c_wo_prior.rdt") # wo APOE
-p_wo2 = pchisq(z[manhattan$uid] * 2, df = 1, lower.tail = F)
-p_wo2 = p_wo2[names(p_wo2) %in% rownames(wo_prior)]
-
-load("./gwas/gwas_no_prior.rdt") # with APOE
-p_wo = pnorm(abs(wo_prior$p), sd = wo_prior$se, lower.tail = F) * 2
-
-plot(p_wo, p_wo2)
-
-manhattan$p_wo = -log10(p_wo)
-
-```
-
-## Zoom into the APOE locus. Prior on APOE locus was too strong to drop below the threshold
-
-```{r}
-
-load("./Apoe/apoe.rdt")
-
-loc_apoe <- manhattan[manhattan$uid %in% rownames(apoe), ]
-qplot(x = pos, y = p_se, data = loc_apoe, geom = "point", color = eff)
-
-```
-
-## The top adsp variants. Top adsp variants did not have high priors, so the posterior did not improve much
-
-```{r}
-
-load("../Adsp/data/glmList.rdt"); adsp <- glmList$gwas
-
-adsp <- adsp[adsp$LOD > 15, ]
-adsp2 <- manhattan[match(adsp$UID, manhattan$uid), ]
-adsp2 <- adsp2[!is.na(adsp2$p_se), ]
-
-plot(adsp2$p_se, adsp2$prior, ylim = c(0, 5))
-points(adsp2$p_se, adsp2$p_wo, col = "red")
-abline(0, 1)
-
-```
-
-## Significant posterior variants were driven by extreme priors
-
-```{r}
-
-signif <- manhattan[manhattan$p_se > 7.3, ]
-(signif <- signif[order(signif$prior, decreasing = T), ]) %>% head
-
-plot(signif$p_se, signif$prior, ylim = c(0, 150))
-points(signif$p_se, signif$p_wo, col = "red")
-
-summary(signif$p_wo)
-summary(signif$prior)
-
-```
-
-## Significant priors
-
-```{r}
-
-t2 = manhattan[manhattan$prior > 7.3, ]
-plot(t2$prior, t2$p_se)
-plot(t2$p_wo, t2$p_se)
-abline(h = 7.3, col = "red")
-abline(v = 7.3, col = "red")
-abline(0, 1, col = "red")
-
-```
-
-
-```{r}
-
-t3 = manhattan[manhattan$p_wo > manhattan$prior, ]
-t3 = t3[t3$p_wo > 2, ]
-head(t3)
-
-t5 = manhattan[manhattan$p_se > manhattan$prior, ]
-t5 = t5[t5$p_se > t5$p_wo, ]
-t5 = t5[t5$p_se > 2, ]
-
-load("./data/hg19.rdt")
-
-load("./gwas/gwas_c.rdt")
-
-load("./gwas/c_wo_prior.rdt")
-wo_prior <- z[rownames(fit)]
-wo_prior <- z[rownames(w_prior)]
-
-vId = names(wo_prior)
-pval = pchisq(wo_prior * 2, df = 1, lower.tail = F)
-
-table(is.na(w_prior$se))
-
-x1 = w_prior[is.na(w_prior$se), ]
-x2 = w_prior[! is.na(w_prior$se), ]
-
-y1 = igap_s1[match(rownames(x1), igap_s1$UID), ]
-y2 = igap_s1[match(rownames(x2), igap_s1$UID), ]
-
-p_y1 = pnorm(abs(y1$Beta), sd = y1$SE, lower.tail = F) * 2
-p_y2 = pnorm(abs(y2$Beta), sd = y2$SE, lower.tail = F) * 2
-
-p_x2 = pnorm(abs(x2$p), sd = abs(x2$se), lower.tail = F) * 2
-
-# manhattan
-
-vId <- rownames(x2)
-
-chr <- as.numeric(gsub("-.*", "", vId))
-pos <- as.numeric(gsub(".*-", "", vId)) * 1e-6  # Mb
-pos <- c(0, chrlen)[chr] + pos
-
-manhattan <- data.frame(chr = chr, pos = pos, uid = vId, p = x2$p, prior = -log10(p_y2), post = -log10(p_x2))
-
-# QQ: post pvalue
-
-png(file = "./gwas/prior_post.png", width = 1e3, height = 1e3, res = 200)
-png(file = "./gwas/post_w_wo.png", width = 1e3, height = 1e3, res = 200)
-
-plot(manhattan$prior, manhattan$post, main = "Prior and post P-values", xlab = "Prior", ylab = "Post")
-plot(manhattan$no_prior, manhattan$post, main = "Post P-values w and w/o priors", xlab = "Post(w/o)", ylab = "Post(w)", xlim = c(0, 18), ylim = c(0, 18))
-
-abline(h = 7.3, col = "red")
-abline(v = 7.3, col = "red")
-abline(0, 1, col = "red")
-
-dev.off()
-
-chr0 = filter(manhattan, chr == 14)
-plot(chr0$pos, chr0$post, cex = .3, xlab = "chr14", ylab = "-log10(Pvalue)", main = "post")
-plot(chr0$pos, chr0$prior, cex = .3, xlab = "chr14", ylab = "-log10(Pvalue)", main = "prior")
-abline(h = 7.3, col = "red")
-
-chr0 = filter(manhattan, chr == 19)
-plot(chr0$pos, chr0$post, cex = .3, xlab = "chr14", ylab = "-log10(Pvalue)", main = "post")
-plot(chr0$pos, chr0$prior, cex = .3, xlab = "chr14", ylab = "-log10(Pvalue)", main = "prior")
-abline(h = 7.3, col = "red")
-
-# QQ plot with the exclusion of the APOE locus
-
-max = manhattan$pos[which.max(manhattan$prior)]
-
-qq0 = filter(manhattan, chr == 19 & pos < max + 1 & pos > max - 1)
-qq1 = filter(manhattan, ! (chr == 19 & pos < max + 1 & pos > max - 1))
-
-plot(qq0$pos, qq0$prior, xlab = "Mbp", ylab = "-log10(Pvalue)", main = "APOE")
-plot(qq0$prior, qq0$post, xlab = "prior", ylab = "post", main = "APOE")
-abline(0, 1, col = "red")
-
-head(qq0[order(qq0$post, decreasing = TRUE), ], n = 10)
-head(qq0[order(qq0$prior, decreasing = TRUE), ], n = 10)
-
-png(file = "./gwas/qq.png", width = 2e3, height = 1e3, res = 200)
-
-par(mfrow = c(1, 2))
-
-plot(sort(-log10(runif(nrow(qq1)))), sort(qq1$prior), xlab = "uniform", ylab = "-log10(Pvalue)", main = "prior")
-abline(0, 1, col = "red")
-
-plot(sort(-log10(runif(nrow(qq1)))), sort(qq1$post), xlab = "uniform", ylab = "-log10(Pvalue)", main = "post")
-abline(0, 1, col = "red")
-
-dev.off()
-
-# Scatter: prior and post p-value with the exclusion of APOE locus
-
-png(file = "./gwas/prior_post.png", width = 2e3, height = 2e3, res = 200)
-
-plot(qq1$prior, qq1$post, main = "Prior and post P-values", xlab = "Prior", ylab = "Post")
-
-abline(h = 7.3, col = "red")
-abline(v = 7.3, col = "red")
-abline(0, 1, col = "red")
-
-dev.off()
-
-# New loci?
-# Alternative peak variant?
-# Remove existing loci?
-
-source("./R/peaks.R")
-(peaks = peak.detection(manhattan$pos * 1e6, manhattan$post, 7.3))
-
-chr <- 19
-pos <- pos[ peaks[2] ]
-min.pos <- pos - 250e3
-max.pos <- pos + 250e3 
-
-hg19 = filter(hg19, CHR == chr, POS > min.pos, POS < max.pos)
-hg19 = hg19[order(hg19$POS), ]
-
-hg19 = hg19[hg19$NAME != "APOC4-APOC2", ]
-
-null = apoe$opt$null 
-full = apoe$opt$full
-
-all(rownames(null) == full$UID)
-full$LOD2 = null$LOD
-full$pVar = null$"beta[3]"
-
-pos <- pos * 1e-3
-min.pos <- min.pos * 1e-3 
-max.pos <- max.pos * 1e-3
-
-full$POS <- full$POS * 1e-3
-
-hg19$POS <- hg19$POS * 1e-3
-hg19$START <- hg19$START * 1e-3
-hg19$END <- hg19$END * 1e-3
-
-hit <- full[full$LOD2 == max(full$LOD2), ]
-
-close.screen(all.screens = TRUE)
-
-split.screen(rbind(c(0.1, 0.9, 0.1, 0.3), c(0.1, 0.9, 0.3, 0.6), c(0.1, 0.9, 0.6, 0.9)))
-
-screen(1)
-par(mar = c(0, 0, 0, 0))
-
-plot(x = full$POS, y = rep(0, length(full$POS)), ylim = c(-12, 0), type = "n", axes = F)
-# box()
-
-for (i in 1:nrow(hg19)) {  # plot the genes
-  adj.arrow <- -(i %% 5 + 1) * 2 
-  adj.text <- -(i %% 5 + 1) * 2 - 1 
-  
-  text(hg19[i, ]$POS, adj.text, labels = hg19[i, ]$NAME, cex = .7, pos = 1, offset = 0, font = 2)
-  arrows(max(hg19[i, ]$START, min.pos), adj.arrow, min(hg19[i, ]$END, max.pos), adj.arrow, 
-         length = 0.05, lwd = 2, code = 2, lty = "solid", col = "darkgreen")
-}
-
-axis(1, at = c(min.pos, pos, max.pos), labels = round(c(min.pos, pos, max.pos)), las = 1, lwd = 2) 
-mtext(paste("Chromosome", chr, "Position (Kb)", sep=" "), side = 1, line = 2.5, font = 2)
-
-screen(2)
-par(mar = c(0, 0, 0, 0))
-
-mycol = rep("chartreuse3", nrow(full))
-mycol[full$pVar > 0] = "firebrick1"
-
-plot(x = full$POS, y = null$LOD, type = "p", pch = 23, cex = 1.0, bg = mycol,
-     main = "", xlab = "", ylab = "", ylim = c(0, 25), axes = F)
-
-axis(2, at = c(0, 10, 20), labels = c(0, 10, 20), las = 1, lwd = 2) 
-# mtext("LOD", side = 2, at = 10, line = 2, font = 2)
-
-hit = full[full$ID %in% c("rs429358", "rs7412"), ]
-points(hit$POS, hit$LOD2, pch = 5, cex = 2.0, lwd = 2.0, col = "blue")
-# points(hit$POS, hit$LOD2, pch = 5, cex = 2.0, lwd = 2.0, col = "blue")
-# text(hit$POS, hit$LOD2, labels = hit$ID, pos = 3, offset = 1, font = 2)
-
-lines(c(min.pos, max.pos), c(15, 15), lty = "dotted", lwd = 1, col = "blue")
-
-screen(3)
-par(mar = c(0, 0, 0, 0))
-
-mycol = rep("chartreuse3", nrow(full))
-mycol[full$"beta[5]" > 0] = "firebrick1"
-
-plot(x = full$POS, y = full$LOD, type = "p", pch = 23, cex = 1.0, bg = mycol, 
-     main = "", xlab = "", ylab = "", ylim = c(0, 25), axes = F)
-
-hit = full[full$ID %in% c("rs429358", "rs7412"), ]
-points(hit$POS, hit$LOD, pch = 5, cex = 2.0, lwd = 2.0, col = "blue")
-
-lines(c(min.pos, max.pos), c(15, 15), lty = "dotted", lwd = 1, col = "blue")
-
-axis(2, at = c(0, 10, 20), labels = c(0, 10, 20), las = 1, lwd = 2) 
-# mtext("LOD", side = 2, at = 10, line = 2, font = 2)
-
-close.screen(all.screens = TRUE)
-
-group <- list()
-group[[1]] <- gwas_lod[1, ]
-group_idx <- 1
-
-for (i in 2:nrow(gwas_lod)) {
-  chromosome = gwas_lod$CHR[i] == gwas_lod$CHR[i-1]
-  position = gwas_lod$POS[i] - gwas_lod$POS[i-1] < 1e6
-  other = abs(gwas_lod$pSnp[i] - gwas_lod$pSnp[i-1]) < 1
-  
-  if ( all(chromosome, position, other) )
-    group[[group_idx]] = rbind(group[[group_idx]], gwas_lod[i, ])
-  else {
-    group_idx = group_idx + 1
-    group[[group_idx]] = gwas_lod[i, ]
-  }
-}
-
-
-```
-
-You can also embed plots, for example:
-
-```{r, echo=FALSE}
-plot(cars)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

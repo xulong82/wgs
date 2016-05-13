@@ -1,0 +1,81 @@
+---
+title: "The APOE locus"
+author: "Xulong Wang"
+date: "December 31, 2015"
+output: pdf_document
+---
+
+In this short note, I demonstrated how the priors affected bayes-glmm's posterior estimations of variant effects by inspecting the APOE locus of ADSP dataset. The priors came from IGAP's meta-analysis. APOE genotypes were removed from the covariate matrix of the GLMM.
+
+```{r}
+
+library(dplyr)
+
+rm(list = ls())
+setwd("~/GitHub/byglmm")
+load("./Apoe/md.rdt")
+
+```
+
+## This document needs to be revised.
+
+```{r}
+load("../Adsp/Manu/model.rdt")
+
+z = mdata[mdata$APOE == 33, ]
+table(z$"19-45411941", z$"19-45412079")
+
+x = model$sampling
+y = model$optimizing$par
+
+uy = y[paste0("u[", 1:576, "]")]
+dat$u = uy
+
+p_igap_prior = pnorm(abs(p1[, "Beta"]), sd = p1[, "SE"], lower.tail = F) * 2
+p_adsp_no = pnorm(abs(fit_no$p), sd = fit_no$se_p, lower.tail = F) * 2
+p_adsp_prior = pnorm(abs(fit_prior$p), sd = fit_prior$se_p, lower.tail = F) * 2
+
+plot(pos, -log10(p_igap_prior), main = "IGAP", xlab = "", ylab = "-log10(Pvalue)")
+plot(pos, -log10(p_adsp_prior), main = "ADSP with prior", xlab = "", ylab = "-log10(Pvalue)")
+plot(pos, -log10(p_adsp_no), main = "ADSP w/o prior", xlab = "", ylab = "-log10(Pvalue)")
+
+```
+
+As a change, p-value of the variant's effect size was taken as the significance metrice, as opposed to the likelihood ratio test (LRT) that we used before. Do the two statistics agree with each other?
+
+```{r, echo=FALSE}
+
+pos <- gsub("*-", "", rownames(p1)) %>% as.numeric
+
+LRT = 2 * (fit_no$lp - min(fit_no$lp))
+p_adsp_no = pnorm(abs(fit_no$p), sd = fit_no$se_p, lower.tail = F) * 2
+
+plot(pos, LRT, main = "ADSP w/o prior", xlab = "", ylab = "LRT")
+plot(pos, -log10(p_adsp_no), main = "ADSP w/o prior", xlab = "", ylab = "-log10(Pvalue)")
+
+cor(LRT, -log10(p_adsp_no))
+
+```
+
+The two statistics agreed with each other well, with pearson's 0.99. Noticed that the APOE locus did not pass the genome-wide significance threshold 5e-8, which equaled 7.3 in -log10(Pvalue) unit. How would this result change by including the IGAP results into the prior?
+
+IGAP's results on the APOE locus by P-values.
+
+```{r}
+
+p_igap_prior = pnorm(abs(p1[, "Beta"]), sd = p1[, "SE"], lower.tail = F) * 2
+plot(pos, -log10(p_igap_prior), main = "IGAP", xlab = "", ylab = "-log10(Pvalue)")
+
+```
+
+ADSP results by taking IGAP results into the prior.
+
+```{r}
+
+p_adsp_prior = pnorm(abs(fit_prior$p), sd = fit_prior$se_p, lower.tail = F) * 2
+plot(pos, -log10(p_adsp_prior), main = "ADSP with prior", xlab = "", ylab = "-log10(Pvalue)")
+
+```
+
+APOE locus became signiciant with the help of the IGAP results.
+
