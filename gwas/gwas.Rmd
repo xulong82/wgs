@@ -20,6 +20,7 @@ glm$P <- pnorm(abs(glm$p), sd = glm$se, lower.tail = F) * 2
 
 setwd("/data/xwang/adsp3/sampling")
 setwd("/data/xwang/adsp3/sampling2") # Binary
+setwd("/data/xwang/adsp3/sampling_prior") # Prior
 
 mcmc <- lapply(dir(), function(x) { load(x); fit })
 mcmc <- lapply(mcmc, function(x) { lapply(x, function(y) { sapply(y[all(! grepl("Error", y))], function(z) z["p", ]) }) })
@@ -31,6 +32,7 @@ mcmc <- as.data.frame(mcmc)
 mcmc$P <- pnorm(abs(unlist(mcmc$mean)), sd = unlist(mcmc$sd), lower.tail = F) * 2
 
 save(mcmc, file = "~/Dropbox/GitHub/wgs/gwas/sampling.rdt")
+save(mcmc, file = "~/Dropbox/GitHub/wgs/gwas/sampling_prior.rdt")
 
 setwd("/data/xwang/adsp3/R")
 geno = lapply(1:22, function(x) { cat(x, "\n"); load(paste0("chr", x, ".rdt")); geno[rownames(geno) %in% rownames(mcmc), ] })
@@ -59,12 +61,13 @@ manhattan$col[manhattan$CHR %% 2 == 1] <- "e"
 
 manhattan$P <- -log10(manhattan$P)
 
-png("~/Dropbox/GitHub/Adsp/new/manhattan_mcmc.png", width = 2e3, height = 1e3, res = 200)
-png("~/Dropbox/GitHub/Adsp/new/manhattan_mcmc2.png", width = 2e3, height = 1e3, res = 200)
+png("~/Dropbox/GitHub/wgs/gwas/manhattan_glm.png", width = 1e3, height = .5e3, res = 100)
+png("~/Dropbox/GitHub/wgs/gwas/manhattan_mcmc.png", width = 1e3, height = .5e3, res = 100)
+png("~/Dropbox/GitHub/wgs/gwas/manhattan_mcmc_prior.png", width = 1e3, height = .5e3, res = 100)
 
 ggplot(manhattan, aes(x = POS2, y = P, color = col)) + 
-  geom_point(alpha = 0.9) + geom_hline(yintercept = 7.3, color = "gold") +
-  scale_x_continuous(breaks = chrmid, labels = names(chrlen)) + 
+  geom_point(alpha = 0.9) + # geom_hline(yintercept = 7.3, color = "gold") +
+  scale_x_continuous(breaks = chrmid, labels = names(chrlen)) + ylim(c(0, 9)) + 
   scale_color_manual(values = c("dodgerblue3", "firebrick1")) + 
   theme_bw() + xlab("") + ylab("-log10(P)") + guides(shape = F, color = F) +
   theme(legend.key = element_blank())
@@ -80,7 +83,7 @@ dev.off()
 load("~/Dropbox/GitHub/wgs/gwas/sampling.rdt")
 mcmc$UID = gsub(":", "-", gsub("_.*", "", rownames(mcmc)))
 
-load("~/Dropbox/GitHub/wgs/vep/vep.rdt")
+load("~/Dropbox/GitHub/wgs/glm/vep.rdt")
 vep$UID = gsub(":", "-", gsub("-.*", "", vep$Location))
 
 vep[vep$Consequence == "missense_variant", ]
@@ -94,7 +97,8 @@ gwas = mcmc[mcmc$P < 5e-8, ]
 
 vep1 = vep[vep$UID %in% gwas$UID, ]
 
-table(vep1$Consequence)
+sort(table(vep1$Consequence))
+sort(table(vep1$Consequence) / nrow(vep1))
 vep1[vep1$Consequence == "missense_variant", ]
 
 gwas$CHR = as.numeric(gsub(":.*", "", rownames(gwas)))
@@ -115,6 +119,28 @@ gwas <- do.call(rbind, lapply(grp, function(x) cbind(PEAK = x$UID[which.min(x$P)
 table = cbind(gwas[match(vep1$UID, gwas$UID), ], vep1)
 write.xlsx(table, file = "~/Dropbox/GitHub/wgs/gwas/table(20160512).xlsx", sheetName = "P(1e-6)")
 
+intron = vep1[grep("intron", vep1$Consequence), ]
+(intron_gene = unique(intron$SYMBOL))
+
+```
+
+# Manuscript Table 1
+
+```{r}
+
+load("~/Dropbox/GitHub/wgs/gwas/sampling.rdt")
+table1 = mcmc[mcmc$P < 1e-6, ]
+ID = rownames(table1)
+table1 = as.data.frame(apply(table1, 2, as.numeric))
+rownames(table1) = ID
+table1 = table1[order(table1$P), ]
+load("/data/xwang/adsp3/meta.rdt")
+
+meta$ID = as.character(meta$ID)
+table1 = cbind(meta[match(rownames(table1), meta$ID), ], table1)
+write.xlsx(table1, file = "/home/xwang/Dropbox/GitHub/wgs/Manu/Table1.xlsx", sheetName = "P(1e-6)")
+save(table1, file = "/home/xwang/Dropbox/GitHub/wgs/Manu/table1.rdt")
+
 ```
 
 # Locus plot 
@@ -128,6 +154,8 @@ lapply(peaks, function(name) {
   make.locus.200k(name, gwas)
   dev.off()
 })
+
+```
 
 #--- Significant variants by MCMC
 

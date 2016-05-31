@@ -1,0 +1,145 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb} 
+\usepackage{geometry} 
+\geometry{a4paper}
+
+\title{A Bayesian Framework for Generalized Linear Mixed Models in Genome-Wide Association Studies}
+\author{Xulong Wang, Gregory W. Carter}
+
+\begin{document}
+
+\maketitle
+
+\section*{Methods}
+\subsection*{Overview of the statistical models}
+
+\paragraph{}{
+Bayesian models are defined by two parts: (1) a likelihood function that describes the data-generating process, and (2) the prior distributions of model parameters. Bayes-GLMM took logistic regression model (LR) and ordered logistic regression model (OLR) as likelihoods functions of binary and categorical traits. In LR, the 0/1 response variable $Y_i$ followed a binomial distribution with a scalar parameter $\pi$ representing the probability that $Y_i$ equaled 1. $\pi$ was further transformed by the logit function and modeled in the linear model scheme. 
+}
+
+\begin{align}
+   \pi & = P(Y_i = 1) \\
+   logit(\pi) & = \bold{X} \beta + g \beta_0 + u \\
+   %log(\frac{\pi}{1-\pi}) & = \bold{X} \beta + g \beta_0 + u \\
+    u & \sim mvN(0, \sigma K) \\
+   \beta & \sim N(0, 1) \\
+   \beta_0 & \sim N( t * \sigma_0, \sigma_0) \\
+   t & \sim N(prior, 1) \\
+   \sigma_0 & \sim inv\_gamma(2, 1) \\ 
+   \sigma & \sim inv\_gamma(2, 1)
+\end{align}
+
+\paragraph{}{
+In the above equations, $X$ was a $n$ by $m$ covariate matrix with $n$ the sample size and $m$ the number of conditional variables. $\beta$ was the corresponding parameter vector in length $m$. $g$ was the numerical genotype of a variant with 0 to 2 representing homozygous reference alleletype, heterozygous, and homozygous alternative alleletype. $\beta_0$ was the variant's effect size. Prior distribution of $\beta_0$ followed $N(t * \sigma_0, \sigma_0)$, with $t$ represented prior information of the given association. $t$ was modeled by a normal distribution with expected mean the standardized effect size $prior$ and unit deviation. $prior$ was defined by the variant's prior effect size divided by its standard error. A standard normal, $N(0, 1)$, was used for $\beta_0$ of variants with no known effects. Further, $\beta$ followed $N(0, 1)$ in prior.
+}
+
+\paragraph{}{We found this method of using priors appealing in three aspects: (1) it standardized the different interpretations of effect size from different statistical models; (2) it took information on both effect size and its standard error; (3) it softened the strong weight of priors from big sample.
+}
+
+\paragraph{}{
+To model the sample relatedness, $u$ was included as a random term that followed a multivariate normal distribution, $mvN(0, \sigma K)$ in prior, with expected mean vector 0 and covariance matrix $\sigma K$. $\sigma$ was the variance component. $K$ was the kinship matrix of the samples. $mvN(0, K)$ was parameterized by the Cholesky factoring of $K$ and $n$ independent standard normal distributions.
+}
+
+\begin{eqnarray}
+   u & = &  L * z \\
+   L & = & Chol(K) \\
+   z & \sim & mvN(0, \sigma I)
+\end{eqnarray}
+
+\paragraph{}{
+In OLR, the categorical response variable $Y_i$ with $J$ levels followed a multinomial distribution with a vector of parameters $\bold{\pi}$, where $\pi_{ij}$ represents the probability that the $i$th observation falls in response category $j$. Cumulative distribution of $\pi$ was logit-transformed and modeled in the linear model scheme.
+}
+
+\begin{eqnarray}
+  P(Y_i \leq j) & = & \pi_{i1} + ... + \pi_{ij} \\
+  %log(\frac{P(Y_i \leq j) }{1 - P(Y_i \leq j) }) & = & \theta_j - \bold{X} \beta + u \quad j = 1,..., J-1
+  logit(P(Y_i \leq j) ) & = & \theta_j - \bold{X} \beta - g \beta_0 + u \quad j = 1,..., J-1 \\
+  \theta & = & 10 * cumsum(\theta_0) \\
+  \theta_0 & \sim & dirichlet(1)
+\end{eqnarray}
+
+\paragraph{}{
+${\theta_j}$ modeled the distances between the categories by providing each category an unique intercept. $\theta$ was defined as ten times the cumulative sum of a multivariate variable $\theta_0$, where $\theta_0$ followed a $J-1$ dimension Dirichlet distribution in prior. 
+}
+
+\subsection*{Model estimations}
+
+\paragraph{}{
+Our models were built under Stan, which provides a flexible and efficient programming environment for statistical modeling. Inherited from Stan, Bayes-GLMM supported two methods for parameter estimation, L-BFGS maximal likelihood estimation (MLE) and Hamilton Markov chain Monte Carlo (HMC) sampling. MLE method made a point estimation for each parameter that maximized the joint posterior of model parameters, whereas MCMC sampling method captured a full posterior distribution for each parameter by iterative sampling. Significance of the estimated effect size $\beta_0$ can be accessed by combing $\beta_0$ and its standard error $SE(\beta_0)$. Standard errors of MLE were computed as the inverse of the square root of the diagonal elements of the observed Fisher Information matrix (Pawitan, 2001). In MCMC sampling, $SE(\beta_0)$ was computed directly from the samples. A standardized $z$ value was computed as $\beta_0 / SE(\beta_0)$, which led to a P-value that quantified the probability of obtaining the $\beta_0$ by chance.
+}
+
+% In All Likelihood, by Yudi Pawitan
+% R: se = sqrt(diag(solve(-fit$hessian)))
+
+\begin{eqnarray}
+SE(\hat{\theta}_{ML}) & = & \frac{1}{\sqrt{I(\hat{\theta}_{ML})}}) \\
+I(\theta) & = & - \frac{\partial^2}{\partial \theta_i \partial \theta_j} l(\theta) \quad 1 \leq i,j \leq p
+\end{eqnarray}
+
+\paragraph{}{
+$\hat{\theta}_{ML}$ was MLE of model parameters. $I(\theta)$ was the Fisher Information matrix. $p$ was the number of parameters.
+}
+
+\paragraph{}{
+In genetic association studies, comparing the two nested null and full models was a widely used method to estimate the significance of a variant. The full models were the same as described above whereas the null models ignored the variant, $g$, as a linear predictor. In MLE, the null to full model improvements was quantified by LRT, which equals two times the log likelihood difference between the full and null models using the MLE estimation of model parameters.
+}
+
+\begin{eqnarray}
+LRT & = & -2 \cdot (log(P(data | \theta^n_p)) - log(P(data | \theta^f_p)))
+% WAIC & = &  -2 \cdot (\sum_{i=1}^{n} log(\frac{1}{S} \sum_{s = 1}^{S} p(y_i | \theta^s)))
+\end{eqnarray}
+
+\paragraph{}{
+$\theta^n_p$ and $\theta^f_p$ were the MLE of the parameter spaces under the null and full models, respectively. 
+% $S$ is the sampling iteration number. $\theta^s$ is the actual sample of model parameters in the $s$-th sampling iteration. 
+}
+
+%\paragraph{}{
+%To estimate the significance of LRT in bayes-glmm, a P-value was computed by approximating LRT to a $\chi^2$ distribution with degree of freedom 1. Further, standard error of WAIC was computed by a method proposed by Vehtari et al. z-score and the corresponding P-value was quantified to describe the significance of WAIC. 
+%}
+
+%\paragraph{}{
+%To control the false discovery rate, P-values of relevant statistics, such as $\beta_0$, LRT, and WAIC, could be corrected by Bonferonni or FDR in bayes-glmm. Apart from the P-values and corrected P-values by parametric approximations, bayes-gwas also provides a permutation strategy to determine the significance thresholds of these statistics. Taking LRT for example, the permutation test followed: (1) Randomly shuffle the sample genotypes; (2) Test the association with the shuffled genotypes; (3) record the maximal LRT; (4) repeat 1-3 $N$ times. The N-sample maximal LRT was fitted by a extreme value distribution which stand for null distribution of the maximal LRT. Random terms of the models were dropped in the permutation test because they are irrelevant of the permutation results (Cheng and Palmer, 2013). 
+%}
+
+%\paragraph{}{Given the approximation nature of the P-values, we recommend the permutation strategy when computing resource is without concern. Further, while P-values are informative in searching for the causal variants, other variant characteristics such as effect sizes, MAF, evolutionary conservation, and genetic consequences are equally important and should be thoroughly considered in prioritizing follow up variants. 
+%}
+
+\subsection*{Kinship matrix}
+
+\paragraph{}{
+We used $u$ as a random term to account for the sample relatedness. $u$ follows $mvNormal(0, \sigma K)$, where K was the kinship matrix of the samples. For each $K$ entry, genotype-based relatedness for the sample pair, or IBS coefficient, was computed using the full spectrum of genomic variants in the ADSP samples.
+}
+
+\begin{equation}
+k_{i, j}  = \frac{1}{M} \sum_{m = 1}^M ({g_{m, i}  \cdot g_{m, j} + (1 - g_{m, i}) \cdot (1 - g_{m, j}))}
+\end{equation}
+
+\paragraph{}{
+$k_{i, j}$ is the IBS relatedness between sample $i$ and $j$. $M$ is the variant number. $g_{m, i}$ and $g_{m, j}$ is the genotype of variant $m$ in sample $i$ and $j$, respectively.
+}
+
+\paragraph{}{
+To avoid over-correction, the kinship matrices were computed by the taking-one-off strategy, in that for any given variant of one chromosome, the corresponding kinship matrix was computed by taking off all variants of the given chromosome. PLINK was used for fast kinship estimation on the massive genotype data.
+}
+
+\subsection*{Linear mixed models}
+
+\paragraph{}{
+To compare the performances of our method to that of a LMM when response variables are categorical, a LMM was constructed as follow: 
+}
+
+\begin{eqnarray}
+   y_i & = &  \bold{X}_i \beta + u + e \\
+   u & \sim & mvN(0, \delta^2_g K) \\
+   e & \sim & N(0, \delta^2_e I)
+\end{eqnarray}
+
+\paragraph{}{
+$y_i$ was the numerical transformation of the AD categories: no/0, possible/0.25, probable/0.5, definite/1. $X$ was the covariate matrix including age and sex. $u$ was the random term. $e$ was the model residual. The LMM model was estimated with QTLRel in R (Cheng et al., 2011).
+}
+
+\subsection*{Code availability}
+
+
+\end{document}

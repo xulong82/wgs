@@ -1,5 +1,5 @@
 ---
-title: "Inspect how priors on $p/se(p)$ affect estimating a variant's effect by simulation"
+title: "How priors on $p/se(p)$ affect a variant's posterior effect?"
 author: "Xulong Wang"
 date: "January 18, 2016"
 output: pdf_document
@@ -14,8 +14,8 @@ library(dplyr)
 
 ## Background
 
-Logistic model: $logit(p) \sim p * genotype$  
-Response: case and control in 0/1  
+Model: Logistic regression: $logit(p) \sim p * genotype$  
+Response: case and control (0/1)  
 Predictor: numerical genotypes in 0/1/2  
 
 ## Model and data 
@@ -23,7 +23,7 @@ Predictor: numerical genotypes in 0/1/2
 ```{r}
 
 rm(list = ls())
-setwd("~/GitHub/byglmm")
+setwd("~/Dropbox/GitHub/wgs/model")
 
 N = 1e2
 
@@ -32,11 +32,8 @@ g = sample(0:2, N, replace = T)
 y = sample(0:1, N, replace = T)
 cor(g, y)
 
-mod = stan_model("./Stan/sim1.stan")
-dat = list(N = N, y = y, g = g, prior = 0)
-
-mod
-dat
+(mod = stan_model("./simulation.stan"))
+(dat = list(N = N, y = y, g = g, prior = 0))
 
 ```
 
@@ -68,12 +65,10 @@ test = sapply(t1, function(t1) {
   c(fit$par, se = se)
 })
 
-```
+test$pvalue = pnorm(abs(test$p), sd = test$se.p, lower.tail = F) * 2
 
-Ignoring codes for optimizing with t1.
-
-```{r}
 (test = as.data.frame(t(test))) %>% head
+
 ```
 
 ## Ouputs
@@ -88,8 +83,9 @@ Abbreviations of statistics:
 
 ```{r}
 
-t0 = x[1] / x[5]
+t0 = x[2] / x[6]
 t2 = test$p / test$se.p
+p1 = pnorm(abs(x["p"]), sd = x["se.p"], lower.tail = F) * 2
 
 ```
 
@@ -97,11 +93,23 @@ t2 = test$p / test$se.p
 
 ```{r}
 
-plot(t1, t2, pch = 3, col = as.numeric(abs(t2) > abs(t0)) + 1)
-abline(v = max(t1[abs(t2) < abs(t0)]))
-abline(v = min(t1[abs(t2) < abs(t0)]))
-legend("topleft", c("abs(t2) > abs(t0)", "abs(t2) < abs(t0)"), fill = c("red", "black"))
+pdf(file = "simulation.pdf", height = 4, width = 6)
+
+plot(t1, test$p, xlab = "Prior Standardized Effect Size", ylab = "Post Effect Size")
+abline(h = x["p"])
+
+plot(t1, test$se.p, xlab = "Prior Standardized Effect Size", ylab = "Post Standard Error of Effect Size")
+abline(h = x["se.p"])
+
+plot(t1, t2, xlab = "Prior Standardized Effect Size", ylab = "Post Standardized Effect Size")
 abline(h = t0)
+
+plot(t1, test$pvalue, xlab = "Prior Standardized Effect Size", ylab = "Post P-value",
+     col = as.numeric(test$pvalue < p1) + 2)
+legend("topleft", c("Decreased Post P-value", "Increased Post P-value"), fill = c("green", "red"))
+abline(h = p1)
+
+dev.off()
 
 ```
 
@@ -116,7 +124,7 @@ Blk: abs(t2) < abs(t2)
 
 ```{r}
 
-plot(t1, t2, col = as.numeric(abs(t2) > abs(t1)) + 1)
+plot(t1, t2, col = as.numeric(abs(t2) < abs(t1)) + 2)
 abline(v = max(t1[abs(t2) > abs(t1)]), col = "red")
 abline(v = min(t1[abs(t2) > abs(t1)]), col = "red")
 legend("topleft", c("abs(t2) > abs(t1)", "abs(t2) < abs(t1)"), fill = c("red", "black"))
@@ -140,11 +148,12 @@ abline(h = x["se.p"])
 
 ```
 
+# The t estimate leaned too much onto the prior
+
 ```{r, include = F}
+
 plot(t1, test$t, pch = 3, col = as.numeric(abs(test$t) > t0) + 1)
 t1[ abs(test$t) > t0 ]
-
-# The t estimate leaned too much onto the prior
 
 plot(test$p)
 plot(test$se.p)

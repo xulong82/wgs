@@ -12,7 +12,7 @@ library(gwascat)
 (cur = makeCurrentGwascat()) 
 
 options(stringsAsFactors = F)
-gwascat <- read.delim("~/Dropbox/GitHub/glmm/GWAS_catelog/gwas_catalog_v1.0-downloaded_2015-07-22.tsv")
+gwascat <- read.delim("~/Dropbox/GitHub/wgs/resources/GWAS_catelog/gwas_catalog_v1.0-downloaded_2015-07-22.tsv")
 
 names(gwascat)
 
@@ -30,7 +30,7 @@ idx = sapply(y, function(i) any(i %in% x))
 
 gwas_select = gwascat[idx, ]
 table(gwas_select$CONTEXT)
-sort(table(gwas_select$DISEASE.TRAIT), decreasing = T)[1:10]
+sort(table(gwas_select$DISEASE.TRAIT), decreasing = T)[1:20]
 
 gwas_select[grepl("cholesterol", gwas_select$DISEASE.TRAIT), ]
 gwas_select[grepl("Triglycerides", gwas_select$DISEASE.TRAIT), c("DISEASE.TRAIT", "MAPPED_GENE")]
@@ -38,6 +38,9 @@ gwas_select[grepl("Adiponectin levels", gwas_select$DISEASE.TRAIT), c("DISEASE.T
 gwas_select[grepl("Alzheimer's disease", gwas_select$DISEASE.TRAIT), c("DISEASE.TRAIT", "MAPPED_GENE")]
 gwas_select[grepl("IgG glycosylation", gwas_select$DISEASE.TRAIT), c("DISEASE.TRAIT", "MAPPED_GENE")]
 gwas_select[grepl("Type 2 diabetes", gwas_select$DISEASE.TRAIT), c("DISEASE.TRAIT", "MAPPED_GENE")]
+gwas_select[grepl("Obesity-related traits", gwas_select$DISEASE.TRAIT), c("DISEASE.TRAIT", "MAPPED_GENE")]
+disease = "Acute lymphoblastic leukemia"
+gwas_select[grepl(disease, gwas_select$DISEASE.TRAIT), c("DISEASE.TRAIT", "MAPPED_GENE")]
 
 disease = "Rheumatoid arthritis"
 disease = "Alzheimer's disease"

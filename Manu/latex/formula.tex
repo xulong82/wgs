@@ -1,0 +1,37 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb} 
+\usepackage{geometry} 
+\geometry{a4paper}
+
+\title{A Bayesian Framework for Generalized Linear Mixed Models in Genome-Wide Association Studies}
+\author{Xulong Wang, Gregory W. Carter}
+
+\begin{document}
+
+\maketitle
+
+\section*{Methods}
+\subsection*{Overview of the statistical models}
+
+\paragraph{}{
+
+\begin{eqnarray}
+   \beta_0 & \sim & N(\mu^{prior}, \sigma^{prior}) 
+ \end{eqnarray}
+
+\begin{eqnarray}
+   \beta_0 & \sim & N(\mu, \sigma) \\
+   \mu & = & z * \sigma \\
+   z & \sim & N(prior, 1) \\
+   \sigma & \sim & N(0, 1)
+ \end{eqnarray}
+
+\begin{eqnarray}
+   \beta_0 & \sim & N(\mu, \sigma) \\
+   \mu & \sim & N(\mu^{prior}, 1) \\
+   \sigma & \sim & N(\sigma^{prior}, 1)
+ \end{eqnarray}
+
+
+
+\end{document}

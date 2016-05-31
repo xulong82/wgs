@@ -2,7 +2,7 @@
  
 # qsub -v chr=1 run_r.sh
 # qsub -v chr=2 run_r.sh
-  qsub -v chr=3 run_r.sh
+# qsub -v chr=3 run_r.sh
 # qsub -v chr=4 run_r.sh
 # qsub -v chr=5 run_r.sh
 # qsub -v chr=6 run_r.sh
@@ -21,5 +21,5 @@
 # qsub -v chr=19 run_r.sh
 # qsub -v chr=20 run_r.sh
 # qsub -v chr=21 run_r.sh
-# qsub -v chr=22 run_r.sh
+qsub -v chr=22 run_r.sh
 
