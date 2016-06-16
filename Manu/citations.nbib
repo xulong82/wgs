@@ -1,0 +1,4769 @@
+
+PMID- 26432245
+OWN - NLM
+STAT- MEDLINE
+DA  - 20151003
+DCOM- 20151026
+LR  - 20160610
+IS  - 1476-4687 (Electronic)
+IS  - 0028-0836 (Linking)
+VI  - 526
+IP  - 7571
+DP  - 2015 Oct 1
+TI  - A global reference for human genetic variation.
+PG  - 68-74
+LID - 10.1038/nature15393 [doi]
+AB  - The 1000 Genomes Project set out to provide a comprehensive description of common
+      human genetic variation by applying whole-genome sequencing to a diverse set of
+      individuals from multiple populations. Here we report completion of the project, 
+      having reconstructed the genomes of 2,504 individuals from 26 populations using a
+      combination of low-coverage whole-genome sequencing, deep exome sequencing, and
+      dense microarray genotyping. We characterized a broad spectrum of genetic
+      variation, in total over 88 million variants (84.7 million single nucleotide
+      polymorphisms (SNPs), 3.6 million short insertions/deletions (indels), and 60,000
+      structural variants), all phased onto high-quality haplotypes. This resource
+      includes >99% of SNP variants with a frequency of >1% for a variety of
+      ancestries. We describe the distribution of genetic variation across the global
+      sample, and discuss the implications for common disease studies.
+CN  - 1000 Genomes Project Consortium
+FAU - Auton, Adam
+AU  - Auton A
+FAU - Brooks, Lisa D
+AU  - Brooks LD
+FAU - Durbin, Richard M
+AU  - Durbin RM
+FAU - Garrison, Erik P
+AU  - Garrison EP
+FAU - Kang, Hyun Min
+AU  - Kang HM
+FAU - Korbel, Jan O
+AU  - Korbel JO
+FAU - Marchini, Jonathan L
+AU  - Marchini JL
+FAU - McCarthy, Shane
+AU  - McCarthy S
+FAU - McVean, Gil A
+AU  - McVean GA
+FAU - Abecasis, Goncalo R
+AU  - Abecasis GR
+LA  - eng
+GR  - 089276/Z.09/Z/Wellcome Trust/United Kingdom
+GR  - 090532/Z/09/Z/Wellcome Trust/United Kingdom
+GR  - 090770/Wellcome Trust/United Kingdom
+GR  - 095552/Z/11/Z/Wellcome Trust/United Kingdom
+GR  - 095908/Wellcome Trust/United Kingdom
+GR  - 096599/Wellcome Trust/United Kingdom
+GR  - 100956/Wellcome Trust/United Kingdom
+GR  - 102541/Wellcome Trust/United Kingdom
+GR  - 136855/Canadian Institutes of Health Research/Canada
+GR  - BB/I021213/1/Biotechnology and Biological Sciences Research Council/United
+      Kingdom
+GR  - BB/I02593X/1/Biotechnology and Biological Sciences Research Council/United
+      Kingdom
+GR  - DP2OD6514/OD/NIH HHS/United States
+GR  - DP5OD9154/OD/NIH HHS/United States
+GR  - G0801823/Medical Research Council/United Kingdom
+GR  - HHSN268201100040C/PHS HHS/United States
+GR  - HHSN272201000025C/PHS HHS/United States
+GR  - P01GM99568/GM/NIGMS NIH HHS/United States
+GR  - P30 CA016672/CA/NCI NIH HHS/United States
+GR  - R01 CA166661/CA/NCI NIH HHS/United States
+GR  - R01 GM108805/GM/NIGMS NIH HHS/United States
+GR  - R01 HG002898/HG/NHGRI NIH HHS/United States
+GR  - R01 HG006849/HG/NHGRI NIH HHS/United States
+GR  - R01 HG007022/HG/NHGRI NIH HHS/United States
+GR  - R01 HG007068/HG/NHGRI NIH HHS/United States
+GR  - R01CA166661/CA/NCI NIH HHS/United States
+GR  - R01CA172652/CA/NCI NIH HHS/United States
+GR  - R01GM104390/GM/NIGMS NIH HHS/United States
+GR  - R01GM59290/GM/NIGMS NIH HHS/United States
+GR  - R01HG2385/HG/NHGRI NIH HHS/United States
+GR  - R01HG2898/HG/NHGRI NIH HHS/United States
+GR  - R01HG4960/HG/NHGRI NIH HHS/United States
+GR  - R01HG5214/HG/NHGRI NIH HHS/United States
+GR  - R01HG5701/HG/NHGRI NIH HHS/United States
+GR  - R01HG6855/HG/NHGRI NIH HHS/United States
+GR  - R01HG7068/HG/NHGRI NIH HHS/United States
+GR  - R01HG7644/HG/NHGRI NIH HHS/United States
+GR  - R01HL104608/HL/NHLBI NIH HHS/United States
+GR  - R01HL87699/HL/NHLBI NIH HHS/United States
+GR  - RC2HG5552/HG/NHGRI NIH HHS/United States
+GR  - T32GM7790/GM/NIGMS NIH HHS/United States
+GR  - T32HL94284/HL/NHLBI NIH HHS/United States
+GR  - U01HG5211/HG/NHGRI NIH HHS/United States
+GR  - U01HG5214/HG/NHGRI NIH HHS/United States
+GR  - U01HG5715/HG/NHGRI NIH HHS/United States
+GR  - U01HG5718/HG/NHGRI NIH HHS/United States
+GR  - U01HG5728/HG/NHGRI NIH HHS/United States
+GR  - U01HG6513/HG/NHGRI NIH HHS/United States
+GR  - U41 HG002371/HG/NHGRI NIH HHS/United States
+GR  - U41HG7497/HG/NHGRI NIH HHS/United States
+GR  - U41HG7635/HG/NHGRI NIH HHS/United States
+GR  - U54HG3067/HG/NHGRI NIH HHS/United States
+GR  - U54HG3079/HG/NHGRI NIH HHS/United States
+GR  - U54HG3273/HG/NHGRI NIH HHS/United States
+GR  - WT0855322/Z/08/Z/Wellcome Trust/United Kingdom
+GR  - WT086084/Z/08/Z/Wellcome Trust/United Kingdom
+GR  - WT090770/Z/09/Z/Wellcome Trust/United Kingdom
+GR  - WT095908/Wellcome Trust/United Kingdom
+GR  - WT097307/Wellcome Trust/United Kingdom
+GR  - WT098051/Wellcome Trust/United Kingdom
+GR  - WT100956/Z/13/Z/Wellcome Trust/United Kingdom
+GR  - WT109497/Wellcome Trust/United Kingdom
+GR  - British Heart Foundation/United Kingdom
+GR  - Howard Hughes Medical Institute/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+PL  - England
+TA  - Nature
+JT  - Nature
+JID - 0410462
+SB  - IM
+CIN - Nature. 2015 Oct 1;526(7571):52-3. PMID: 26432243
+MH  - Datasets as Topic
+MH  - Demography
+MH  - Disease Susceptibility
+MH  - Exome/genetics
+MH  - Genetic Variation/*genetics
+MH  - Genetics, Medical
+MH  - Genetics, Population/*standards
+MH  - Genome, Human/*genetics
+MH  - Genome-Wide Association Study
+MH  - Genomics/*standards
+MH  - Genotype
+MH  - Haplotypes/genetics
+MH  - High-Throughput Nucleotide Sequencing
+MH  - Humans
+MH  - INDEL Mutation/genetics
+MH  - *Internationality
+MH  - Physical Chromosome Mapping
+MH  - Polymorphism, Single Nucleotide/genetics
+MH  - Quantitative Trait Loci/genetics
+MH  - Rare Diseases/genetics
+MH  - Reference Standards
+MH  - Sequence Analysis, DNA
+PMC - PMC4750478
+MID - NIHMS753481
+OID - NLM: NIHMS753481
+OID - NLM: PMC4750478
+IR  - Auton A
+FIR - Auton, Adam
+IR  - Abecasis GR
+FIR - Abecasis, Goncalo R
+IR  - Altshuler DM
+FIR - Altshuler, David M
+IR  - Durbin RM
+FIR - Durbin, Richard M
+IR  - Abecasis GR
+FIR - Abecasis, Goncalo R
+IR  - Bentley DR
+FIR - Bentley, David R
+IR  - Chakravarti A
+FIR - Chakravarti, Aravinda
+IR  - Clark AG
+FIR - Clark, Andrew G
+IR  - Donnelly P
+FIR - Donnelly, Peter
+IR  - Eichler EE
+FIR - Eichler, Evan E
+IR  - Flicek P
+FIR - Flicek, Paul
+IR  - Gabriel SB
+FIR - Gabriel, Stacey B
+IR  - Gibbs RA
+FIR - Gibbs, Richard A
+IR  - Green ED
+FIR - Green, Eric D
+IR  - Hurles ME
+FIR - Hurles, Matthew E
+IR  - Knoppers BM
+FIR - Knoppers, Bartha M
+IR  - Korbel JO
+FIR - Korbel, Jan O
+IR  - Lander ES
+FIR - Lander, Eric S
+IR  - Lee C
+FIR - Lee, Charles
+IR  - Lehrach H
+FIR - Lehrach, Hans
+IR  - Mardis ER
+FIR - Mardis, Elaine R
+IR  - Marth GT
+FIR - Marth, Gabor T
+IR  - McVean GA
+FIR - McVean, Gil A
+IR  - Nickerson DA
+FIR - Nickerson, Deborah A
+IR  - Schmidt JP
+FIR - Schmidt, Jeanette P
+IR  - Sherry ST
+FIR - Sherry, Stephen T
+IR  - Wang J
+FIR - Wang, Jun
+IR  - Wilson RK
+FIR - Wilson, Richard K
+IR  - Gibbs RA
+FIR - Gibbs, Richard A
+IR  - Boerwinkle E
+FIR - Boerwinkle, Eric
+IR  - Doddapaneni H
+FIR - Doddapaneni, Harsha
+IR  - Han Y
+FIR - Han, Yi
+IR  - Korchina V
+FIR - Korchina, Viktoriya
+IR  - Kovar C
+FIR - Kovar, Christie
+IR  - Lee S
+FIR - Lee, Sandra
+IR  - Muzny D
+FIR - Muzny, Donna
+IR  - Reid JG
+FIR - Reid, Jeffrey G
+IR  - Zhu Y
+FIR - Zhu, Yiming
+IR  - Wang J
+FIR - Wang, Jun
+IR  - Chang Y
+FIR - Chang, Yuqi
+IR  - Feng Q
+FIR - Feng, Qiang
+IR  - Fang X
+FIR - Fang, Xiaodong
+IR  - Guo X
+FIR - Guo, Xiaosen
+IR  - Jian M
+FIR - Jian, Min
+IR  - Jiang H
+FIR - Jiang, Hui
+IR  - Jin X
+FIR - Jin, Xin
+IR  - Lan T
+FIR - Lan, Tianming
+IR  - Li G
+FIR - Li, Guoqing
+IR  - Li J
+FIR - Li, Jingxiang
+IR  - Li Y
+FIR - Li, Yingrui
+IR  - Liu S
+FIR - Liu, Shengmao
+IR  - Liu X
+FIR - Liu, Xiao
+IR  - Lu Y
+FIR - Lu, Yao
+IR  - Ma X
+FIR - Ma, Xuedi
+IR  - Tang M
+FIR - Tang, Meifang
+IR  - Wang B
+FIR - Wang, Bo
+IR  - Wang G
+FIR - Wang, Guangbiao
+IR  - Wu H
+FIR - Wu, Honglong
+IR  - Wu R
+FIR - Wu, Renhua
+IR  - Xu X
+FIR - Xu, Xun
+IR  - Yin Y
+FIR - Yin, Ye
+IR  - Zhang D
+FIR - Zhang, Dandan
+IR  - Zhang W
+FIR - Zhang, Wenwei
+IR  - Zhao J
+FIR - Zhao, Jiao
+IR  - Zhao M
+FIR - Zhao, Meiru
+IR  - Zheng X
+FIR - Zheng, Xiaole
+IR  - Lander ES
+FIR - Lander, Eric S
+IR  - Altshuler DM
+FIR - Altshuler, David M
+IR  - Gabriel SB
+FIR - Gabriel, Stacey B
+IR  - Gupta N
+FIR - Gupta, Namrata
+IR  - Gharani N
+FIR - Gharani, Neda
+IR  - Toji LH
+FIR - Toji, Lorraine H
+IR  - Gerry NP
+FIR - Gerry, Norman P
+IR  - Resch AM
+FIR - Resch, Alissa M
+IR  - Flicek P
+FIR - Flicek, Paul
+IR  - Barker J
+FIR - Barker, Jonathan
+IR  - Clarke L
+FIR - Clarke, Laura
+IR  - Gil L
+FIR - Gil, Laurent
+IR  - Hunt SE
+FIR - Hunt, Sarah E
+IR  - Kelman G
+FIR - Kelman, Gavin
+IR  - Kulesha E
+FIR - Kulesha, Eugene
+IR  - Leinonen R
+FIR - Leinonen, Rasko
+IR  - McLaren WM
+FIR - McLaren, William M
+IR  - Radhakrishnan R
+FIR - Radhakrishnan, Rajesh
+IR  - Roa A
+FIR - Roa, Asier
+IR  - Smirnov D
+FIR - Smirnov, Dmitriy
+IR  - Smith RE
+FIR - Smith, Richard E
+IR  - Streeter I
+FIR - Streeter, Ian
+IR  - Thormann A
+FIR - Thormann, Anja
+IR  - Toneva I
+FIR - Toneva, Iliana
+IR  - Vaughan B
+FIR - Vaughan, Brendan
+IR  - Zheng-Bradley X
+FIR - Zheng-Bradley, Xiangqun
+IR  - Bentley DR
+FIR - Bentley, David R
+IR  - Grocock R
+FIR - Grocock, Russell
+IR  - Humphray S
+FIR - Humphray, Sean
+IR  - James T
+FIR - James, Terena
+IR  - Kingsbury Z
+FIR - Kingsbury, Zoya
+IR  - Lehrach H
+FIR - Lehrach, Hans
+IR  - Sudbrak R
+FIR - Sudbrak, Ralf
+IR  - Albrecht MW
+FIR - Albrecht, Marcus W
+IR  - Amstislavskiy VS
+FIR - Amstislavskiy, Vyacheslav S
+IR  - Borodina TA
+FIR - Borodina, Tatiana A
+IR  - Lienhard M
+FIR - Lienhard, Matthias
+IR  - Mertes F
+FIR - Mertes, Florian
+IR  - Sultan M
+FIR - Sultan, Marc
+IR  - Timmermann B
+FIR - Timmermann, Bernd
+IR  - Yaspo ML
+FIR - Yaspo, Marie-Laure
+IR  - Mardis ER
+FIR - Mardis, Elaine R
+IR  - Wilson RK
+FIR - Wilson, Richard K
+IR  - Fulton L
+FIR - Fulton, Lucinda
+IR  - Fulton R
+FIR - Fulton, Robert
+IR  - Sherry ST
+FIR - Sherry, Stephen T
+IR  - Ananiev V
+FIR - Ananiev, Victor
+IR  - Belaia Z
+FIR - Belaia, Zinaida
+IR  - Beloslyudtsev D
+FIR - Beloslyudtsev, Dimitriy
+IR  - Bouk N
+FIR - Bouk, Nathan
+IR  - Chen C
+FIR - Chen, Chao
+IR  - Church D
+FIR - Church, Deanna
+IR  - Cohen R
+FIR - Cohen, Robert
+IR  - Cook C
+FIR - Cook, Charles
+IR  - Garner J
+FIR - Garner, John
+IR  - Hefferon T
+FIR - Hefferon, Timothy
+IR  - Kimelman M
+FIR - Kimelman, Mikhail
+IR  - Liu C
+FIR - Liu, Chunlei
+IR  - Lopez J
+FIR - Lopez, John
+IR  - Meric P
+FIR - Meric, Peter
+IR  - O'Sullivan C
+FIR - O'Sullivan, Chris
+IR  - Ostapchuk Y
+FIR - Ostapchuk, Yuri
+IR  - Phan L
+FIR - Phan, Lon
+IR  - Ponomarov S
+FIR - Ponomarov, Sergiy
+IR  - Schneider V
+FIR - Schneider, Valerie
+IR  - Shekhtman E
+FIR - Shekhtman, Eugene
+IR  - Sirotkin K
+FIR - Sirotkin, Karl
+IR  - Slotta D
+FIR - Slotta, Douglas
+IR  - Zhang H
+FIR - Zhang, Hua
+IR  - McVean GA
+FIR - McVean, Gil A
+IR  - Durbin RM
+FIR - Durbin, Richard M
+IR  - Balasubramaniam S
+FIR - Balasubramaniam, Senduran
+IR  - Burton J
+FIR - Burton, John
+IR  - Danecek P
+FIR - Danecek, Petr
+IR  - Keane TM
+FIR - Keane, Thomas M
+IR  - Kolb-Kokocinski A
+FIR - Kolb-Kokocinski, Anja
+IR  - McCarthy S
+FIR - McCarthy, Shane
+IR  - Stalker J
+FIR - Stalker, James
+IR  - Quail M
+FIR - Quail, Michael
+IR  - Durbin RM
+FIR - Durbin, Richard M
+IR  - Balasubramaniam S
+FIR - Balasubramaniam, Senduran
+IR  - Burton J
+FIR - Burton, John
+IR  - Danecek P
+FIR - Danecek, Petr
+IR  - Keane TM
+FIR - Keane, Thomas M
+IR  - Kolb-Kokocinski A
+FIR - Kolb-Kokocinski, Anja
+IR  - McCarthy S
+FIR - McCarthy, Shane
+IR  - Stalker J
+FIR - Stalker, James
+IR  - Quail M
+FIR - Quail, Michael
+IR  - Schmidt JP
+FIR - Schmidt, Jeanette P
+IR  - Davies CJ
+FIR - Davies, Christopher J
+IR  - Gollub J
+FIR - Gollub, Jeremy
+IR  - Webster T
+FIR - Webster, Teresa
+IR  - Wong B
+FIR - Wong, Brant
+IR  - Zhan Y
+FIR - Zhan, Yiping
+IR  - Auton A
+FIR - Auton, Adam
+IR  - Campbell CL
+FIR - Campbell, Christopher L
+IR  - Kong Y
+FIR - Kong, Yu
+IR  - Marcketta A
+FIR - Marcketta, Anthony
+IR  - Gibbs RA
+FIR - Gibbs, Richard A
+IR  - Yu F
+FIR - Yu, Fuli
+IR  - Antunes L
+FIR - Antunes, Lilian
+IR  - Bainbridge M
+FIR - Bainbridge, Matthew
+IR  - Muzny D
+FIR - Muzny, Donna
+IR  - Sabo A
+FIR - Sabo, Aniko
+IR  - Huang Z
+FIR - Huang, Zhuoyi
+IR  - Wang J
+FIR - Wang, Jun
+IR  - Coin LJ
+FIR - Coin, Lachlan J M
+IR  - Fang L
+FIR - Fang, Lin
+IR  - Guo X
+FIR - Guo, Xiaosen
+IR  - Jin X
+FIR - Jin, Xin
+IR  - Li G
+FIR - Li, Guoqing
+IR  - Li Q
+FIR - Li, Qibin
+IR  - Li Y
+FIR - Li, Yingrui
+IR  - Li Z
+FIR - Li, Zhenyu
+IR  - Lin H
+FIR - Lin, Haoxiang
+IR  - Liu B
+FIR - Liu, Binghang
+IR  - Luo R
+FIR - Luo, Ruibang
+IR  - Shao H
+FIR - Shao, Haojing
+IR  - Xie Y
+FIR - Xie, Yinlong
+IR  - Ye C
+FIR - Ye, Chen
+IR  - Yu C
+FIR - Yu, Chang
+IR  - Zhang F
+FIR - Zhang, Fan
+IR  - Zheng H
+FIR - Zheng, Hancheng
+IR  - Zhu H
+FIR - Zhu, Hongmei
+IR  - Alkan C
+FIR - Alkan, Can
+IR  - Dal E
+FIR - Dal, Elif
+IR  - Kahveci F
+FIR - Kahveci, Fatma
+IR  - Marth GT
+FIR - Marth, Gabor T
+IR  - Garrison EP
+FIR - Garrison, Erik P
+IR  - Kural D
+FIR - Kural, Deniz
+IR  - Lee WP
+FIR - Lee, Wan-Ping
+IR  - Leong WF
+FIR - Leong, Wen Fung
+IR  - Stromberg M
+FIR - Stromberg, Michael
+IR  - Ward AN
+FIR - Ward, Alistair N
+IR  - Wu J
+FIR - Wu, Jiantao
+IR  - Zhang M
+FIR - Zhang, Mengyao
+IR  - Daly MJ
+FIR - Daly, Mark J
+IR  - DePristo MA
+FIR - DePristo, Mark A
+IR  - Handsaker RE
+FIR - Handsaker, Robert E
+IR  - Altshuler DM
+FIR - Altshuler, David M
+IR  - Banks E
+FIR - Banks, Eric
+IR  - Bhatia G
+FIR - Bhatia, Gaurav
+IR  - Del Angel G
+FIR - Del Angel, Guillermo
+IR  - Gabriel SB
+FIR - Gabriel, Stacey B
+IR  - Genovese G
+FIR - Genovese, Giulio
+IR  - Gupta N
+FIR - Gupta, Namrata
+IR  - Li H
+FIR - Li, Heng
+IR  - Kashin S
+FIR - Kashin, Seva
+IR  - Lander ES
+FIR - Lander, Eric S
+IR  - McCarroll SA
+FIR - McCarroll, Steven A
+IR  - Nemesh JC
+FIR - Nemesh, James C
+IR  - Poplin RE
+FIR - Poplin, Ryan E
+IR  - Yoon SC
+FIR - Yoon, Seungtai C
+IR  - Lihm J
+FIR - Lihm, Jayon
+IR  - Makarov V
+FIR - Makarov, Vladimir
+IR  - Clark AG
+FIR - Clark, Andrew G
+IR  - Gottipati S
+FIR - Gottipati, Srikanth
+IR  - Keinan A
+FIR - Keinan, Alon
+IR  - Rodriguez-Flores JL
+FIR - Rodriguez-Flores, Juan L
+IR  - Korbel JO
+FIR - Korbel, Jan O
+IR  - Rausch T
+FIR - Rausch, Tobias
+IR  - Fritz MH
+FIR - Fritz, Markus H
+IR  - Stutz AM
+FIR - Stutz, Adrian M
+IR  - Flicek P
+FIR - Flicek, Paul
+IR  - Beal K
+FIR - Beal, Kathryn
+IR  - Clarke L
+FIR - Clarke, Laura
+IR  - Datta A
+FIR - Datta, Avik
+IR  - Herrero J
+FIR - Herrero, Javier
+IR  - McLaren WM
+FIR - McLaren, William M
+IR  - Ritchie GR
+FIR - Ritchie, Graham R S
+IR  - Smith RE
+FIR - Smith, Richard E
+IR  - Zerbino D
+FIR - Zerbino, Daniel
+IR  - Zheng-Bradley X
+FIR - Zheng-Bradley, Xiangqun
+IR  - Sabeti PC
+FIR - Sabeti, Pardis C
+IR  - Shlyakhter I
+FIR - Shlyakhter, Ilya
+IR  - Schaffner SF
+FIR - Schaffner, Stephen F
+IR  - Vitti J
+FIR - Vitti, Joseph
+IR  - Cooper DN
+FIR - Cooper, David N
+IR  - Ball EV
+FIR - Ball, Edward V
+IR  - Stenson PD
+FIR - Stenson, Peter D
+IR  - Bentley DR
+FIR - Bentley, David R
+IR  - Barnes B
+FIR - Barnes, Bret
+IR  - Bauer M
+FIR - Bauer, Markus
+IR  - Cheetham RK
+FIR - Cheetham, R Keira
+IR  - Cox A
+FIR - Cox, Anthony
+IR  - Eberle M
+FIR - Eberle, Michael
+IR  - Humphray S
+FIR - Humphray, Sean
+IR  - Kahn S
+FIR - Kahn, Scott
+IR  - Murray L
+FIR - Murray, Lisa
+IR  - Peden J
+FIR - Peden, John
+IR  - Shaw R
+FIR - Shaw, Richard
+IR  - Kenny EE
+FIR - Kenny, Eimear E
+IR  - Batzer MA
+FIR - Batzer, Mark A
+IR  - Konkel MK
+FIR - Konkel, Miriam K
+IR  - Walker JA
+FIR - Walker, Jerilyn A
+IR  - MacArthur DG
+FIR - MacArthur, Daniel G
+IR  - Lek M
+FIR - Lek, Monkol
+IR  - Sudbrak R
+FIR - Sudbrak, Ralf
+IR  - Amstislavskiy VS
+FIR - Amstislavskiy, Vyacheslav S
+IR  - Herwig R
+FIR - Herwig, Ralf
+IR  - Mardis ER
+FIR - Mardis, Elaine R
+IR  - Ding L
+FIR - Ding, Li
+IR  - Koboldt DC
+FIR - Koboldt, Daniel C
+IR  - Larson D
+FIR - Larson, David
+IR  - Ye K
+FIR - Ye, Kai
+IR  - Gravel S
+FIR - Gravel, Simon
+IR  - Swaroop A
+FIR - Swaroop, Anand
+IR  - Chew E
+FIR - Chew, Emily
+IR  - Lappalainen T
+FIR - Lappalainen, Tuuli
+IR  - Erlich Y
+FIR - Erlich, Yaniv
+IR  - Gymrek M
+FIR - Gymrek, Melissa
+IR  - Willems TF
+FIR - Willems, Thomas Frederick
+IR  - Simpson JT
+FIR - Simpson, Jared T
+IR  - Shriver MD
+FIR - Shriver, Mark D
+IR  - Rosenfeld JA
+FIR - Rosenfeld, Jeffrey A
+IR  - Bustamante CD
+FIR - Bustamante, Carlos D
+IR  - Montgomery SB
+FIR - Montgomery, Stephen B
+IR  - De La Vega FM
+FIR - De La Vega, Francisco M
+IR  - Byrnes JK
+FIR - Byrnes, Jake K
+IR  - Carroll AW
+FIR - Carroll, Andrew W
+IR  - DeGorter MK
+FIR - DeGorter, Marianne K
+IR  - Lacroute P
+FIR - Lacroute, Phil
+IR  - Maples BK
+FIR - Maples, Brian K
+IR  - Martin AR
+FIR - Martin, Alicia R
+IR  - Moreno-Estrada A
+FIR - Moreno-Estrada, Andres
+IR  - Shringarpure SS
+FIR - Shringarpure, Suyash S
+IR  - Zakharia F
+FIR - Zakharia, Fouad
+IR  - Halperin E
+FIR - Halperin, Eran
+IR  - Baran Y
+FIR - Baran, Yael
+IR  - Lee C
+FIR - Lee, Charles
+IR  - Cerveira E
+FIR - Cerveira, Eliza
+IR  - Hwang J
+FIR - Hwang, Jaeho
+IR  - Malhotra A
+FIR - Malhotra, Ankit
+IR  - Plewczynski D
+FIR - Plewczynski, Dariusz
+IR  - Radew K
+FIR - Radew, Kamen
+IR  - Romanovitch M
+FIR - Romanovitch, Mallory
+IR  - Zhang C
+FIR - Zhang, Chengsheng
+IR  - Hyland FC
+FIR - Hyland, Fiona C L
+IR  - Craig DW
+FIR - Craig, David W
+IR  - Christoforides A
+FIR - Christoforides, Alexis
+IR  - Homer N
+FIR - Homer, Nils
+IR  - Izatt T
+FIR - Izatt, Tyler
+IR  - Kurdoglu AA
+FIR - Kurdoglu, Ahmet A
+IR  - Sinari SA
+FIR - Sinari, Shripad A
+IR  - Squire K
+FIR - Squire, Kevin
+IR  - Sherry ST
+FIR - Sherry, Stephen T
+IR  - Xiao C
+FIR - Xiao, Chunlin
+IR  - Sebat J
+FIR - Sebat, Jonathan
+IR  - Antaki D
+FIR - Antaki, Danny
+IR  - Gujral M
+FIR - Gujral, Madhusudan
+IR  - Noor A
+FIR - Noor, Amina
+IR  - Ye K
+FIR - Ye, Kenny
+IR  - Burchard EG
+FIR - Burchard, Esteban G
+IR  - Hernandez RD
+FIR - Hernandez, Ryan D
+IR  - Gignoux CR
+FIR - Gignoux, Christopher R
+IR  - Haussler D
+FIR - Haussler, David
+IR  - Katzman SJ
+FIR - Katzman, Sol J
+IR  - Kent WJ
+FIR - Kent, W James
+IR  - Howie B
+FIR - Howie, Bryan
+IR  - Ruiz-Linares A
+FIR - Ruiz-Linares, Andres
+IR  - Dermitzakis ET
+FIR - Dermitzakis, Emmanouil T
+IR  - Devine SE
+FIR - Devine, Scott E
+IR  - Abecasis GR
+FIR - Abecasis, Goncalo R
+IR  - Kang HM
+FIR - Kang, Hyun Min
+IR  - Kidd JM
+FIR - Kidd, Jeffrey M
+IR  - Blackwell T
+FIR - Blackwell, Tom
+IR  - Caron S
+FIR - Caron, Sean
+IR  - Chen W
+FIR - Chen, Wei
+IR  - Emery S
+FIR - Emery, Sarah
+IR  - Fritsche L
+FIR - Fritsche, Lars
+IR  - Fuchsberger C
+FIR - Fuchsberger, Christian
+IR  - Jun G
+FIR - Jun, Goo
+IR  - Li B
+FIR - Li, Bingshan
+IR  - Lyons R
+FIR - Lyons, Robert
+IR  - Scheller C
+FIR - Scheller, Chris
+IR  - Sidore C
+FIR - Sidore, Carlo
+IR  - Song S
+FIR - Song, Shiya
+IR  - Sliwerska E
+FIR - Sliwerska, Elzbieta
+IR  - Taliun D
+FIR - Taliun, Daniel
+IR  - Tan A
+FIR - Tan, Adrian
+IR  - Welch R
+FIR - Welch, Ryan
+IR  - Wing MK
+FIR - Wing, Mary Kate
+IR  - Zhan X
+FIR - Zhan, Xiaowei
+IR  - Awadalla P
+FIR - Awadalla, Philip
+IR  - Hodgkinson A
+FIR - Hodgkinson, Alan
+IR  - Li Y
+FIR - Li, Yun
+IR  - Shi X
+FIR - Shi, Xinghua
+IR  - Quitadamo A
+FIR - Quitadamo, Andrew
+IR  - Lunter G
+FIR - Lunter, Gerton
+IR  - McVean GA
+FIR - McVean, Gil A
+IR  - Marchini JL
+FIR - Marchini, Jonathan L
+IR  - Myers S
+FIR - Myers, Simon
+IR  - Churchhouse C
+FIR - Churchhouse, Claire
+IR  - Delaneau O
+FIR - Delaneau, Olivier
+IR  - Gupta-Hinch A
+FIR - Gupta-Hinch, Anjali
+IR  - Kretzschmar W
+FIR - Kretzschmar, Warren
+IR  - Iqbal Z
+FIR - Iqbal, Zamin
+IR  - Mathieson I
+FIR - Mathieson, Iain
+IR  - Menelaou A
+FIR - Menelaou, Androniki
+IR  - Rimmer A
+FIR - Rimmer, Andy
+IR  - Xifara DK
+FIR - Xifara, Dionysia K
+IR  - Oleksyk TK
+FIR - Oleksyk, Taras K
+IR  - Fu Y
+FIR - Fu, Yunxin
+IR  - Liu X
+FIR - Liu, Xiaoming
+IR  - Xiong M
+FIR - Xiong, Momiao
+IR  - Jorde L
+FIR - Jorde, Lynn
+IR  - Witherspoon D
+FIR - Witherspoon, David
+IR  - Xing J
+FIR - Xing, Jinchuan
+IR  - Eichler EE
+FIR - Eichler, Evan E
+IR  - Browning BL
+FIR - Browning, Brian L
+IR  - Browning SR
+FIR - Browning, Sharon R
+IR  - Hormozdiari F
+FIR - Hormozdiari, Fereydoun
+IR  - Sudmant PH
+FIR - Sudmant, Peter H
+IR  - Khurana E
+FIR - Khurana, Ekta
+IR  - Durbin RM
+FIR - Durbin, Richard M
+IR  - Hurles ME
+FIR - Hurles, Matthew E
+IR  - Tyler-Smith C
+FIR - Tyler-Smith, Chris
+IR  - Albers CA
+FIR - Albers, Cornelis A
+IR  - Ayub Q
+FIR - Ayub, Qasim
+IR  - Balasubramaniam S
+FIR - Balasubramaniam, Senduran
+IR  - Chen Y
+FIR - Chen, Yuan
+IR  - Colonna V
+FIR - Colonna, Vincenza
+IR  - Danecek P
+FIR - Danecek, Petr
+IR  - Jostins L
+FIR - Jostins, Luke
+IR  - Keane TM
+FIR - Keane, Thomas M
+IR  - McCarthy S
+FIR - McCarthy, Shane
+IR  - Walter K
+FIR - Walter, Klaudia
+IR  - Xue Y
+FIR - Xue, Yali
+IR  - Gerstein MB
+FIR - Gerstein, Mark B
+IR  - Abyzov A
+FIR - Abyzov, Alexej
+IR  - Balasubramanian S
+FIR - Balasubramanian, Suganthi
+IR  - Chen J
+FIR - Chen, Jieming
+IR  - Clarke D
+FIR - Clarke, Declan
+IR  - Fu Y
+FIR - Fu, Yao
+IR  - Harmanci AO
+FIR - Harmanci, Arif O
+IR  - Jin M
+FIR - Jin, Mike
+IR  - Lee D
+FIR - Lee, Donghoon
+IR  - Liu J
+FIR - Liu, Jeremy
+IR  - Mu XJ
+FIR - Mu, Xinmeng Jasmine
+IR  - Zhang J
+FIR - Zhang, Jing
+IR  - Zhang Y
+FIR - Zhang, Yan
+IR  - Gerstein MB
+FIR - Gerstein, Mark B
+IR  - Abyzov A
+FIR - Abyzov, Alexej
+IR  - Balasubramanian S
+FIR - Balasubramanian, Suganthi
+IR  - Chen J
+FIR - Chen, Jieming
+IR  - Clarke D
+FIR - Clarke, Declan
+IR  - Fu Y
+FIR - Fu, Yao
+IR  - Harmanci AO
+FIR - Harmanci, Arif O
+IR  - Jin M
+FIR - Jin, Mike
+IR  - Lee D
+FIR - Lee, Donghoon
+IR  - Liu J
+FIR - Liu, Jeremy
+IR  - Mu XJ
+FIR - Mu, Xinmeng Jasmine
+IR  - Zhang J
+FIR - Zhang, Jing
+IR  - Zhang Y
+FIR - Zhang, Yan
+IR  - Li Y
+FIR - Li, Yingrui
+IR  - Luo R
+FIR - Luo, Ruibang
+IR  - Zhu H
+FIR - Zhu, Hongmei
+IR  - Alkan C
+FIR - Alkan, Can
+IR  - Dal E
+FIR - Dal, Elif
+IR  - Kahveci F
+FIR - Kahveci, Fatma
+IR  - Marth GT
+FIR - Marth, Gabor T
+IR  - Garrison EP
+FIR - Garrison, Erik P
+IR  - Kural D
+FIR - Kural, Deniz
+IR  - Lee WP
+FIR - Lee, Wan-Ping
+IR  - Ward AN
+FIR - Ward, Alistair N
+IR  - Wu J
+FIR - Wu, Jiantao
+IR  - Zhang M
+FIR - Zhang, Mengyao
+IR  - McCarroll SA
+FIR - McCarroll, Steven A
+IR  - Handsaker RE
+FIR - Handsaker, Robert E
+IR  - Altshuler DM
+FIR - Altshuler, David M
+IR  - Banks E
+FIR - Banks, Eric
+IR  - Del Angel G
+FIR - Del Angel, Guillermo
+IR  - Genovese G
+FIR - Genovese, Giulio
+IR  - Hartl C
+FIR - Hartl, Chris
+IR  - Li H
+FIR - Li, Heng
+IR  - Kashin S
+FIR - Kashin, Seva
+IR  - Nemesh JC
+FIR - Nemesh, James C
+IR  - Shakir K
+FIR - Shakir, Khalid
+IR  - Yoon SC
+FIR - Yoon, Seungtai C
+IR  - Lihm J
+FIR - Lihm, Jayon
+IR  - Makarov V
+FIR - Makarov, Vladimir
+IR  - Degenhardt J
+FIR - Degenhardt, Jeremiah
+IR  - Korbel JO
+FIR - Korbel, Jan O
+IR  - Fritz MH
+FIR - Fritz, Markus H
+IR  - Meiers S
+FIR - Meiers, Sascha
+IR  - Raeder B
+FIR - Raeder, Benjamin
+IR  - Rausch T
+FIR - Rausch, Tobias
+IR  - Stutz AM
+FIR - Stutz, Adrian M
+IR  - Flicek P
+FIR - Flicek, Paul
+IR  - Casale FP
+FIR - Casale, Francesco Paolo
+IR  - Clarke L
+FIR - Clarke, Laura
+IR  - Smith RE
+FIR - Smith, Richard E
+IR  - Stegle O
+FIR - Stegle, Oliver
+IR  - Zheng-Bradley X
+FIR - Zheng-Bradley, Xiangqun
+IR  - Bentley DR
+FIR - Bentley, David R
+IR  - Barnes B
+FIR - Barnes, Bret
+IR  - Cheetham RK
+FIR - Cheetham, R Keira
+IR  - Eberle M
+FIR - Eberle, Michael
+IR  - Humphray S
+FIR - Humphray, Sean
+IR  - Kahn S
+FIR - Kahn, Scott
+IR  - Murray L
+FIR - Murray, Lisa
+IR  - Shaw R
+FIR - Shaw, Richard
+IR  - Lameijer EW
+FIR - Lameijer, Eric-Wubbo
+IR  - Batzer MA
+FIR - Batzer, Mark A
+IR  - Konkel MK
+FIR - Konkel, Miriam K
+IR  - Walker JA
+FIR - Walker, Jerilyn A
+IR  - Ding L
+FIR - Ding, Li
+IR  - Hall I
+FIR - Hall, Ira
+IR  - Ye K
+FIR - Ye, Kai
+IR  - Lacroute P
+FIR - Lacroute, Phil
+IR  - Lee C
+FIR - Lee, Charles
+IR  - Cerveira E
+FIR - Cerveira, Eliza
+IR  - Malhotra A
+FIR - Malhotra, Ankit
+IR  - Hwang J
+FIR - Hwang, Jaeho
+IR  - Plewczynski D
+FIR - Plewczynski, Dariusz
+IR  - Radew K
+FIR - Radew, Kamen
+IR  - Romanovitch M
+FIR - Romanovitch, Mallory
+IR  - Zhang C
+FIR - Zhang, Chengsheng
+IR  - Craig DW
+FIR - Craig, David W
+IR  - Homer N
+FIR - Homer, Nils
+IR  - Church D
+FIR - Church, Deanna
+IR  - Xiao C
+FIR - Xiao, Chunlin
+IR  - Sebat J
+FIR - Sebat, Jonathan
+IR  - Antaki D
+FIR - Antaki, Danny
+IR  - Bafna V
+FIR - Bafna, Vineet
+IR  - Michaelson J
+FIR - Michaelson, Jacob
+IR  - Ye K
+FIR - Ye, Kenny
+IR  - Devine SE
+FIR - Devine, Scott E
+IR  - Gardner EJ
+FIR - Gardner, Eugene J
+IR  - Abecasis GR
+FIR - Abecasis, Goncalo R
+IR  - Kidd JM
+FIR - Kidd, Jeffrey M
+IR  - Mills RE
+FIR - Mills, Ryan E
+IR  - Dayama G
+FIR - Dayama, Gargi
+IR  - Emery S
+FIR - Emery, Sarah
+IR  - Jun G
+FIR - Jun, Goo
+IR  - Shi X
+FIR - Shi, Xinghua
+IR  - Quitadamo A
+FIR - Quitadamo, Andrew
+IR  - Lunter G
+FIR - Lunter, Gerton
+IR  - McVean GA
+FIR - McVean, Gil A
+IR  - Chen K
+FIR - Chen, Ken
+IR  - Fan X
+FIR - Fan, Xian
+IR  - Chong Z
+FIR - Chong, Zechen
+IR  - Chen T
+FIR - Chen, Tenghui
+IR  - Witherspoon D
+FIR - Witherspoon, David
+IR  - Xing J
+FIR - Xing, Jinchuan
+IR  - Eichler EE
+FIR - Eichler, Evan E
+IR  - Chaisson MJ
+FIR - Chaisson, Mark J
+IR  - Hormozdiari F
+FIR - Hormozdiari, Fereydoun
+IR  - Huddleston J
+FIR - Huddleston, John
+IR  - Malig M
+FIR - Malig, Maika
+IR  - Nelson BJ
+FIR - Nelson, Bradley J
+IR  - Sudmant PH
+FIR - Sudmant, Peter H
+IR  - Parrish NF
+FIR - Parrish, Nicholas F
+IR  - Khurana E
+FIR - Khurana, Ekta
+IR  - Hurles ME
+FIR - Hurles, Matthew E
+IR  - Blackburne B
+FIR - Blackburne, Ben
+IR  - Lindsay SJ
+FIR - Lindsay, Sarah J
+IR  - Ning Z
+FIR - Ning, Zemin
+IR  - Walter K
+FIR - Walter, Klaudia
+IR  - Zhang Y
+FIR - Zhang, Yujun
+IR  - Gerstein MB
+FIR - Gerstein, Mark B
+IR  - Abyzov A
+FIR - Abyzov, Alexej
+IR  - Chen J
+FIR - Chen, Jieming
+IR  - Clarke D
+FIR - Clarke, Declan
+IR  - Lam H
+FIR - Lam, Hugo
+IR  - Mu XJ
+FIR - Mu, Xinmeng Jasmine
+IR  - Sisu C
+FIR - Sisu, Cristina
+IR  - Zhang J
+FIR - Zhang, Jing
+IR  - Zhang Y
+FIR - Zhang, Yan
+IR  - Gerstein MB
+FIR - Gerstein, Mark B
+IR  - Abyzov A
+FIR - Abyzov, Alexej
+IR  - Chen J
+FIR - Chen, Jieming
+IR  - Clarke D
+FIR - Clarke, Declan
+IR  - Lam H
+FIR - Lam, Hugo
+IR  - Mu XJ
+FIR - Mu, Xinmeng Jasmine
+IR  - Sisu C
+FIR - Sisu, Cristina
+IR  - Zhang J
+FIR - Zhang, Jing
+IR  - Zhang Y
+FIR - Zhang, Yan
+IR  - Gibbs RA
+FIR - Gibbs, Richard A
+IR  - Yu F
+FIR - Yu, Fuli
+IR  - Bainbridge M
+FIR - Bainbridge, Matthew
+IR  - Challis D
+FIR - Challis, Danny
+IR  - Evani US
+FIR - Evani, Uday S
+IR  - Kovar C
+FIR - Kovar, Christie
+IR  - Lu J
+FIR - Lu, James
+IR  - Muzny D
+FIR - Muzny, Donna
+IR  - Nagaswamy U
+FIR - Nagaswamy, Uma
+IR  - Reid JG
+FIR - Reid, Jeffrey G
+IR  - Sabo A
+FIR - Sabo, Aniko
+IR  - Yu J
+FIR - Yu, Jin
+IR  - Guo X
+FIR - Guo, Xiaosen
+IR  - Li W
+FIR - Li, Wangshen
+IR  - Li Y
+FIR - Li, Yingrui
+IR  - Wu R
+FIR - Wu, Renhua
+IR  - Marth GT
+FIR - Marth, Gabor T
+IR  - Garrison EP
+FIR - Garrison, Erik P
+IR  - Leong WF
+FIR - Leong, Wen Fung
+IR  - Ward AN
+FIR - Ward, Alistair N
+IR  - Del Angel G
+FIR - Del Angel, Guillermo
+IR  - DePristo MA
+FIR - DePristo, Mark A
+IR  - Gabriel SB
+FIR - Gabriel, Stacey B
+IR  - Gupta N
+FIR - Gupta, Namrata
+IR  - Hartl C
+FIR - Hartl, Chris
+IR  - Poplin RE
+FIR - Poplin, Ryan E
+IR  - Clark AG
+FIR - Clark, Andrew G
+IR  - Rodriguez-Flores JL
+FIR - Rodriguez-Flores, Juan L
+IR  - Flicek P
+FIR - Flicek, Paul
+IR  - Clarke L
+FIR - Clarke, Laura
+IR  - Smith RE
+FIR - Smith, Richard E
+IR  - Zheng-Bradley X
+FIR - Zheng-Bradley, Xiangqun
+IR  - MacArthur DG
+FIR - MacArthur, Daniel G
+IR  - Mardis ER
+FIR - Mardis, Elaine R
+IR  - Fulton R
+FIR - Fulton, Robert
+IR  - Koboldt DC
+FIR - Koboldt, Daniel C
+IR  - Gravel S
+FIR - Gravel, Simon
+IR  - Bustamante CD
+FIR - Bustamante, Carlos D
+IR  - Craig DW
+FIR - Craig, David W
+IR  - Christoforides A
+FIR - Christoforides, Alexis
+IR  - Homer N
+FIR - Homer, Nils
+IR  - Izatt T
+FIR - Izatt, Tyler
+IR  - Sherry ST
+FIR - Sherry, Stephen T
+IR  - Xiao C
+FIR - Xiao, Chunlin
+IR  - Dermitzakis ET
+FIR - Dermitzakis, Emmanouil T
+IR  - Abecasis GR
+FIR - Abecasis, Goncalo R
+IR  - Min Kang H
+FIR - Min Kang, Hyun
+IR  - McVean GA
+FIR - McVean, Gil A
+IR  - Gerstein MB
+FIR - Gerstein, Mark B
+IR  - Balasubramanian S
+FIR - Balasubramanian, Suganthi
+IR  - Habegger L
+FIR - Habegger, Lukas
+IR  - Gerstein MB
+FIR - Gerstein, Mark B
+IR  - Balasubramanian S
+FIR - Balasubramanian, Suganthi
+IR  - Habegger L
+FIR - Habegger, Lukas
+IR  - Yu H
+FIR - Yu, Haiyuan
+IR  - Flicek P
+FIR - Flicek, Paul
+IR  - Clarke L
+FIR - Clarke, Laura
+IR  - Cunningham F
+FIR - Cunningham, Fiona
+IR  - Dunham I
+FIR - Dunham, Ian
+IR  - Zerbino D
+FIR - Zerbino, Daniel
+IR  - Zheng-Bradley X
+FIR - Zheng-Bradley, Xiangqun
+IR  - Lage K
+FIR - Lage, Kasper
+IR  - Jespersen JB
+FIR - Jespersen, Jakob Berg
+IR  - Horn H
+FIR - Horn, Heiko
+IR  - Montgomery SB
+FIR - Montgomery, Stephen B
+IR  - DeGorter MK
+FIR - DeGorter, Marianne K
+IR  - Khurana E
+FIR - Khurana, Ekta
+IR  - Tyler-Smith C
+FIR - Tyler-Smith, Chris
+IR  - Chen Y
+FIR - Chen, Yuan
+IR  - Colonna V
+FIR - Colonna, Vincenza
+IR  - Xue Y
+FIR - Xue, Yali
+IR  - Gerstein MB
+FIR - Gerstein, Mark B
+IR  - Balasubramanian S
+FIR - Balasubramanian, Suganthi
+IR  - Fu Y
+FIR - Fu, Yao
+IR  - Kim D
+FIR - Kim, Donghoon
+IR  - Gerstein MB
+FIR - Gerstein, Mark B
+IR  - Balasubramanian S
+FIR - Balasubramanian, Suganthi
+IR  - Fu Y
+FIR - Fu, Yao
+IR  - Kim D
+FIR - Kim, Donghoon
+IR  - Auton A
+FIR - Auton, Adam
+IR  - Marcketta A
+FIR - Marcketta, Anthony
+IR  - Desalle R
+FIR - Desalle, Rob
+IR  - Narechania A
+FIR - Narechania, Apurva
+IR  - Sayres MA
+FIR - Sayres, Melissa A Wilson
+IR  - Garrison EP
+FIR - Garrison, Erik P
+IR  - Handsaker RE
+FIR - Handsaker, Robert E
+IR  - Kashin S
+FIR - Kashin, Seva
+IR  - McCarroll SA
+FIR - McCarroll, Steven A
+IR  - Rodriguez-Flores JL
+FIR - Rodriguez-Flores, Juan L
+IR  - Flicek P
+FIR - Flicek, Paul
+IR  - Clarke L
+FIR - Clarke, Laura
+IR  - Zheng-Bradley X
+FIR - Zheng-Bradley, Xiangqun
+IR  - Erlich Y
+FIR - Erlich, Yaniv
+IR  - Gymrek M
+FIR - Gymrek, Melissa
+IR  - Willems TF
+FIR - Willems, Thomas Frederick
+IR  - Bustamante CD
+FIR - Bustamante, Carlos D
+IR  - Mendez FL
+FIR - Mendez, Fernando L
+IR  - Poznik GD
+FIR - Poznik, G David
+IR  - Underhill PA
+FIR - Underhill, Peter A
+IR  - Lee C
+FIR - Lee, Charles
+IR  - Cerveira E
+FIR - Cerveira, Eliza
+IR  - Malhotra A
+FIR - Malhotra, Ankit
+IR  - Romanovitch M
+FIR - Romanovitch, Mallory
+IR  - Zhang C
+FIR - Zhang, Chengsheng
+IR  - Abecasis GR
+FIR - Abecasis, Goncalo R
+IR  - Coin L
+FIR - Coin, Lachlan
+IR  - Shao H
+FIR - Shao, Haojing
+IR  - Mittelman D
+FIR - Mittelman, David
+IR  - Tyler-Smith C
+FIR - Tyler-Smith, Chris
+IR  - Ayub Q
+FIR - Ayub, Qasim
+IR  - Banerjee R
+FIR - Banerjee, Ruby
+IR  - Cerezo M
+FIR - Cerezo, Maria
+IR  - Chen Y
+FIR - Chen, Yuan
+IR  - Fitzgerald TW
+FIR - Fitzgerald, Thomas W
+IR  - Louzada S
+FIR - Louzada, Sandra
+IR  - Massaia A
+FIR - Massaia, Andrea
+IR  - McCarthy S
+FIR - McCarthy, Shane
+IR  - Ritchie GR
+FIR - Ritchie, Graham R
+IR  - Xue Y
+FIR - Xue, Yali
+IR  - Yang F
+FIR - Yang, Fengtang
+IR  - Tyler-Smith C
+FIR - Tyler-Smith, Chris
+IR  - Ayub Q
+FIR - Ayub, Qasim
+IR  - Banerjee R
+FIR - Banerjee, Ruby
+IR  - Cerezo M
+FIR - Cerezo, Maria
+IR  - Chen Y
+FIR - Chen, Yuan
+IR  - Fitzgerald TW
+FIR - Fitzgerald, Thomas W
+IR  - Louzada S
+FIR - Louzada, Sandra
+IR  - Massaia A
+FIR - Massaia, Andrea
+IR  - McCarthy S
+FIR - McCarthy, Shane
+IR  - Ritchie GR
+FIR - Ritchie, Graham R
+IR  - Xue Y
+FIR - Xue, Yali
+IR  - Yang F
+FIR - Yang, Fengtang
+IR  - Gibbs RA
+FIR - Gibbs, Richard A
+IR  - Kovar C
+FIR - Kovar, Christie
+IR  - Kalra D
+FIR - Kalra, Divya
+IR  - Hale W
+FIR - Hale, Walker
+IR  - Muzny D
+FIR - Muzny, Donna
+IR  - Reid JG
+FIR - Reid, Jeffrey G
+IR  - Wang J
+FIR - Wang, Jun
+IR  - Dan X
+FIR - Dan, Xu
+IR  - Guo X
+FIR - Guo, Xiaosen
+IR  - Li G
+FIR - Li, Guoqing
+IR  - Li Y
+FIR - Li, Yingrui
+IR  - Ye C
+FIR - Ye, Chen
+IR  - Zheng X
+FIR - Zheng, Xiaole
+IR  - Altshuler DM
+FIR - Altshuler, David M
+IR  - Flicek P
+FIR - Flicek, Paul
+IR  - Clarke L
+FIR - Clarke, Laura
+IR  - Zheng-Bradley X
+FIR - Zheng-Bradley, Xiangqun
+IR  - Bentley DR
+FIR - Bentley, David R
+IR  - Cox A
+FIR - Cox, Anthony
+IR  - Humphray S
+FIR - Humphray, Sean
+IR  - Kahn S
+FIR - Kahn, Scott
+IR  - Sudbrak R
+FIR - Sudbrak, Ralf
+IR  - Albrecht MW
+FIR - Albrecht, Marcus W
+IR  - Lienhard M
+FIR - Lienhard, Matthias
+IR  - Larson D
+FIR - Larson, David
+IR  - Craig DW
+FIR - Craig, David W
+IR  - Izatt T
+FIR - Izatt, Tyler
+IR  - Kurdoglu AA
+FIR - Kurdoglu, Ahmet A
+IR  - Sherry ST
+FIR - Sherry, Stephen T
+IR  - Xiao C
+FIR - Xiao, Chunlin
+IR  - Haussler D
+FIR - Haussler, David
+IR  - Abecasis GR
+FIR - Abecasis, Goncalo R
+IR  - McVean GA
+FIR - McVean, Gil A
+IR  - Durbin RM
+FIR - Durbin, Richard M
+IR  - Balasubramaniam S
+FIR - Balasubramaniam, Senduran
+IR  - Keane TM
+FIR - Keane, Thomas M
+IR  - McCarthy S
+FIR - McCarthy, Shane
+IR  - Stalker J
+FIR - Stalker, James
+IR  - Durbin RM
+FIR - Durbin, Richard M
+IR  - Balasubramaniam S
+FIR - Balasubramaniam, Senduran
+IR  - Keane TM
+FIR - Keane, Thomas M
+IR  - McCarthy S
+FIR - McCarthy, Shane
+IR  - Stalker J
+FIR - Stalker, James
+IR  - Chakravarti A
+FIR - Chakravarti, Aravinda
+IR  - Knoppers BM
+FIR - Knoppers, Bartha M
+IR  - Abecasis GR
+FIR - Abecasis, Goncalo R
+IR  - Barnes KC
+FIR - Barnes, Kathleen C
+IR  - Beiswanger C
+FIR - Beiswanger, Christine
+IR  - Burchard EG
+FIR - Burchard, Esteban G
+IR  - Bustamante CD
+FIR - Bustamante, Carlos D
+IR  - Cai H
+FIR - Cai, Hongyu
+IR  - Cao H
+FIR - Cao, Hongzhi
+IR  - Durbin RM
+FIR - Durbin, Richard M
+IR  - Gerry NP
+FIR - Gerry, Norman P
+IR  - Gharani N
+FIR - Gharani, Neda
+IR  - Gibbs RA
+FIR - Gibbs, Richard A
+IR  - Gignoux CR
+FIR - Gignoux, Christopher R
+IR  - Gravel S
+FIR - Gravel, Simon
+IR  - Henn B
+FIR - Henn, Brenna
+IR  - Jones D
+FIR - Jones, Danielle
+IR  - Jorde L
+FIR - Jorde, Lynn
+IR  - Kaye JS
+FIR - Kaye, Jane S
+IR  - Keinan A
+FIR - Keinan, Alon
+IR  - Kent A
+FIR - Kent, Alastair
+IR  - Kerasidou A
+FIR - Kerasidou, Angeliki
+IR  - Li Y
+FIR - Li, Yingrui
+IR  - Mathias R
+FIR - Mathias, Rasika
+IR  - McVean GA
+FIR - McVean, Gil A
+IR  - Moreno-Estrada A
+FIR - Moreno-Estrada, Andres
+IR  - Ossorio PN
+FIR - Ossorio, Pilar N
+IR  - Parker M
+FIR - Parker, Michael
+IR  - Resch AM
+FIR - Resch, Alissa M
+IR  - Rotimi CN
+FIR - Rotimi, Charles N
+IR  - Royal CD
+FIR - Royal, Charmaine D
+IR  - Sandoval K
+FIR - Sandoval, Karla
+IR  - Su Y
+FIR - Su, Yeyang
+IR  - Sudbrak R
+FIR - Sudbrak, Ralf
+IR  - Tian Z
+FIR - Tian, Zhongming
+IR  - Tishkoff S
+FIR - Tishkoff, Sarah
+IR  - Toji LH
+FIR - Toji, Lorraine H
+IR  - Tyler-Smith C
+FIR - Tyler-Smith, Chris
+IR  - Via M
+FIR - Via, Marc
+IR  - Wang Y
+FIR - Wang, Yuhong
+IR  - Yang H
+FIR - Yang, Huanming
+IR  - Yang L
+FIR - Yang, Ling
+IR  - Zhu J
+FIR - Zhu, Jiayong
+IR  - Bodmer W
+FIR - Bodmer, Walter
+IR  - Bedoya G
+FIR - Bedoya, Gabriel
+IR  - Ruiz-Linares A
+FIR - Ruiz-Linares, Andres
+IR  - Cai Z
+FIR - Cai, Zhiming
+IR  - Gao Y
+FIR - Gao, Yang
+IR  - Chu J
+FIR - Chu, Jiayou
+IR  - Peltonen L
+FIR - Peltonen, Leena
+IR  - Garcia-Montero A
+FIR - Garcia-Montero, Andres
+IR  - Orfao A
+FIR - Orfao, Alberto
+IR  - Dutil J
+FIR - Dutil, Julie
+IR  - Martinez-Cruzado JC
+FIR - Martinez-Cruzado, Juan C
+IR  - Oleksyk TK
+FIR - Oleksyk, Taras K
+IR  - Barnes KC
+FIR - Barnes, Kathleen C
+IR  - Mathias RA
+FIR - Mathias, Rasika A
+IR  - Hennis A
+FIR - Hennis, Anselm
+IR  - Watson H
+FIR - Watson, Harold
+IR  - McKenzie C
+FIR - McKenzie, Colin
+IR  - Qadri F
+FIR - Qadri, Firdausi
+IR  - LaRocque R
+FIR - LaRocque, Regina
+IR  - Sabeti PC
+FIR - Sabeti, Pardis C
+IR  - Zhu J
+FIR - Zhu, Jiayong
+IR  - Deng X
+FIR - Deng, Xiaoyan
+IR  - Sabeti PC
+FIR - Sabeti, Pardis C
+IR  - Asogun D
+FIR - Asogun, Danny
+IR  - Folarin O
+FIR - Folarin, Onikepe
+IR  - Happi C
+FIR - Happi, Christian
+IR  - Omoniwa O
+FIR - Omoniwa, Omonwunmi
+IR  - Stremlau M
+FIR - Stremlau, Matt
+IR  - Tariyal R
+FIR - Tariyal, Ridhi
+IR  - Jallow M
+FIR - Jallow, Muminatou
+IR  - Joof FS
+FIR - Joof, Fatoumatta Sisay
+IR  - Corrah T
+FIR - Corrah, Tumani
+IR  - Rockett K
+FIR - Rockett, Kirk
+IR  - Kwiatkowski D
+FIR - Kwiatkowski, Dominic
+IR  - Kooner J
+FIR - Kooner, Jaspal
+IR  - Hien TT
+FIR - Hien, Tran Tinh
+IR  - Dunstan SJ
+FIR - Dunstan, Sarah J
+IR  - Hang NT
+FIR - Hang, Nguyen Thuy
+IR  - Fonnie R
+FIR - Fonnie, Richard
+IR  - Garry R
+FIR - Garry, Robert
+IR  - Kanneh L
+FIR - Kanneh, Lansana
+IR  - Moses L
+FIR - Moses, Lina
+IR  - Sabeti PC
+FIR - Sabeti, Pardis C
+IR  - Schieffelin J
+FIR - Schieffelin, John
+IR  - Grant DS
+FIR - Grant, Donald S
+IR  - Gallo C
+FIR - Gallo, Carla
+IR  - Poletti G
+FIR - Poletti, Giovanni
+IR  - Saleheen D
+FIR - Saleheen, Danish
+IR  - Rasheed A
+FIR - Rasheed, Asif
+IR  - Saleheen D
+FIR - Saleheen, Danish
+IR  - Rasheed A
+FIR - Rasheed, Asif
+IR  - Brooks LD
+FIR - Brooks, Lisa D
+IR  - Felsenfeld AL
+FIR - Felsenfeld, Adam L
+IR  - McEwen JE
+FIR - McEwen, Jean E
+IR  - Vaydylevich Y
+FIR - Vaydylevich, Yekaterina
+IR  - Green ED
+FIR - Green, Eric D
+IR  - Duncanson A
+FIR - Duncanson, Audrey
+IR  - Dunn M
+FIR - Dunn, Michael
+IR  - Schloss JA
+FIR - Schloss, Jeffery A
+IR  - Wang J
+FIR - Wang, Jun
+IR  - Yang H
+FIR - Yang, Huanming
+IR  - Auton A
+FIR - Auton, Adam
+IR  - Brooks LD
+FIR - Brooks, Lisa D
+IR  - Durbin RM
+FIR - Durbin, Richard M
+IR  - Garrison EP
+FIR - Garrison, Erik P
+IR  - Min Kang H
+FIR - Min Kang, Hyun
+IR  - Korbel JO
+FIR - Korbel, Jan O
+IR  - Marchini JL
+FIR - Marchini, Jonathan L
+IR  - McCarthy S
+FIR - McCarthy, Shane
+IR  - McVean GA
+FIR - McVean, Gil A
+IR  - Abecasis GR
+FIR - Abecasis, Goncalo R
+IR  - Auton A
+FIR - Auton, Adam
+IR  - Brooks LD
+FIR - Brooks, Lisa D
+IR  - Durbin RM
+FIR - Durbin, Richard M
+IR  - Garrison EP
+FIR - Garrison, Erik P
+IR  - Min Kang H
+FIR - Min Kang, Hyun
+IR  - Korbel JO
+FIR - Korbel, Jan O
+IR  - Marchini JL
+FIR - Marchini, Jonathan L
+IR  - McCarthy S
+FIR - McCarthy, Shane
+IR  - McVean GA
+FIR - McVean, Gil A
+IR  - Abecasis GR
+FIR - Abecasis, Goncalo R
+EDAT- 2015/10/04 06:00
+MHDA- 2015/10/27 06:00
+CRDT- 2015/10/04 06:00
+PHST- 2015/05/12 [received]
+PHST- 2015/08/20 [accepted]
+AID - nature15393 [pii]
+AID - 10.1038/nature15393 [doi]
+PST - ppublish
+SO  - Nature. 2015 Oct 1;526(7571):68-74. doi: 10.1038/nature15393.
+
+PMID- 25954001
+OWN - NLM
+STAT- MEDLINE
+DA  - 20150508
+DCOM- 20150622
+LR  - 20160603
+IS  - 1095-9203 (Electronic)
+IS  - 0036-8075 (Linking)
+VI  - 348
+IP  - 6235
+DP  - 2015 May 8
+TI  - Human genomics. The Genotype-Tissue Expression (GTEx) pilot analysis: multitissue
+      gene regulation in humans.
+PG  - 648-60
+LID - 10.1126/science.1262110 [doi]
+AB  - Understanding the functional consequences of genetic variation, and how it
+      affects complex human disease and quantitative traits, remains a critical
+      challenge for biomedicine. We present an analysis of RNA sequencing data from
+      1641 samples across 43 tissues from 175 individuals, generated as part of the
+      pilot phase of the Genotype-Tissue Expression (GTEx) project. We describe the
+      landscape of gene expression across tissues, catalog thousands of tissue-specific
+      and shared regulatory expression quantitative trait loci (eQTL) variants,
+      describe complex network relationships, and identify signals from genome-wide
+      association studies explained by eQTLs. These findings provide a systematic
+      understanding of the cellular and biological consequences of human genetic
+      variation and of the heterogeneity of such effects among a diverse set of human
+      tissues.
+CI  - Copyright (c) 2015, American Association for the Advancement of Science.
+CN  - GTEx Consortium
+LA  - eng
+SI  - dbGaP/PHS000424.V3.P1
+SI  - dbGaP/PHS000424.V5.P1
+GR  - 098381/Wellcome Trust/United Kingdom
+GR  - HHSN261200800001E/PHS HHS/United States
+GR  - HHSN268201000029C/HL/NHLBI NIH HHS/United States
+GR  - HHSN268201000029C/PHS HHS/United States
+GR  - K12 CA139160/CA/NCI NIH HHS/United States
+GR  - P30 DK020595/DK/NIDDK NIH HHS/United States
+GR  - R01 DA006227-17/DA/NIDA NIH HHS/United States
+GR  - R01 GM104371/GM/NIGMS NIH HHS/United States
+GR  - R01 GM104371/GM/NIGMS NIH HHS/United States
+GR  - R01 MH090936/MH/NIMH NIH HHS/United States
+GR  - R01 MH090937/MH/NIMH NIH HHS/United States
+GR  - R01 MH090937/MH/NIMH NIH HHS/United States
+GR  - R01 MH090941/MH/NIMH NIH HHS/United States
+GR  - R01 MH090948/MH/NIMH NIH HHS/United States
+GR  - R01 MH090951/MH/NIMH NIH HHS/United States
+GR  - R01 MH101820/MH/NIMH NIH HHS/United States
+GR  - R01AG046170/AG/NIA NIH HHS/United States
+GR  - R01CA163772/CA/NCI NIH HHS/United States
+GR  - U01AI111598-01/AI/NIAID NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20150507
+PL  - United States
+TA  - Science
+JT  - Science (New York, N.Y.)
+JID - 0404511
+RN  - 0 (GRAF3 protein, human)
+RN  - 0 (GTPase-Activating Proteins)
+RN  - 0 (RNA, Untranslated)
+SB  - IM
+CIN - Science. 2015 May 8;348(6235):640-1. PMID: 25953996
+MH  - Alleles
+MH  - Blood Pressure/genetics
+MH  - Disease/*genetics
+MH  - GTPase-Activating Proteins/genetics
+MH  - *Gene Expression Regulation
+MH  - Gene Regulatory Networks
+MH  - *Genetic Variation
+MH  - Genome, Human/*genetics
+MH  - Genome-Wide Association Study
+MH  - Genotype
+MH  - Humans
+MH  - Multigene Family
+MH  - Organ Specificity/genetics
+MH  - Pilot Projects
+MH  - *Quantitative Trait Loci
+MH  - RNA Splicing
+MH  - RNA, Untranslated/genetics
+MH  - Sequence Analysis, RNA
+MH  - Tibial Arteries/metabolism
+MH  - *Transcriptome
+PMC - PMC4547484
+MID - NIHMS712356
+OID - NLM: NIHMS712356
+OID - NLM: PMC4547484
+IR  - Ardlie KG
+FIR - Ardlie, Kristin G
+IR  - Deluca DS
+FIR - Deluca, David S
+IR  - Segre AV
+FIR - Segre, Ayellet V
+IR  - Sullivan TJ
+FIR - Sullivan, Timothy J
+IR  - Young TR
+FIR - Young, Taylor R
+IR  - Gelfand ET
+FIR - Gelfand, Ellen T
+IR  - Trowbridge CA
+FIR - Trowbridge, Casandra A
+IR  - Maller JB
+FIR - Maller, Julian B
+IR  - Tukiainen T
+FIR - Tukiainen, Taru
+IR  - Lek M
+FIR - Lek, Monkol
+IR  - Ward LD
+FIR - Ward, Lucas D
+IR  - Kheradpour P
+FIR - Kheradpour, Pouya
+IR  - Iriarte B
+FIR - Iriarte, Benjamin
+IR  - Meng Y
+FIR - Meng, Yan
+IR  - Palmer CD
+FIR - Palmer, Cameron D
+IR  - Esko T
+FIR - Esko, Tonu
+IR  - Winckler W
+FIR - Winckler, Wendy
+IR  - Hirschhorn JN
+FIR - Hirschhorn, Joel N
+IR  - Kellis M
+FIR - Kellis, Manolis
+IR  - MacArthur DG
+FIR - MacArthur, Daniel G
+IR  - Getz G
+FIR - Getz, Gad
+IR  - Shabalin AA
+FIR - Shabalin, Andrey A
+IR  - Li G
+FIR - Li, Gen
+IR  - Zhou YH
+FIR - Zhou, Yi-Hui
+IR  - Nobel AB
+FIR - Nobel, Andrew B
+IR  - Rusyn I
+FIR - Rusyn, Ivan
+IR  - Wright FA
+FIR - Wright, Fred A
+IR  - Lappalainen T
+FIR - Lappalainen, Tuuli
+IR  - Ferreira PG
+FIR - Ferreira, Pedro G
+IR  - Ongen H
+FIR - Ongen, Halit
+IR  - Rivas MA
+FIR - Rivas, Manuel A
+IR  - Battle A
+FIR - Battle, Alexis
+IR  - Mostafavi S
+FIR - Mostafavi, Sara
+IR  - Monlong J
+FIR - Monlong, Jean
+IR  - Sammeth M
+FIR - Sammeth, Michael
+IR  - Mele M
+FIR - Mele, Marta
+IR  - Reverter F
+FIR - Reverter, Ferran
+IR  - Goldmann JM
+FIR - Goldmann, Jakob M
+IR  - Koller D
+FIR - Koller, Daphne
+IR  - Guigo R
+FIR - Guigo, Roderic
+IR  - McCarthy MI
+FIR - McCarthy, Mark I
+IR  - Dermitzakis ET
+FIR - Dermitzakis, Emmanouil T
+IR  - Gamazon ER
+FIR - Gamazon, Eric R
+IR  - Im HK
+FIR - Im, Hae Kyung
+IR  - Konkashbaev A
+FIR - Konkashbaev, Anuar
+IR  - Nicolae DL
+FIR - Nicolae, Dan L
+IR  - Cox NJ
+FIR - Cox, Nancy J
+IR  - Flutre T
+FIR - Flutre, Timothee
+IR  - Wen X
+FIR - Wen, Xiaoquan
+IR  - Stephens M
+FIR - Stephens, Matthew
+IR  - Pritchard JK
+FIR - Pritchard, Jonathan K
+IR  - Tu Z
+FIR - Tu, Zhidong
+IR  - Zhang B
+FIR - Zhang, Bin
+IR  - Huang T
+FIR - Huang, Tao
+IR  - Long Q
+FIR - Long, Quan
+IR  - Lin L
+FIR - Lin, Luan
+IR  - Yang J
+FIR - Yang, Jialiang
+IR  - Zhu J
+FIR - Zhu, Jun
+IR  - Liu J
+FIR - Liu, Jun
+IR  - Brown A
+FIR - Brown, Amanda
+IR  - Mestichelli B
+FIR - Mestichelli, Bernadette
+IR  - Tidwell D
+FIR - Tidwell, Denee
+IR  - Lo E
+FIR - Lo, Edmund
+IR  - Salvatore M
+FIR - Salvatore, Michael
+IR  - Shad S
+FIR - Shad, Saboor
+IR  - Thomas JA
+FIR - Thomas, Jeffrey A
+IR  - Lonsdale JT
+FIR - Lonsdale, John T
+IR  - Moser MT
+FIR - Moser, Michael T
+IR  - Gillard BM
+FIR - Gillard, Bryan M
+IR  - Karasik E
+FIR - Karasik, Ellen
+IR  - Ramsey K
+FIR - Ramsey, Kimberly
+IR  - Choi C
+FIR - Choi, Christopher
+IR  - Foster BA
+FIR - Foster, Barbara A
+IR  - Syron J
+FIR - Syron, John
+IR  - Fleming J
+FIR - Fleming, Johnell
+IR  - Magazine H
+FIR - Magazine, Harold
+IR  - Hasz R
+FIR - Hasz, Rick
+IR  - Walters GD
+FIR - Walters, Gary D
+IR  - Bridge JP
+FIR - Bridge, Jason P
+IR  - Miklos M
+FIR - Miklos, Mark
+IR  - Sullivan S
+FIR - Sullivan, Susan
+IR  - Barker LK
+FIR - Barker, Laura K
+IR  - Traino HM
+FIR - Traino, Heather M
+IR  - Mosavel M
+FIR - Mosavel, Maghboeba
+IR  - Siminoff LA
+FIR - Siminoff, Laura A
+IR  - Valley DR
+FIR - Valley, Dana R
+IR  - Rohrer DC
+FIR - Rohrer, Daniel C
+IR  - Jewell SD
+FIR - Jewell, Scott D
+IR  - Branton PA
+FIR - Branton, Philip A
+IR  - Sobin LH
+FIR - Sobin, Leslie H
+IR  - Barcus M
+FIR - Barcus, Mary
+IR  - Qi L
+FIR - Qi, Liqun
+IR  - McLean J
+FIR - McLean, Jeffrey
+IR  - Hariharan P
+FIR - Hariharan, Pushpa
+IR  - Um KS
+FIR - Um, Ki Sung
+IR  - Wu S
+FIR - Wu, Shenpei
+IR  - Tabor D
+FIR - Tabor, David
+IR  - Shive C
+FIR - Shive, Charles
+IR  - Smith AM
+FIR - Smith, Anna M
+IR  - Buia SA
+FIR - Buia, Stephen A
+IR  - Undale AH
+FIR - Undale, Anita H
+IR  - Robinson KL
+FIR - Robinson, Karna L
+IR  - Roche N
+FIR - Roche, Nancy
+IR  - Valentino KM
+FIR - Valentino, Kimberly M
+IR  - Britton A
+FIR - Britton, Angela
+IR  - Burges R
+FIR - Burges, Robin
+IR  - Bradbury D
+FIR - Bradbury, Debra
+IR  - Hambright KW
+FIR - Hambright, Kenneth W
+IR  - Seleski J
+FIR - Seleski, John
+IR  - Korzeniewski GE
+FIR - Korzeniewski, Greg E
+IR  - Erickson K
+FIR - Erickson, Kenyon
+IR  - Marcus Y
+FIR - Marcus, Yvonne
+IR  - Tejada J
+FIR - Tejada, Jorge
+IR  - Taherian M
+FIR - Taherian, Mehran
+IR  - Lu C
+FIR - Lu, Chunrong
+IR  - Basile M
+FIR - Basile, Margaret
+IR  - Mash DC
+FIR - Mash, Deborah C
+IR  - Volpi S
+FIR - Volpi, Simona
+IR  - Struewing JP
+FIR - Struewing, Jeffery P
+IR  - Temple GF
+FIR - Temple, Gary F
+IR  - Boyer J
+FIR - Boyer, Joy
+IR  - Colantuoni D
+FIR - Colantuoni, Deborah
+IR  - Little R
+FIR - Little, Roger
+IR  - Koester S
+FIR - Koester, Susan
+IR  - Carithers LJ
+FIR - Carithers, Latarsha J
+IR  - Moore HM
+FIR - Moore, Helen M
+IR  - Guan P
+FIR - Guan, Ping
+IR  - Compton C
+FIR - Compton, Carolyn
+IR  - Sawyer SJ
+FIR - Sawyer, Sherilyn J
+IR  - Demchok JP
+FIR - Demchok, Joanne P
+IR  - Vaught JB
+FIR - Vaught, Jimmie B
+IR  - Rabiner CA
+FIR - Rabiner, Chana A
+IR  - Lockhart NC
+FIR - Lockhart, Nicole C
+IR  - Ardlie KG
+FIR - Ardlie, Kristin G
+IR  - Getz G
+FIR - Getz, Gad
+IR  - Wright FA
+FIR - Wright, Fred A
+IR  - Kellis M
+FIR - Kellis, Manolis
+IR  - Volpi S
+FIR - Volpi, Simona
+IR  - Dermitzakis ET
+FIR - Dermitzakis, Emmanouil T
+EDAT- 2015/05/09 06:00
+MHDA- 2015/06/24 06:00
+CRDT- 2015/05/09 06:00
+PHST- 2014/10/03 [received]
+PHST- 2015/04/03 [accepted]
+PHST- 2015/05/07 [aheadofprint]
+AID - 348/6235/648 [pii]
+AID - 10.1126/science.1262110 [doi]
+PST - ppublish
+SO  - Science. 2015 May 8;348(6235):648-60. doi: 10.1126/science.1262110. Epub 2015 May
+      7.
+
+PMID- 25237114
+OWN - NLM
+STAT- MEDLINE
+DA  - 20140919
+DCOM- 20150609
+LR  - 20150803
+IS  - 2160-1836 (Electronic)
+IS  - 2160-1836 (Linking)
+VI  - 4
+IP  - 9
+DP  - 2014 Sep
+TI  - Quantitative trait locus mapping methods for diversity outbred mice.
+PG  - 1623-33
+LID - 10.1534/g3.114.013748 [doi]
+AB  - Genetic mapping studies in the mouse and other model organisms are used to search
+      for genes underlying complex phenotypes. Traditional genetic mapping studies that
+      employ single-generation crosses have poor mapping resolution and limit discovery
+      to loci that are polymorphic between the two parental strains. Multiparent
+      outbreeding populations address these shortcomings by increasing the density of
+      recombination events and introducing allelic variants from multiple founder
+      strains. However, multiparent crosses present new analytical challenges and
+      require specialized software to take full advantage of these benefits. Each
+      animal in an outbreeding population is genetically unique and must be genotyped
+      using a high-density marker set; regression models for mapping must accommodate
+      multiple founder alleles, and complex breeding designs give rise to polygenic
+      covariance among related animals that must be accounted for in mapping analysis. 
+      The Diversity Outbred (DO) mice combine the genetic diversity of eight founder
+      strains in a multigenerational breeding design that has been maintained for >16
+      generations. The large population size and randomized mating ensure the long-term
+      genetic stability of this population. We present a complete analytical pipeline
+      for genetic mapping in DO mice, including algorithms for probabilistic
+      reconstruction of founder haplotypes from genotyping array intensity data, and
+      mapping methods that accommodate multiple founder haplotypes and account for
+      relatedness among animals. Power analysis suggests that studies with as few as
+      200 DO mice can detect loci with large effects, but loci that account for <5% of 
+      trait variance may require a sample size of up to 1000 animals. The methods
+      described here are implemented in the freely available R package DOQTL.
+CI  - Copyright (c) 2014 Gatti et al.
+FAU - Gatti, Daniel M
+AU  - Gatti DM
+AD  - The Jackson Laboratory, Bar Harbor, Maine 04609.
+FAU - Svenson, Karen L
+AU  - Svenson KL
+AD  - The Jackson Laboratory, Bar Harbor, Maine 04609.
+FAU - Shabalin, Andrey
+AU  - Shabalin A
+AD  - Medical College of Virginia of Virginia Commonwealth University, Richmond,
+      Virginia 23298.
+FAU - Wu, Long-Yang
+AU  - Wu LY
+AD  - The Jackson Laboratory, Bar Harbor, Maine 04609.
+FAU - Valdar, William
+AU  - Valdar W
+AD  - Department of Genetics, University of North Carolina, Chapel Hill, North Carolina
+      27599 Lineberger Comprehensive Cancer Center, University of North Carolina,
+      Chapel Hill, North Carolina 27599.
+FAU - Simecek, Petr
+AU  - Simecek P
+AD  - The Jackson Laboratory, Bar Harbor, Maine 04609.
+FAU - Goodwin, Neal
+AU  - Goodwin N
+AD  - The Jackson Laboratory, Bar Harbor, Maine 04609.
+FAU - Cheng, Riyan
+AU  - Cheng R
+AD  - Division of Plant Sciences, Research School of Biology, The Australian National
+      University, Canberra, Australian Capital Territory 0200, Australia.
+FAU - Pomp, Daniel
+AU  - Pomp D
+AD  - Department of Genetics, University of North Carolina, Chapel Hill, North Carolina
+      27599.
+FAU - Palmer, Abraham
+AU  - Palmer A
+AD  - Department of Human Genetics, University of Chicago, Chicago, Illinois 60637.
+FAU - Chesler, Elissa J
+AU  - Chesler EJ
+AD  - The Jackson Laboratory, Bar Harbor, Maine 04609.
+FAU - Broman, Karl W
+AU  - Broman KW
+AD  - Department of Biostatistics and Medical Informatics, University of Wisconsin,
+      Madison, Wisconsin 53706.
+FAU - Churchill, Gary A
+AU  - Churchill GA
+AD  - The Jackson Laboratory, Bar Harbor, Maine 04609 gary.churchill@jax.org.
+LA  - eng
+GR  - DK056350/DK/NIDDK NIH HHS/United States
+GR  - DK076050/DK/NIDDK NIH HHS/United States
+GR  - P30 AG038070/AG/NIA NIH HHS/United States
+GR  - P30 AG038070/AG/NIA NIH HHS/United States
+GR  - P30 CA034196/CA/NCI NIH HHS/United States
+GR  - P30 DK056350/DK/NIDDK NIH HHS/United States
+GR  - P30 GM070683/GM/NIGMS NIH HHS/United States
+GR  - P50 GM076468/GM/NIGMS NIH HHS/United States
+GR  - P50 GM076468/GM/NIGMS NIH HHS/United States
+GR  - R01 GM070683/GM/NIGMS NIH HHS/United States
+GR  - R01 GM074244/GM/NIGMS NIH HHS/United States
+GR  - RC1DK087346/DK/NIDDK NIH HHS/United States
+GR  - UL1 TR000430/TR/NCATS NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+DEP - 20140918
+PL  - United States
+TA  - G3 (Bethesda)
+JT  - G3 (Bethesda, Md.)
+JID - 101566598
+SB  - IM
+MH  - Animals
+MH  - Animals, Outbred Strains/*genetics
+MH  - Chromosome Mapping/*methods
+MH  - Computer Simulation
+MH  - Genotype
+MH  - Leukocyte Count
+MH  - Mice
+MH  - Models, Genetic
+MH  - Neutrophils/cytology
+MH  - Phenotype
+MH  - Polymorphism, Single Nucleotide
+MH  - *Quantitative Trait Loci
+MH  - Software
+PMC - PMC4169154
+OID - NLM: PMC4169154
+OTO - NOTNLM
+OT  - MPP
+OT  - Multiparent Advanced Generation Inter-Cross (MAGIC)
+OT  - Multiparental populations
+OT  - diversity outbred
+OT  - haplotype reconstruction
+OT  - quantitative trait locus mapping
+EDAT- 2014/09/23 06:00
+MHDA- 2015/06/10 06:00
+CRDT- 2014/09/20 06:00
+AID - 4/9/1623 [pii]
+AID - 10.1534/g3.114.013748 [doi]
+PST - epublish
+SO  - G3 (Bethesda). 2014 Sep 18;4(9):1623-33. doi: 10.1534/g3.114.013748.
+
+PMID- 24531419
+OWN - NLM
+STAT- MEDLINE
+DA  - 20140331
+DCOM- 20140603
+LR  - 20150515
+IS  - 1548-7105 (Electronic)
+IS  - 1548-7091 (Linking)
+VI  - 11
+IP  - 4
+DP  - 2014 Apr
+TI  - Efficient multivariate linear mixed model algorithms for genome-wide association 
+      studies.
+PG  - 407-9
+LID - 10.1038/nmeth.2848 [doi]
+AB  - Multivariate linear mixed models (mvLMMs) are powerful tools for testing
+      associations between single-nucleotide polymorphisms and multiple correlated
+      phenotypes while controlling for population stratification in genome-wide
+      association studies. We present efficient algorithms in the genome-wide efficient
+      mixed model association (GEMMA) software for fitting mvLMMs and computing
+      likelihood ratio tests. These algorithms offer improved computation speed, power 
+      and P-value calibration over existing methods, and can deal with more than two
+      phenotypes.
+FAU - Zhou, Xiang
+AU  - Zhou X
+AD  - 1] Department of Human Genetics, University of Chicago, Chicago, Illinois, USA.
+      [2] Department of Statistics, University of Chicago, Chicago, Illinois, USA.
+FAU - Stephens, Matthew
+AU  - Stephens M
+AD  - 1] Department of Human Genetics, University of Chicago, Chicago, Illinois, USA.
+      [2] Department of Statistics, University of Chicago, Chicago, Illinois, USA.
+LA  - eng
+GR  - HG02585/HG/NHGRI NIH HHS/United States
+GR  - HL092206/HL/NHLBI NIH HHS/United States
+GR  - R01 HG002585/HG/NHGRI NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20140216
+PL  - United States
+TA  - Nat Methods
+JT  - Nature methods
+JID - 101215604
+SB  - IM
+MH  - *Algorithms
+MH  - *Genome
+MH  - Likelihood Functions
+MH  - *Linear Models
+MH  - *Multivariate Analysis
+MH  - Polymorphism, Single Nucleotide/*genetics
+MH  - Software
+PMC - PMC4211878
+MID - NIHMS560150
+OID - NLM: NIHMS560150
+OID - NLM: PMC4211878
+EDAT- 2014/02/18 06:00
+MHDA- 2014/06/04 06:00
+CRDT- 2014/02/18 06:00
+PHST- 2013/05/06 [received]
+PHST- 2013/01/13 [accepted]
+PHST- 2014/02/16 [aheadofprint]
+AID - nmeth.2848 [pii]
+AID - 10.1038/nmeth.2848 [doi]
+PST - ppublish
+SO  - Nat Methods. 2014 Apr;11(4):407-9. doi: 10.1038/nmeth.2848. Epub 2014 Feb 16.
+
+PMID- 24316577
+OWN - NLM
+STAT- MEDLINE
+DA  - 20131230
+DCOM- 20140317
+LR  - 20151002
+IS  - 1362-4962 (Electronic)
+IS  - 0305-1048 (Linking)
+VI  - 42
+IP  - Database issue
+DP  - 2014 Jan
+TI  - The NHGRI GWAS Catalog, a curated resource of SNP-trait associations.
+PG  - D1001-6
+LID - 10.1093/nar/gkt1229 [doi]
+AB  - The National Human Genome Research Institute (NHGRI) Catalog of Published
+      Genome-Wide Association Studies (GWAS) Catalog provides a publicly available
+      manually curated collection of published GWAS assaying at least 100,000
+      single-nucleotide polymorphisms (SNPs) and all SNP-trait associations with P <1 x
+      10(-5). The Catalog includes 1751 curated publications of 11 912 SNPs. In
+      addition to the SNP-trait association data, the Catalog also publishes a
+      quarterly diagram of all SNP-trait associations mapped to the SNPs' chromosomal
+      locations. The Catalog can be accessed via a tabular web interface, via a dynamic
+      visualization on the human karyotype, as a downloadable tab-delimited file and as
+      an OWL knowledge base. This article presents a number of recent improvements to
+      the Catalog, including novel ways for users to interact with the Catalog and
+      changes to the curation infrastructure.
+FAU - Welter, Danielle
+AU  - Welter D
+AD  - European Bioinformatics Institute (EMBL-EBI), European Molecular Biology
+      Laboratory, Wellcome Trust Genome Campus, Hinxton, Cambridge, CB10 1SD, UK,
+      Division of Genomic Medicine, National Human Genome Research Institute, National 
+      Institutes of Health, Bethesda, MD 20892, USA and Division of Policy,
+      Communication and Education, National Human Genome Research Institute, National
+      Institutes of Health, Bethesda, MD 20892, USA.
+FAU - MacArthur, Jacqueline
+AU  - MacArthur J
+FAU - Morales, Joannella
+AU  - Morales J
+FAU - Burdett, Tony
+AU  - Burdett T
+FAU - Hall, Peggy
+AU  - Hall P
+FAU - Junkins, Heather
+AU  - Junkins H
+FAU - Klemm, Alan
+AU  - Klemm A
+FAU - Flicek, Paul
+AU  - Flicek P
+FAU - Manolio, Teri
+AU  - Manolio T
+FAU - Hindorff, Lucia
+AU  - Hindorff L
+FAU - Parkinson, Helen
+AU  - Parkinson H
+LA  - eng
+GR  - 3U41-HG006104/HG/NHGRI NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20131206
+PL  - England
+TA  - Nucleic Acids Res
+JT  - Nucleic acids research
+JID - 0411011
+SB  - IM
+MH  - *Databases, Nucleic Acid
+MH  - Gene Ontology
+MH  - Genome, Human
+MH  - *Genome-Wide Association Study
+MH  - Humans
+MH  - Internet
+MH  - Karyotype
+MH  - *Polymorphism, Single Nucleotide
+PMC - PMC3965119
+OID - NLM: PMC3965119
+EDAT- 2013/12/10 06:00
+MHDA- 2014/03/19 06:00
+CRDT- 2013/12/10 06:00
+PHST- 2013/12/06 [aheadofprint]
+AID - gkt1229 [pii]
+AID - 10.1093/nar/gkt1229 [doi]
+PST - ppublish
+SO  - Nucleic Acids Res. 2014 Jan;42(Database issue):D1001-6. doi: 10.1093/nar/gkt1229.
+      Epub 2013 Dec 6.
+
+PMID- 22955616
+OWN - NLM
+STAT- MEDLINE
+DA  - 20120907
+DCOM- 20121017
+LR  - 20150813
+IS  - 1476-4687 (Electronic)
+IS  - 0028-0836 (Linking)
+VI  - 489
+IP  - 7414
+DP  - 2012 Sep 6
+TI  - An integrated encyclopedia of DNA elements in the human genome.
+PG  - 57-74
+LID - 10.1038/nature11247 [doi]
+AB  - The human genome encodes the blueprint of life, but the function of the vast
+      majority of its nearly three billion bases is unknown. The Encyclopedia of DNA
+      Elements (ENCODE) project has systematically mapped regions of transcription,
+      transcription factor association, chromatin structure and histone modification.
+      These data enabled us to assign biochemical functions for 80% of the genome, in
+      particular outside of the well-studied protein-coding regions. Many discovered
+      candidate regulatory elements are physically associated with one another and with
+      expressed genes, providing new insights into the mechanisms of gene regulation.
+      The newly identified elements also show a statistical correspondence to sequence 
+      variants linked to human disease, and can thereby guide interpretation of this
+      variation. Overall, the project provides new insights into the organization and
+      regulation of our genes and genome, and is an expansive resource of functional
+      annotations for biomedical research.
+CN  - ENCODE Project Consortium
+LA  - eng
+GR  - 095908/Wellcome Trust/United Kingdom
+GR  - K99 HG006698/HG/NHGRI NIH HHS/United States
+GR  - P30 CA016086/CA/NCI NIH HHS/United States
+GR  - P30 CA045508/CA/NCI NIH HHS/United States
+GR  - R01 DK054369/DK/NIDDK NIH HHS/United States
+GR  - R01 DK065806/DK/NIDDK NIH HHS/United States
+GR  - R01 HG003143/HG/NHGRI NIH HHS/United States
+GR  - R01 HG005085/HG/NHGRI NIH HHS/United States
+GR  - R01HG003143/HG/NHGRI NIH HHS/United States
+GR  - R01HG003541/HG/NHGRI NIH HHS/United States
+GR  - R01HG003700/HG/NHGRI NIH HHS/United States
+GR  - R01HG003988/HG/NHGRI NIH HHS/United States
+GR  - R01HG004456-03/HG/NHGRI NIH HHS/United States
+GR  - R37 DK044746/DK/NIDDK NIH HHS/United States
+GR  - RC2 HG005573/HG/NHGRI NIH HHS/United States
+GR  - RC2HG005591/HG/NHGRI NIH HHS/United States
+GR  - RC2HG005679/HG/NHGRI NIH HHS/United States
+GR  - T32 GM007205/GM/NIGMS NIH HHS/United States
+GR  - U01 HG004695/HG/NHGRI NIH HHS/United States
+GR  - U01HG004561/HG/NHGRI NIH HHS/United States
+GR  - U01HG004571/HG/NHGRI NIH HHS/United States
+GR  - U01HG004695/HG/NHGRI NIH HHS/United States
+GR  - U41HG004568/HG/NHGRI NIH HHS/United States
+GR  - U54HG004555/HG/NHGRI NIH HHS/United States
+GR  - U54HG004557/HG/NHGRI NIH HHS/United States
+GR  - U54HG004558/HG/NHGRI NIH HHS/United States
+GR  - U54HG004563/HG/NHGRI NIH HHS/United States
+GR  - U54HG004570/HG/NHGRI NIH HHS/United States
+GR  - U54HG004576/HG/NHGRI NIH HHS/United States
+GR  - U54HG004592/HG/NHGRI NIH HHS/United States
+GR  - ZIAHG200323/PHS HHS/United States
+GR  - ZIAHG200341/PHS HHS/United States
+GR  - Intramural NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, American Recovery and Reinvestment Act
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, N.I.H., Intramural
+PT  - Research Support, U.S. Gov't, Non-P.H.S.
+PL  - England
+TA  - Nature
+JT  - Nature
+JID - 0410462
+RN  - 0 (Chromatin)
+RN  - 0 (DNA-Binding Proteins)
+RN  - 0 (Histones)
+RN  - 0 (Proteins)
+RN  - 0 (Transcription Factors)
+RN  - 9007-49-2 (DNA)
+RN  - EC 3.1.21.1 (Deoxyribonuclease I)
+SB  - IM
+CIN - Nat Rev Genet. 2012 Oct;13(10):678. PMID: 22955793
+CIN - Am J Transplant. 2013 Feb;13(2):245. PMID: 23356894
+CIN - Nat Methods. 2012 Nov;9(11):1046. PMID: 23281567
+MH  - Alleles
+MH  - Animals
+MH  - Binding Sites/genetics
+MH  - Chromatin/genetics/metabolism
+MH  - Chromatin Immunoprecipitation
+MH  - Chromosomes, Human/genetics/metabolism
+MH  - DNA/*genetics
+MH  - DNA Footprinting
+MH  - DNA Methylation/genetics
+MH  - DNA-Binding Proteins/metabolism
+MH  - Deoxyribonuclease I/metabolism
+MH  - *Encyclopedias as Topic
+MH  - Exons/genetics
+MH  - Genetic Predisposition to Disease/genetics
+MH  - Genetic Variation/genetics
+MH  - Genome, Human/*genetics
+MH  - Genome-Wide Association Study
+MH  - *Genomics
+MH  - Histones/chemistry/metabolism
+MH  - Humans
+MH  - Mammals/genetics
+MH  - *Molecular Sequence Annotation
+MH  - Neoplasms/genetics
+MH  - Polymorphism, Single Nucleotide/genetics
+MH  - Promoter Regions, Genetic/genetics
+MH  - Proteins/genetics
+MH  - Regulatory Sequences, Nucleic Acid/*genetics
+MH  - Sequence Analysis, RNA
+MH  - Transcription Factors/metabolism
+MH  - Transcription, Genetic/genetics
+PMC - PMC3439153
+MID - NIHMS381381
+OID - NLM: NIHMS381381
+OID - NLM: PMC3439153
+IR  - Dunham I
+FIR - Dunham, Ian
+IR  - Kundaje A
+FIR - Kundaje, Anshul
+IR  - Aldred SF
+FIR - Aldred, Shelley F
+IR  - Collins PJ
+FIR - Collins, Patrick J
+IR  - Davis CA
+FIR - Davis, Carrie A
+IR  - Doyle F
+FIR - Doyle, Francis
+IR  - Epstein CB
+FIR - Epstein, Charles B
+IR  - Frietze S
+FIR - Frietze, Seth
+IR  - Harrow J
+FIR - Harrow, Jennifer
+IR  - Kaul R
+FIR - Kaul, Rajinder
+IR  - Khatun J
+FIR - Khatun, Jainab
+IR  - Lajoie BR
+FIR - Lajoie, Bryan R
+IR  - Landt SG
+FIR - Landt, Stephen G
+IR  - Lee BK
+FIR - Lee, Bum-Kyu
+IR  - Pauli F
+FIR - Pauli, Florencia
+IR  - Rosenbloom KR
+FIR - Rosenbloom, Kate R
+IR  - Sabo P
+FIR - Sabo, Peter
+IR  - Safi A
+FIR - Safi, Alexias
+IR  - Sanyal A
+FIR - Sanyal, Amartya
+IR  - Shoresh N
+FIR - Shoresh, Noam
+IR  - Simon JM
+FIR - Simon, Jeremy M
+IR  - Song L
+FIR - Song, Lingyun
+IR  - Trinklein ND
+FIR - Trinklein, Nathan D
+IR  - Altshuler RC
+FIR - Altshuler, Robert C
+IR  - Birney E
+FIR - Birney, Ewan
+IR  - Brown JB
+FIR - Brown, James B
+IR  - Cheng C
+FIR - Cheng, Chao
+IR  - Djebali S
+FIR - Djebali, Sarah
+IR  - Dong X
+FIR - Dong, Xianjun
+IR  - Dunham I
+FIR - Dunham, Ian
+IR  - Ernst J
+FIR - Ernst, Jason
+IR  - Furey TS
+FIR - Furey, Terrence S
+IR  - Gerstein M
+FIR - Gerstein, Mark
+IR  - Giardine B
+FIR - Giardine, Belinda
+IR  - Greven M
+FIR - Greven, Melissa
+IR  - Hardison RC
+FIR - Hardison, Ross C
+IR  - Harris RS
+FIR - Harris, Robert S
+IR  - Herrero J
+FIR - Herrero, Javier
+IR  - Hoffman MM
+FIR - Hoffman, Michael M
+IR  - Iyer S
+FIR - Iyer, Sowmya
+IR  - Kellis M
+FIR - Kellis, Manolis
+IR  - Khatun J
+FIR - Khatun, Jainab
+IR  - Kheradpour P
+FIR - Kheradpour, Pouya
+IR  - Kundaje A
+FIR - Kundaje, Anshul
+IR  - Lassmann T
+FIR - Lassmann, Timo
+IR  - Li Q
+FIR - Li, Qunhua
+IR  - Lin X
+FIR - Lin, Xinying
+IR  - Marinov GK
+FIR - Marinov, Georgi K
+IR  - Merkel A
+FIR - Merkel, Angelika
+IR  - Mortazavi A
+FIR - Mortazavi, Ali
+IR  - Parker SC
+FIR - Parker, Stephen C J
+IR  - Reddy TE
+FIR - Reddy, Timothy E
+IR  - Rozowsky J
+FIR - Rozowsky, Joel
+IR  - Schlesinger F
+FIR - Schlesinger, Felix
+IR  - Thurman RE
+FIR - Thurman, Robert E
+IR  - Wang J
+FIR - Wang, Jie
+IR  - Ward LD
+FIR - Ward, Lucas D
+IR  - Whitfield TW
+FIR - Whitfield, Troy W
+IR  - Wilder SP
+FIR - Wilder, Steven P
+IR  - Wu W
+FIR - Wu, Weisheng
+IR  - Xi HS
+FIR - Xi, Hualin S
+IR  - Yip KY
+FIR - Yip, Kevin Y
+IR  - Zhuang J
+FIR - Zhuang, Jiali
+IR  - Pazin MJ
+FIR - Pazin, Michael J
+IR  - Lowdon RF
+FIR - Lowdon, Rebecca F
+IR  - Dillon LA
+FIR - Dillon, Laura A L
+IR  - Adams LB
+FIR - Adams, Leslie B
+IR  - Kelly CJ
+FIR - Kelly, Caroline J
+IR  - Zhang J
+FIR - Zhang, Julia
+IR  - Wexler JR
+FIR - Wexler, Judith R
+IR  - Green ED
+FIR - Green, Eric D
+IR  - Good PJ
+FIR - Good, Peter J
+IR  - Feingold EA
+FIR - Feingold, Elise A
+IR  - Bernstein BE
+FIR - Bernstein, Bradley E
+IR  - Birney E
+FIR - Birney, Ewan
+IR  - Crawford GE
+FIR - Crawford, Gregory E
+IR  - Dekker J
+FIR - Dekker, Job
+IR  - Elnitski L
+FIR - Elnitski, Laura
+IR  - Farnham PJ
+FIR - Farnham, Peggy J
+IR  - Gerstein M
+FIR - Gerstein, Mark
+IR  - Giddings MC
+FIR - Giddings, Morgan C
+IR  - Gingeras TR
+FIR - Gingeras, Thomas R
+IR  - Green ED
+FIR - Green, Eric D
+IR  - Guigo R
+FIR - Guigo, Roderic
+IR  - Hardison RC
+FIR - Hardison, Ross C
+IR  - Hubbard TJ
+FIR - Hubbard, Timothy J
+IR  - Kellis M
+FIR - Kellis, Manolis
+IR  - Kent W
+FIR - Kent, W James
+IR  - Lieb JD
+FIR - Lieb, Jason D
+IR  - Margulies EH
+FIR - Margulies, Elliott H
+IR  - Myers RM
+FIR - Myers, Richard M
+IR  - Snyder M
+FIR - Snyder, Michael
+IR  - Stamatoyannopoulos JA
+FIR - Stamatoyannopoulos, John A
+IR  - Tenenbaum SA
+FIR - Tenenbaum, Scott A
+IR  - Weng Z
+FIR - Weng, Zhiping
+IR  - White KP
+FIR - White, Kevin P
+IR  - Wold B
+FIR - Wold, Barbara
+IR  - Khatun J
+FIR - Khatun, Jainab
+IR  - Yu Y
+FIR - Yu, Yanbao
+IR  - Wrobel J
+FIR - Wrobel, John
+IR  - Risk BA
+FIR - Risk, Brian A
+IR  - Gunawardena HP
+FIR - Gunawardena, Harsha P
+IR  - Kuiper HC
+FIR - Kuiper, Heather C
+IR  - Maier CW
+FIR - Maier, Christopher W
+IR  - Xie L
+FIR - Xie, Ling
+IR  - Chen X
+FIR - Chen, Xian
+IR  - Giddings MC
+FIR - Giddings, Morgan C
+IR  - Bernstein BE
+FIR - Bernstein, Bradley E
+IR  - Epstein CB
+FIR - Epstein, Charles B
+IR  - Shoresh N
+FIR - Shoresh, Noam
+IR  - Ernst J
+FIR - Ernst, Jason
+IR  - Kheradpour P
+FIR - Kheradpour, Pouya
+IR  - Mikkelsen TS
+FIR - Mikkelsen, Tarjei S
+IR  - Gillespie S
+FIR - Gillespie, Shawn
+IR  - Goren A
+FIR - Goren, Alon
+IR  - Ram O
+FIR - Ram, Oren
+IR  - Zhang X
+FIR - Zhang, Xiaolan
+IR  - Wang L
+FIR - Wang, Li
+IR  - Issner R
+FIR - Issner, Robbyn
+IR  - Coyne MJ
+FIR - Coyne, Michael J
+IR  - Durham T
+FIR - Durham, Timothy
+IR  - Ku M
+FIR - Ku, Manching
+IR  - Truong T
+FIR - Truong, Thanh
+IR  - Ward LD
+FIR - Ward, Lucas D
+IR  - Altshuler RC
+FIR - Altshuler, Robert C
+IR  - Eaton ML
+FIR - Eaton, Matthew L
+IR  - Kellis M
+FIR - Kellis, Manolis
+IR  - Djebali S
+FIR - Djebali, Sarah
+IR  - Davis CA
+FIR - Davis, Carrie A
+IR  - Merkel A
+FIR - Merkel, Angelika
+IR  - Dobin A
+FIR - Dobin, Alex
+IR  - Lassmann T
+FIR - Lassmann, Timo
+IR  - Mortazavi A
+FIR - Mortazavi, Ali
+IR  - Tanzer A
+FIR - Tanzer, Andrea
+IR  - Lagarde J
+FIR - Lagarde, Julien
+IR  - Lin W
+FIR - Lin, Wei
+IR  - Schlesinger F
+FIR - Schlesinger, Felix
+IR  - Xue C
+FIR - Xue, Chenghai
+IR  - Marinov GK
+FIR - Marinov, Georgi K
+IR  - Khatun J
+FIR - Khatun, Jainab
+IR  - Williams BA
+FIR - Williams, Brian A
+IR  - Zaleski C
+FIR - Zaleski, Chris
+IR  - Rozowsky J
+FIR - Rozowsky, Joel
+IR  - Roder M
+FIR - Roder, Maik
+IR  - Kokocinski F
+FIR - Kokocinski, Felix
+IR  - Abdelhamid RF
+FIR - Abdelhamid, Rehab F
+IR  - Alioto T
+FIR - Alioto, Tyler
+IR  - Antoshechkin I
+FIR - Antoshechkin, Igor
+IR  - Baer MT
+FIR - Baer, Michael T
+IR  - Batut P
+FIR - Batut, Philippe
+IR  - Bell I
+FIR - Bell, Ian
+IR  - Bell K
+FIR - Bell, Kimberly
+IR  - Chakrabortty S
+FIR - Chakrabortty, Sudipto
+IR  - Chen X
+FIR - Chen, Xian
+IR  - Chrast J
+FIR - Chrast, Jacqueline
+IR  - Curado J
+FIR - Curado, Joao
+IR  - Derrien T
+FIR - Derrien, Thomas
+IR  - Drenkow J
+FIR - Drenkow, Jorg
+IR  - Dumais E
+FIR - Dumais, Erica
+IR  - Dumais J
+FIR - Dumais, Jackie
+IR  - Duttagupta R
+FIR - Duttagupta, Radha
+IR  - Fastuca M
+FIR - Fastuca, Megan
+IR  - Fejes-Toth K
+FIR - Fejes-Toth, Kata
+IR  - Ferreira P
+FIR - Ferreira, Pedro
+IR  - Foissac S
+FIR - Foissac, Sylvain
+IR  - Fullwood MJ
+FIR - Fullwood, Melissa J
+IR  - Gao H
+FIR - Gao, Hui
+IR  - Gonzalez D
+FIR - Gonzalez, David
+IR  - Gordon A
+FIR - Gordon, Assaf
+IR  - Gunawardena HP
+FIR - Gunawardena, Harsha P
+IR  - Howald C
+FIR - Howald, Cedric
+IR  - Jha S
+FIR - Jha, Sonali
+IR  - Johnson R
+FIR - Johnson, Rory
+IR  - Kapranov P
+FIR - Kapranov, Philipp
+IR  - King B
+FIR - King, Brandon
+IR  - Kingswood C
+FIR - Kingswood, Colin
+IR  - Li G
+FIR - Li, Guoliang
+IR  - Luo OJ
+FIR - Luo, Oscar J
+IR  - Park E
+FIR - Park, Eddie
+IR  - Preall JB
+FIR - Preall, Jonathan B
+IR  - Presaud K
+FIR - Presaud, Kimberly
+IR  - Ribeca P
+FIR - Ribeca, Paolo
+IR  - Risk BA
+FIR - Risk, Brian A
+IR  - Robyr D
+FIR - Robyr, Daniel
+IR  - Ruan X
+FIR - Ruan, Xiaoan
+IR  - Sammeth M
+FIR - Sammeth, Michael
+IR  - Sandhu KS
+FIR - Sandhu, Kuljeet Singh
+IR  - Schaeffer L
+FIR - Schaeffer, Lorain
+IR  - See LH
+FIR - See, Lei-Hoon
+IR  - Shahab A
+FIR - Shahab, Atif
+IR  - Skancke J
+FIR - Skancke, Jorgen
+IR  - Suzuki AM
+FIR - Suzuki, Ana Maria
+IR  - Takahashi H
+FIR - Takahashi, Hazuki
+IR  - Tilgner H
+FIR - Tilgner, Hagen
+IR  - Trout D
+FIR - Trout, Diane
+IR  - Walters N
+FIR - Walters, Nathalie
+IR  - Wang H
+FIR - Wang, Huaien
+IR  - Wrobel J
+FIR - Wrobel, John
+IR  - Yu Y
+FIR - Yu, Yanbao
+IR  - Hayashizaki Y
+FIR - Hayashizaki, Yoshihide
+IR  - Harrow J
+FIR - Harrow, Jennifer
+IR  - Gerstein M
+FIR - Gerstein, Mark
+IR  - Hubbard TJ
+FIR - Hubbard, Timothy J
+IR  - Reymond A
+FIR - Reymond, Alexandre
+IR  - Antonarakis SE
+FIR - Antonarakis, Stylianos E
+IR  - Hannon GJ
+FIR - Hannon, Gregory J
+IR  - Giddings MC
+FIR - Giddings, Morgan C
+IR  - Ruan Y
+FIR - Ruan, Yijun
+IR  - Wold B
+FIR - Wold, Barbara
+IR  - Carninci P
+FIR - Carninci, Piero
+IR  - Guigo R
+FIR - Guigo, Roderic
+IR  - Gingeras TR
+FIR - Gingeras, Thomas R
+IR  - Rosenbloom KR
+FIR - Rosenbloom, Kate R
+IR  - Sloan CA
+FIR - Sloan, Cricket A
+IR  - Learned K
+FIR - Learned, Katrina
+IR  - Malladi VS
+FIR - Malladi, Venkat S
+IR  - Wong MC
+FIR - Wong, Matthew C
+IR  - Barber GP
+FIR - Barber, Galt P
+IR  - Cline MS
+FIR - Cline, Melissa S
+IR  - Dreszer TR
+FIR - Dreszer, Timothy R
+IR  - Heitner SG
+FIR - Heitner, Steven G
+IR  - Karolchik D
+FIR - Karolchik, Donna
+IR  - Kent W
+FIR - Kent, W James
+IR  - Kirkup VM
+FIR - Kirkup, Vanessa M
+IR  - Meyer LR
+FIR - Meyer, Laurence R
+IR  - Long JC
+FIR - Long, Jeffrey C
+IR  - Maddren M
+FIR - Maddren, Morgan
+IR  - Raney BJ
+FIR - Raney, Brian J
+IR  - Furey TS
+FIR - Furey, Terrence S
+IR  - Song L
+FIR - Song, Lingyun
+IR  - Grasfeder LL
+FIR - Grasfeder, Linda L
+IR  - Giresi PG
+FIR - Giresi, Paul G
+IR  - Lee BK
+FIR - Lee, Bum-Kyu
+IR  - Battenhouse A
+FIR - Battenhouse, Anna
+IR  - Sheffield NC
+FIR - Sheffield, Nathan C
+IR  - Simon JM
+FIR - Simon, Jeremy M
+IR  - Showers KA
+FIR - Showers, Kimberly A
+IR  - Safi A
+FIR - Safi, Alexias
+IR  - London D
+FIR - London, Darin
+IR  - Bhinge AA
+FIR - Bhinge, Akshay A
+IR  - Shestak C
+FIR - Shestak, Christopher
+IR  - Schaner MR
+FIR - Schaner, Matthew R
+IR  - Kim SK
+FIR - Kim, Seul Ki
+IR  - Zhang ZZ
+FIR - Zhang, Zhuzhu Z
+IR  - Mieczkowski PA
+FIR - Mieczkowski, Piotr A
+IR  - Mieczkowska JO
+FIR - Mieczkowska, Joanna O
+IR  - Liu Z
+FIR - Liu, Zheng
+IR  - McDaniell RM
+FIR - McDaniell, Ryan M
+IR  - Ni Y
+FIR - Ni, Yunyun
+IR  - Rashid NU
+FIR - Rashid, Naim U
+IR  - Kim MJ
+FIR - Kim, Min Jae
+IR  - Adar S
+FIR - Adar, Sheera
+IR  - Zhang Z
+FIR - Zhang, Zhancheng
+IR  - Wang T
+FIR - Wang, Tianyuan
+IR  - Winter D
+FIR - Winter, Deborah
+IR  - Keefe D
+FIR - Keefe, Damian
+IR  - Birney E
+FIR - Birney, Ewan
+IR  - Iyer VR
+FIR - Iyer, Vishwanath R
+IR  - Lieb JD
+FIR - Lieb, Jason D
+IR  - Crawford GE
+FIR - Crawford, Gregory E
+IR  - Li G
+FIR - Li, Guoliang
+IR  - Sandhu KS
+FIR - Sandhu, Kuljeet Singh
+IR  - Zheng M
+FIR - Zheng, Meizhen
+IR  - Wang P
+FIR - Wang, Ping
+IR  - Luo OJ
+FIR - Luo, Oscar J
+IR  - Shahab A
+FIR - Shahab, Atif
+IR  - Fullwood MJ
+FIR - Fullwood, Melissa J
+IR  - Ruan X
+FIR - Ruan, Xiaoan
+IR  - Ruan Y
+FIR - Ruan, Yijun
+IR  - Myers RM
+FIR - Myers, Richard M
+IR  - Pauli F
+FIR - Pauli, Florencia
+IR  - Williams BA
+FIR - Williams, Brian A
+IR  - Gertz J
+FIR - Gertz, Jason
+IR  - Marinov GK
+FIR - Marinov, Georgi K
+IR  - Reddy TE
+FIR - Reddy, Timothy E
+IR  - Vielmetter J
+FIR - Vielmetter, Jost
+IR  - Partridge E
+FIR - Partridge, E Christopher
+IR  - Trout D
+FIR - Trout, Diane
+IR  - Varley KE
+FIR - Varley, Katherine E
+IR  - Gasper C
+FIR - Gasper, Clarke
+IR  - Bansal A
+FIR - Bansal, Anita
+IR  - Pepke S
+FIR - Pepke, Shirley
+IR  - Jain P
+FIR - Jain, Preti
+IR  - Amrhein H
+FIR - Amrhein, Henry
+IR  - Bowling KM
+FIR - Bowling, Kevin M
+IR  - Anaya M
+FIR - Anaya, Michael
+IR  - Cross MK
+FIR - Cross, Marie K
+IR  - King B
+FIR - King, Brandon
+IR  - Muratet MA
+FIR - Muratet, Michael A
+IR  - Antoshechkin I
+FIR - Antoshechkin, Igor
+IR  - Newberry KM
+FIR - Newberry, Kimberly M
+IR  - McCue K
+FIR - McCue, Kenneth
+IR  - Nesmith AS
+FIR - Nesmith, Amy S
+IR  - Fisher-Aylor KI
+FIR - Fisher-Aylor, Katherine I
+IR  - Pusey B
+FIR - Pusey, Barbara
+IR  - DeSalvo G
+FIR - DeSalvo, Gilberto
+IR  - Parker SL
+FIR - Parker, Stephanie L
+IR  - Balasubramanian S
+FIR - Balasubramanian, Sreeram
+IR  - Davis NS
+FIR - Davis, Nicholas S
+IR  - Meadows SK
+FIR - Meadows, Sarah K
+IR  - Eggleston T
+FIR - Eggleston, Tracy
+IR  - Gunter C
+FIR - Gunter, Chris
+IR  - Newberry J
+FIR - Newberry, J Scott
+IR  - Levy SE
+FIR - Levy, Shawn E
+IR  - Absher DM
+FIR - Absher, Devin M
+IR  - Mortazavi A
+FIR - Mortazavi, Ali
+IR  - Wong WH
+FIR - Wong, Wing H
+IR  - Wold B
+FIR - Wold, Barbara
+IR  - Blow MJ
+FIR - Blow, Matthew J
+IR  - Visel A
+FIR - Visel, Axel
+IR  - Pennachio LA
+FIR - Pennachio, Len A
+IR  - Elnitski L
+FIR - Elnitski, Laura
+IR  - Margulies EH
+FIR - Margulies, Elliott H
+IR  - Parker SC
+FIR - Parker, Stephen C J
+IR  - Petrykowska HM
+FIR - Petrykowska, Hanna M
+IR  - Abyzov A
+FIR - Abyzov, Alexej
+IR  - Aken B
+FIR - Aken, Bronwen
+IR  - Barrell D
+FIR - Barrell, Daniel
+IR  - Barson G
+FIR - Barson, Gemma
+IR  - Berry A
+FIR - Berry, Andrew
+IR  - Bignell A
+FIR - Bignell, Alexandra
+IR  - Boychenko V
+FIR - Boychenko, Veronika
+IR  - Bussotti G
+FIR - Bussotti, Giovanni
+IR  - Chrast J
+FIR - Chrast, Jacqueline
+IR  - Davidson C
+FIR - Davidson, Claire
+IR  - Derrien T
+FIR - Derrien, Thomas
+IR  - Despacio-Reyes G
+FIR - Despacio-Reyes, Gloria
+IR  - Diekhans M
+FIR - Diekhans, Mark
+IR  - Ezkurdia I
+FIR - Ezkurdia, Iakes
+IR  - Frankish A
+FIR - Frankish, Adam
+IR  - Gilbert J
+FIR - Gilbert, James
+IR  - Gonzalez JM
+FIR - Gonzalez, Jose Manuel
+IR  - Griffiths E
+FIR - Griffiths, Ed
+IR  - Harte R
+FIR - Harte, Rachel
+IR  - Hendrix DA
+FIR - Hendrix, David A
+IR  - Howald C
+FIR - Howald, Cedric
+IR  - Hunt T
+FIR - Hunt, Toby
+IR  - Jungreis I
+FIR - Jungreis, Irwin
+IR  - Kay M
+FIR - Kay, Mike
+IR  - Khurana E
+FIR - Khurana, Ekta
+IR  - Kokocinski F
+FIR - Kokocinski, Felix
+IR  - Leng J
+FIR - Leng, Jing
+IR  - Lin MF
+FIR - Lin, Michael F
+IR  - Loveland J
+FIR - Loveland, Jane
+IR  - Lu Z
+FIR - Lu, Zhi
+IR  - Manthravadi D
+FIR - Manthravadi, Deepa
+IR  - Mariotti M
+FIR - Mariotti, Marco
+IR  - Mudge J
+FIR - Mudge, Jonathan
+IR  - Mukherjee G
+FIR - Mukherjee, Gaurab
+IR  - Notredame C
+FIR - Notredame, Cedric
+IR  - Pei B
+FIR - Pei, Baikang
+IR  - Rodriguez JM
+FIR - Rodriguez, Jose Manuel
+IR  - Saunders G
+FIR - Saunders, Gary
+IR  - Sboner A
+FIR - Sboner, Andrea
+IR  - Searle S
+FIR - Searle, Stephen
+IR  - Sisu C
+FIR - Sisu, Cristina
+IR  - Snow C
+FIR - Snow, Catherine
+IR  - Steward C
+FIR - Steward, Charlie
+IR  - Tanzer A
+FIR - Tanzer, Andrea
+IR  - Tapanari E
+FIR - Tapanari, Electra
+IR  - Tress ML
+FIR - Tress, Michael L
+IR  - van Baren MJ
+FIR - van Baren, Marijke J
+IR  - Walters N
+FIR - Walters, Nathalie
+IR  - Washietl S
+FIR - Washietl, Stefan
+IR  - Wilming L
+FIR - Wilming, Laurens
+IR  - Zadissa A
+FIR - Zadissa, Amonida
+IR  - Zhang Z
+FIR - Zhang, Zhengdong
+IR  - Brent M
+FIR - Brent, Michael
+IR  - Haussler D
+FIR - Haussler, David
+IR  - Kellis M
+FIR - Kellis, Manolis
+IR  - Valencia A
+FIR - Valencia, Alfonso
+IR  - Gerstein M
+FIR - Gerstein, Mark
+IR  - Reymond A
+FIR - Reymond, Alexandre
+IR  - Guigo R
+FIR - Guigo, Roderic
+IR  - Harrow J
+FIR - Harrow, Jennifer
+IR  - Hubbard TJ
+FIR - Hubbard, Timothy J
+IR  - Landt SG
+FIR - Landt, Stephen G
+IR  - Frietze S
+FIR - Frietze, Seth
+IR  - Abyzov A
+FIR - Abyzov, Alexej
+IR  - Addleman N
+FIR - Addleman, Nick
+IR  - Alexander RP
+FIR - Alexander, Roger P
+IR  - Auerbach RK
+FIR - Auerbach, Raymond K
+IR  - Balasubramanian S
+FIR - Balasubramanian, Suganthi
+IR  - Bettinger K
+FIR - Bettinger, Keith
+IR  - Bhardwaj N
+FIR - Bhardwaj, Nitin
+IR  - Boyle AP
+FIR - Boyle, Alan P
+IR  - Cao AR
+FIR - Cao, Alina R
+IR  - Cayting P
+FIR - Cayting, Philip
+IR  - Charos A
+FIR - Charos, Alexandra
+IR  - Cheng Y
+FIR - Cheng, Yong
+IR  - Cheng C
+FIR - Cheng, Chao
+IR  - Eastman C
+FIR - Eastman, Catharine
+IR  - Euskirchen G
+FIR - Euskirchen, Ghia
+IR  - Fleming JD
+FIR - Fleming, Joseph D
+IR  - Grubert F
+FIR - Grubert, Fabian
+IR  - Habegger L
+FIR - Habegger, Lukas
+IR  - Hariharan M
+FIR - Hariharan, Manoj
+IR  - Harmanci A
+FIR - Harmanci, Arif
+IR  - Iyengar S
+FIR - Iyengar, Sushma
+IR  - Jin VX
+FIR - Jin, Victor X
+IR  - Karczewski KJ
+FIR - Karczewski, Konrad J
+IR  - Kasowski M
+FIR - Kasowski, Maya
+IR  - Lacroute P
+FIR - Lacroute, Phil
+IR  - Lam H
+FIR - Lam, Hugo
+IR  - Lamarre-Vincent N
+FIR - Lamarre-Vincent, Nathan
+IR  - Leng J
+FIR - Leng, Jing
+IR  - Lian J
+FIR - Lian, Jin
+IR  - Lindahl-Allen M
+FIR - Lindahl-Allen, Marianne
+IR  - Min R
+FIR - Min, Renqiang
+IR  - Miotto B
+FIR - Miotto, Benoit
+IR  - Monahan H
+FIR - Monahan, Hannah
+IR  - Moqtaderi Z
+FIR - Moqtaderi, Zarmik
+IR  - Mu XJ
+FIR - Mu, Xinmeng J
+IR  - O'Geen H
+FIR - O'Geen, Henriette
+IR  - Ouyang Z
+FIR - Ouyang, Zhengqing
+IR  - Patacsil D
+FIR - Patacsil, Dorrelyn
+IR  - Pei B
+FIR - Pei, Baikang
+IR  - Raha D
+FIR - Raha, Debasish
+IR  - Ramirez L
+FIR - Ramirez, Lucia
+IR  - Reed B
+FIR - Reed, Brian
+IR  - Rozowsky J
+FIR - Rozowsky, Joel
+IR  - Sboner A
+FIR - Sboner, Andrea
+IR  - Shi M
+FIR - Shi, Minyi
+IR  - Sisu C
+FIR - Sisu, Cristina
+IR  - Slifer T
+FIR - Slifer, Teri
+IR  - Witt H
+FIR - Witt, Heather
+IR  - Wu L
+FIR - Wu, Linfeng
+IR  - Xu X
+FIR - Xu, Xiaoqin
+IR  - Yan KK
+FIR - Yan, Koon-Kiu
+IR  - Yang X
+FIR - Yang, Xinqiong
+IR  - Yip KY
+FIR - Yip, Kevin Y
+IR  - Zhang Z
+FIR - Zhang, Zhengdong
+IR  - Struhl K
+FIR - Struhl, Kevin
+IR  - Weissman SM
+FIR - Weissman, Sherman M
+IR  - Gerstein M
+FIR - Gerstein, Mark
+IR  - Farnham PJ
+FIR - Farnham, Peggy J
+IR  - Snyder M
+FIR - Snyder, Michael
+IR  - Tenenbaum SA
+FIR - Tenenbaum, Scott A
+IR  - Penalva LO
+FIR - Penalva, Luiz O
+IR  - Doyle F
+FIR - Doyle, Francis
+IR  - Karmakar S
+FIR - Karmakar, Subhradip
+IR  - Landt SG
+FIR - Landt, Stephen G
+IR  - Bhanvadia RR
+FIR - Bhanvadia, Raj R
+IR  - Choudhury A
+FIR - Choudhury, Alina
+IR  - Domanus M
+FIR - Domanus, Marc
+IR  - Ma L
+FIR - Ma, Lijia
+IR  - Moran J
+FIR - Moran, Jennifer
+IR  - Patacsil D
+FIR - Patacsil, Dorrelyn
+IR  - Slifer T
+FIR - Slifer, Teri
+IR  - Victorsen A
+FIR - Victorsen, Alec
+IR  - Yang X
+FIR - Yang, Xinqiong
+IR  - Snyder M
+FIR - Snyder, Michael
+IR  - Auer T
+FIR - Auer, Thomas
+IR  - Centanin L
+FIR - Centanin, Lazaro
+IR  - Eichenlaub M
+FIR - Eichenlaub, Michael
+IR  - Gruhl F
+FIR - Gruhl, Franziska
+IR  - Heermann S
+FIR - Heermann, Stephan
+IR  - Hoeckendorf B
+FIR - Hoeckendorf, Burkhard
+IR  - Inoue D
+FIR - Inoue, Daigo
+IR  - Kellner T
+FIR - Kellner, Tanja
+IR  - Kirchmaier S
+FIR - Kirchmaier, Stephan
+IR  - Mueller C
+FIR - Mueller, Claudia
+IR  - Reinhardt R
+FIR - Reinhardt, Robert
+IR  - Schertel L
+FIR - Schertel, Lea
+IR  - Schneider S
+FIR - Schneider, Stephanie
+IR  - Sinn R
+FIR - Sinn, Rebecca
+IR  - Wittbrodt B
+FIR - Wittbrodt, Beate
+IR  - Wittbrodt J
+FIR - Wittbrodt, Jochen
+IR  - Weng Z
+FIR - Weng, Zhiping
+IR  - Whitfield TW
+FIR - Whitfield, Troy W
+IR  - Wang J
+FIR - Wang, Jie
+IR  - Collins PJ
+FIR - Collins, Patrick J
+IR  - Aldred SF
+FIR - Aldred, Shelley F
+IR  - Trinklein ND
+FIR - Trinklein, Nathan D
+IR  - Partridge EC
+FIR - Partridge, E Christopher
+IR  - Myers RM
+FIR - Myers, Richard M
+IR  - Dekker J
+FIR - Dekker, Job
+IR  - Jain G
+FIR - Jain, Gaurav
+IR  - Lajoie BR
+FIR - Lajoie, Bryan R
+IR  - Sanyal A
+FIR - Sanyal, Amartya
+IR  - Balasundaram G
+FIR - Balasundaram, Gayathri
+IR  - Bates DL
+FIR - Bates, Daniel L
+IR  - Byron R
+FIR - Byron, Rachel
+IR  - Canfield TK
+FIR - Canfield, Theresa K
+IR  - Diegel MJ
+FIR - Diegel, Morgan J
+IR  - Dunn D
+FIR - Dunn, Douglas
+IR  - Ebersol AK
+FIR - Ebersol, Abigail K
+IR  - Frum T
+FIR - Frum, Tristan
+IR  - Garg K
+FIR - Garg, Kavita
+IR  - Gist E
+FIR - Gist, Erica
+IR  - Hansen R
+FIR - Hansen, R Scott
+IR  - Boatman L
+FIR - Boatman, Lisa
+IR  - Haugen E
+FIR - Haugen, Eric
+IR  - Humbert R
+FIR - Humbert, Richard
+IR  - Jain G
+FIR - Jain, Gaurav
+IR  - Johnson AK
+FIR - Johnson, Audra K
+IR  - Johnson EM
+FIR - Johnson, Ericka M
+IR  - Kutyavin TV
+FIR - Kutyavin, Tattyana V
+IR  - Lajoie BR
+FIR - Lajoie, Bryan R
+IR  - Lee K
+FIR - Lee, Kristen
+IR  - Lotakis D
+FIR - Lotakis, Dimitra
+IR  - Maurano MT
+FIR - Maurano, Matthew T
+IR  - Neph SJ
+FIR - Neph, Shane J
+IR  - Neri FV
+FIR - Neri, Fiedencio V
+IR  - Nguyen ED
+FIR - Nguyen, Eric D
+IR  - Qu H
+FIR - Qu, Hongzhu
+IR  - Reynolds AP
+FIR - Reynolds, Alex P
+IR  - Roach V
+FIR - Roach, Vaughn
+IR  - Rynes E
+FIR - Rynes, Eric
+IR  - Sabo P
+FIR - Sabo, Peter
+IR  - Sanchez ME
+FIR - Sanchez, Minerva E
+IR  - Sandstrom RS
+FIR - Sandstrom, Richard S
+IR  - Sanyal A
+FIR - Sanyal, Amartya
+IR  - Shafer AO
+FIR - Shafer, Anthony O
+IR  - Stergachis AB
+FIR - Stergachis, Andrew B
+IR  - Thomas S
+FIR - Thomas, Sean
+IR  - Thurman RE
+FIR - Thurman, Robert E
+IR  - Vernot B
+FIR - Vernot, Benjamin
+IR  - Vierstra J
+FIR - Vierstra, Jeff
+IR  - Vong S
+FIR - Vong, Shinny
+IR  - Wang H
+FIR - Wang, Hao
+IR  - Weaver MA
+FIR - Weaver, Molly A
+IR  - Yan Y
+FIR - Yan, Yongqi
+IR  - Zhang M
+FIR - Zhang, Miaohua
+IR  - Akey JM
+FIR - Akey, Joshua M
+IR  - Bender M
+FIR - Bender, Michael
+IR  - Dorschner MO
+FIR - Dorschner, Michael O
+IR  - Groudine M
+FIR - Groudine, Mark
+IR  - MacCoss MJ
+FIR - MacCoss, Michael J
+IR  - Navas P
+FIR - Navas, Patrick
+IR  - Stamatoyannopoulos G
+FIR - Stamatoyannopoulos, George
+IR  - Kaul R
+FIR - Kaul, Rajinder
+IR  - Dekker J
+FIR - Dekker, Job
+IR  - Stamatoyannopoulos JA
+FIR - Stamatoyannopoulos, John A
+IR  - Dunham I
+FIR - Dunham, Ian
+IR  - Beal K
+FIR - Beal, Kathryn
+IR  - Brazma A
+FIR - Brazma, Alvis
+IR  - Flicek P
+FIR - Flicek, Paul
+IR  - Herrero J
+FIR - Herrero, Javier
+IR  - Johnson N
+FIR - Johnson, Nathan
+IR  - Keefe D
+FIR - Keefe, Damian
+IR  - Lukk M
+FIR - Lukk, Margus
+IR  - Luscombe NM
+FIR - Luscombe, Nicholas M
+IR  - Sobral D
+FIR - Sobral, Daniel
+IR  - Vaquerizas JM
+FIR - Vaquerizas, Juan M
+IR  - Wilder SP
+FIR - Wilder, Steven P
+IR  - Batzoglou S
+FIR - Batzoglou, Serafim
+IR  - Sidow A
+FIR - Sidow, Arend
+IR  - Hussami N
+FIR - Hussami, Nadine
+IR  - Kyriazopoulou-Panagiotopoulou S
+FIR - Kyriazopoulou-Panagiotopoulou, Sofia
+IR  - Libbrecht MW
+FIR - Libbrecht, Max W
+IR  - Schaub MA
+FIR - Schaub, Marc A
+IR  - Kundaje A
+FIR - Kundaje, Anshul
+IR  - Hardison RC
+FIR - Hardison, Ross C
+IR  - Miller W
+FIR - Miller, Webb
+IR  - Giardine B
+FIR - Giardine, Belinda
+IR  - Harris RS
+FIR - Harris, Robert S
+IR  - Wu W
+FIR - Wu, Weisheng
+IR  - Bickel PJ
+FIR - Bickel, Peter J
+IR  - Banfai B
+FIR - Banfai, Balazs
+IR  - Boley NP
+FIR - Boley, Nathan P
+IR  - Brown JB
+FIR - Brown, James B
+IR  - Huang H
+FIR - Huang, Haiyan
+IR  - Li Q
+FIR - Li, Qunhua
+IR  - Li JJ
+FIR - Li, Jingyi Jessica
+IR  - Noble WS
+FIR - Noble, William Stafford
+IR  - Bilmes JA
+FIR - Bilmes, Jeffrey A
+IR  - Buske OJ
+FIR - Buske, Orion J
+IR  - Hoffman MM
+FIR - Hoffman, Michael M
+IR  - Sahu AD
+FIR - Sahu, Avinash D
+IR  - Kharchenko PV
+FIR - Kharchenko, Peter V
+IR  - Park PJ
+FIR - Park, Peter J
+IR  - Baker D
+FIR - Baker, Dannon
+IR  - Taylor J
+FIR - Taylor, James
+IR  - Weng Z
+FIR - Weng, Zhiping
+IR  - Iyer S
+FIR - Iyer, Sowmya
+IR  - Dong X
+FIR - Dong, Xianjun
+IR  - Greven M
+FIR - Greven, Melissa
+IR  - Lin X
+FIR - Lin, Xinying
+IR  - Wang J
+FIR - Wang, Jie
+IR  - Xi HS
+FIR - Xi, Hualin S
+IR  - Zhuang J
+FIR - Zhuang, Jiali
+IR  - Gerstein M
+FIR - Gerstein, Mark
+IR  - Alexander RP
+FIR - Alexander, Roger P
+IR  - Balasubramanian S
+FIR - Balasubramanian, Suganthi
+IR  - Cheng C
+FIR - Cheng, Chao
+IR  - Harmanci A
+FIR - Harmanci, Arif
+IR  - Lochovsky L
+FIR - Lochovsky, Lucas
+IR  - Min R
+FIR - Min, Renqiang
+IR  - Mu XJ
+FIR - Mu, Xinmeng J
+IR  - Rozowsky J
+FIR - Rozowsky, Joel
+IR  - Yan KK
+FIR - Yan, Koon-Kiu
+IR  - Yip KY
+FIR - Yip, Kevin Y
+IR  - Birney E
+FIR - Birney, Ewan
+EDAT- 2012/09/08 06:00
+MHDA- 2012/10/18 06:00
+CRDT- 2012/09/08 06:00
+PHST- 2011/11/24 [received]
+PHST- 2012/05/29 [accepted]
+AID - nature11247 [pii]
+AID - 10.1038/nature11247 [doi]
+PST - ppublish
+SO  - Nature. 2012 Sep 6;489(7414):57-74. doi: 10.1038/nature11247.
+
+PMID- 22064851
+OWN - NLM
+STAT- MEDLINE
+DA  - 20111223
+DCOM- 20120705
+LR  - 20150129
+IS  - 1362-4962 (Electronic)
+IS  - 0305-1048 (Linking)
+VI  - 40
+IP  - Database issue
+DP  - 2012 Jan
+TI  - HaploReg: a resource for exploring chromatin states, conservation, and regulatory
+      motif alterations within sets of genetically linked variants.
+PG  - D930-4
+LID - 10.1093/nar/gkr917 [doi]
+AB  - The resolution of genome-wide association studies (GWAS) is limited by the
+      linkage disequilibrium (LD) structure of the population being studied. Selecting 
+      the most likely causal variants within an LD block is relatively straightforward 
+      within coding sequence, but is more difficult when all variants are intergenic.
+      Predicting functional non-coding sequence has been recently facilitated by the
+      availability of conservation and epigenomic information. We present HaploReg, a
+      tool for exploring annotations of the non-coding genome among the results of
+      published GWAS or novel sets of variants. Using LD information from the 1000
+      Genomes Project, linked SNPs and small indels can be visualized along with their 
+      predicted chromatin state in nine cell types, conservation across mammals and
+      their effect on regulatory motifs. Sets of SNPs, such as those resulting from
+      GWAS, are analyzed for an enrichment of cell type-specific enhancers. HaploReg
+      will be useful to researchers developing mechanistic hypotheses of the impact of 
+      non-coding variants on clinical phenotypes and normal variation. The HaploReg
+      database is available at http://compbio.mit.edu/HaploReg.
+FAU - Ward, Lucas D
+AU  - Ward LD
+AD  - Computer Science and Artificial Intelligence Laboratory, Massachusetts Institute 
+      of Technology and The Broad Institute of MIT and Harvard, Cambridge, MA 02139,
+      USA. lukeward@mit.edu
+FAU - Kellis, Manolis
+AU  - Kellis M
+LA  - eng
+GR  - R01 HG004037/HG/NHGRI NIH HHS/United States
+GR  - R01-HG004037/HG/NHGRI NIH HHS/United States
+GR  - RC1-HG005334/HG/NHGRI NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, U.S. Gov't, Non-P.H.S.
+DEP - 20111107
+PL  - England
+TA  - Nucleic Acids Res
+JT  - Nucleic acids research
+JID - 0411011
+RN  - 0 (Chromatin)
+SB  - IM
+MH  - Animals
+MH  - Base Sequence
+MH  - Chromatin/*chemistry
+MH  - Conserved Sequence
+MH  - *Databases, Nucleic Acid
+MH  - Enhancer Elements, Genetic
+MH  - Genetic Linkage
+MH  - *Genome-Wide Association Study
+MH  - Genomics
+MH  - *INDEL Mutation
+MH  - Linkage Disequilibrium
+MH  - Molecular Sequence Annotation
+MH  - Nucleotide Motifs
+MH  - *Polymorphism, Single Nucleotide
+MH  - Regulatory Sequences, Nucleic Acid
+PMC - PMC3245002
+OID - NLM: PMC3245002
+EDAT- 2011/11/09 06:00
+MHDA- 2012/07/06 06:00
+CRDT- 2011/11/09 06:00
+PHST- 2011/11/07 [aheadofprint]
+AID - gkr917 [pii]
+AID - 10.1093/nar/gkr917 [doi]
+PST - ppublish
+SO  - Nucleic Acids Res. 2012 Jan;40(Database issue):D930-4. doi: 10.1093/nar/gkr917.
+      Epub 2011 Nov 7.
+
+PMID- 21892150
+OWN - NLM
+STAT- MEDLINE
+DA  - 20110930
+DCOM- 20111223
+IS  - 1548-7105 (Electronic)
+IS  - 1548-7091 (Linking)
+VI  - 8
+IP  - 10
+DP  - 2011
+TI  - FaST linear mixed models for genome-wide association studies.
+PG  - 833-5
+LID - 10.1038/nmeth.1681 [doi]
+AB  - We describe factored spectrally transformed linear mixed models (FaST-LMM), an
+      algorithm for genome-wide association studies (GWAS) that scales linearly with
+      cohort size in both run time and memory use. On Wellcome Trust data for 15,000
+      individuals, FaST-LMM ran an order of magnitude faster than current efficient
+      algorithms. Our algorithm can analyze data for 120,000 individuals in just a few 
+      hours, whereas current algorithms fail on data for even 20,000 individuals
+      (http://mscompbio.codeplex.com/).
+FAU - Lippert, Christoph
+AU  - Lippert C
+AD  - Microsoft Research, Los Angeles, California, USA.
+      christoph.lippert@tuebingen.mpg.de
+FAU - Listgarten, Jennifer
+AU  - Listgarten J
+FAU - Liu, Ying
+AU  - Liu Y
+FAU - Kadie, Carl M
+AU  - Kadie CM
+FAU - Davidson, Robert I
+AU  - Davidson RI
+FAU - Heckerman, David
+AU  - Heckerman D
+LA  - eng
+GR  - 076113/Wellcome Trust/United Kingdom
+GR  - 085475/Wellcome Trust/United Kingdom
+GR  - U10 AA008401/AA/NIAAA NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20110904
+PL  - United States
+TA  - Nat Methods
+JT  - Nature methods
+JID - 101215604
+SB  - IM
+MH  - Algorithms
+MH  - Computer Simulation
+MH  - *Genome-Wide Association Study
+MH  - *Models, Genetic
+MH  - Software
+EDAT- 2011/09/06 06:00
+MHDA- 2011/12/24 06:00
+CRDT- 2011/09/06 06:00
+PHST- 2011/04/05 [received]
+PHST- 2011/08/02 [accepted]
+PHST- 2011/09/04 [aheadofprint]
+AID - nmeth.1681 [pii]
+AID - 10.1038/nmeth.1681 [doi]
+PST - epublish
+SO  - Nat Methods. 2011 Sep 4;8(10):833-5. doi: 10.1038/nmeth.1681.
+
+PMID- 21794153
+OWN - NLM
+STAT- MEDLINE
+DA  - 20110825
+DCOM- 20111109
+LR  - 20150710
+IS  - 1471-2156 (Electronic)
+IS  - 1471-2156 (Linking)
+VI  - 12
+DP  - 2011
+TI  - QTLRel: an R package for genome-wide association studies in which relatedness is 
+      a concern.
+PG  - 66
+LID - 10.1186/1471-2156-12-66 [doi]
+AB  - BACKGROUND: Existing software for quantitative trait mapping is either not able
+      to model polygenic variation or does not allow incorporation of more than one
+      genetic variance component. Improperly modeling the genetic relatedness among
+      subjects can result in excessive false positives. We have developed an R package,
+      QTLRel, to enable more flexible modeling of genetic relatedness as well as
+      covariates and non-genetic variance components. RESULTS: We have successfully
+      used the package to analyze many datasets, including F(3)(4) body weight data
+      that contains 688 individuals genotyped at 3105 SNP markers and identified 11
+      QTL. It took 295 seconds to estimate variance components and 70 seconds to
+      perform the genome scan on an Linux machine equipped with a 2.40GHz Intel(R)
+      Core(TM)2 Quad CPU. CONCLUSIONS: QTLRel provides a toolkit for genome-wide
+      association studies that is capable of calculating genetic incidence matrices
+      from pedigrees, estimating variance components, performing genome scans,
+      incorporating interactive covariates and genetic and non-genetic variance
+      components, as well as other functionalities such as multiple-QTL mapping and
+      genome-wide epistasis.
+FAU - Cheng, Riyan
+AU  - Cheng R
+AD  - Department of Human Genetics, The University of Chicago, IL 60637, USA.
+FAU - Abney, Mark
+AU  - Abney M
+FAU - Palmer, Abraham A
+AU  - Palmer AA
+FAU - Skol, Andrew D
+AU  - Skol AD
+LA  - eng
+GR  - R01 DA021336/DA/NIDA NIH HHS/United States
+GR  - R01 GM097737/GM/NIGMS NIH HHS/United States
+GR  - R01 HG002899/HG/NHGRI NIH HHS/United States
+GR  - R01DA021336/DA/NIDA NIH HHS/United States
+GR  - R01MH079103/MH/NIMH NIH HHS/United States
+GR  - R21DA024845/DA/NIDA NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+DEP - 20110727
+PL  - England
+TA  - BMC Genet
+JT  - BMC genetics
+JID - 100966978
+SB  - IM
+MH  - Genetic Variation
+MH  - *Genome-Wide Association Study
+MH  - Humans
+MH  - Models, Statistical
+MH  - *Pedigree
+MH  - Quantitative Trait Loci
+MH  - *Software
+PMC - PMC3160955
+OID - NLM: PMC3160955
+EDAT- 2011/07/29 06:00
+MHDA- 2011/11/10 06:00
+CRDT- 2011/07/29 06:00
+PHST- 2011/05/19 [received]
+PHST- 2011/07/27 [accepted]
+PHST- 2011/07/27 [aheadofprint]
+AID - 1471-2156-12-66 [pii]
+AID - 10.1186/1471-2156-12-66 [doi]
+PST - epublish
+SO  - BMC Genet. 2011 Jul 27;12:66. doi: 10.1186/1471-2156-12-66.
+
+PMID- 20944595
+OWN - NLM
+STAT- MEDLINE
+DA  - 20101014
+DCOM- 20110127
+LR  - 20141202
+IS  - 1546-1696 (Electronic)
+IS  - 1087-0156 (Linking)
+VI  - 28
+IP  - 10
+DP  - 2010 Oct
+TI  - The NIH Roadmap Epigenomics Mapping Consortium.
+PG  - 1045-8
+LID - 10.1038/nbt1010-1045 [doi]
+AB  - The NIH Roadmap Epigenomics Mapping Consortium aims to produce a public resource 
+      of epigenomic maps for stem cells and primary ex vivo tissues selected to
+      represent the normal counterparts of tissues and organ systems frequently
+      involved in human disease.
+FAU - Bernstein, Bradley E
+AU  - Bernstein BE
+AD  - Broad Institute of Harvard and MIT, Cambridge, Massachusetts, USA.
+      Bernstein.Bradley@mgh.harvard.edu
+FAU - Stamatoyannopoulos, John A
+AU  - Stamatoyannopoulos JA
+FAU - Costello, Joseph F
+AU  - Costello JF
+FAU - Ren, Bing
+AU  - Ren B
+FAU - Milosavljevic, Aleksandar
+AU  - Milosavljevic A
+FAU - Meissner, Alexander
+AU  - Meissner A
+FAU - Kellis, Manolis
+AU  - Kellis M
+FAU - Marra, Marco A
+AU  - Marra MA
+FAU - Beaudet, Arthur L
+AU  - Beaudet AL
+FAU - Ecker, Joseph R
+AU  - Ecker JR
+FAU - Farnham, Peggy J
+AU  - Farnham PJ
+FAU - Hirst, Martin
+AU  - Hirst M
+FAU - Lander, Eric S
+AU  - Lander ES
+FAU - Mikkelsen, Tarjei S
+AU  - Mikkelsen TS
+FAU - Thomson, James A
+AU  - Thomson JA
+LA  - eng
+GR  - R01 HG003523/HG/NHGRI NIH HHS/United States
+GR  - R01 HG004037/HG/NHGRI NIH HHS/United States
+GR  - R01 HG005085/HG/NHGRI NIH HHS/United States
+PT  - Journal Article
+PL  - United States
+TA  - Nat Biotechnol
+JT  - Nature biotechnology
+JID - 9604648
+SB  - IM
+MH  - *Cooperative Behavior
+MH  - *Epigenomics
+MH  - Genome, Human/genetics
+MH  - Humans
+MH  - *National Institutes of Health (U.S.)
+MH  - Reference Standards
+MH  - Stem Cells/metabolism
+MH  - United States
+PMC - PMC3607281
+MID - NIHMS452871
+OID - NLM: NIHMS452871
+OID - NLM: PMC3607281
+EDAT- 2010/10/15 06:00
+MHDA- 2011/01/29 06:00
+CRDT- 2010/10/15 06:00
+AID - nbt1010-1045 [pii]
+AID - 10.1038/nbt1010-1045 [doi]
+PST - ppublish
+SO  - Nat Biotechnol. 2010 Oct;28(10):1045-8. doi: 10.1038/nbt1010-1045.
+
+PMID- 20647212
+OWN - NLM
+STAT- MEDLINE
+DA  - 20100721
+DCOM- 20100727
+LR  - 20101122
+IS  - 1533-4406 (Electronic)
+IS  - 0028-4793 (Linking)
+VI  - 363
+IP  - 2
+DP  - 2010 Jul 8
+TI  - Genomewide association studies and assessment of the risk of disease.
+PG  - 166-76
+LID - 10.1056/NEJMra0905980 [doi]
+FAU - Manolio, Teri A
+AU  - Manolio TA
+AD  - Office of Population Genomics, National Human Genome Research Institute, Bldg.
+      31, Rm. 4B-09, 31 Center Dr., MSC 2152, Bethesda, MD 20892, USA. manolio@nih.gov
+LA  - eng
+PT  - Journal Article
+PT  - Review
+PL  - United States
+TA  - N Engl J Med
+JT  - The New England journal of medicine
+JID - 0255562
+SB  - AIM
+SB  - IM
+CIN - N Engl J Med. 2010 Nov 18;363(21):2076-7; author reply 2077. PMID: 21083406
+CIN - N Engl J Med. 2010 Nov 18;363(21):2077; author reply 2077. PMID: 21083405
+MH  - *Genetic Predisposition to Disease
+MH  - Genetic Testing
+MH  - *Genome-Wide Association Study
+MH  - Humans
+MH  - Polymorphism, Single Nucleotide
+MH  - *Risk Assessment
+RF  - 74
+EDAT- 2010/07/22 06:00
+MHDA- 2010/07/28 06:00
+CRDT- 2010/07/22 06:00
+AID - 363/2/166 [pii]
+AID - 10.1056/NEJMra0905980 [doi]
+PST - ppublish
+SO  - N Engl J Med. 2010 Jul 8;363(2):166-76. doi: 10.1056/NEJMra0905980.
+
+PMID- 20208533
+OWN - NLM
+STAT- MEDLINE
+DA  - 20100329
+DCOM- 20100416
+LR  - 20141204
+IS  - 1546-1718 (Electronic)
+IS  - 1061-4036 (Linking)
+VI  - 42
+IP  - 4
+DP  - 2010 Apr
+TI  - Variance component model to account for sample structure in genome-wide
+      association studies.
+PG  - 348-54
+LID - 10.1038/ng.548 [doi]
+AB  - Although genome-wide association studies (GWASs) have identified numerous loci
+      associated with complex traits, imprecise modeling of the genetic relatedness
+      within study samples may cause substantial inflation of test statistics and
+      possibly spurious associations. Variance component approaches, such as efficient 
+      mixed-model association (EMMA), can correct for a wide range of sample structures
+      by explicitly accounting for pairwise relatedness between individuals, using
+      high-density markers to model the phenotype distribution; but such approaches are
+      computationally impractical. We report here a variance component approach
+      implemented in publicly available software, EMMA eXpedited (EMMAX), that reduces 
+      the computational time for analyzing large GWAS data sets from years to hours. We
+      apply this method to two human GWAS data sets, performing association analysis
+      for ten quantitative traits from the Northern Finland Birth Cohort and seven
+      common diseases from the Wellcome Trust Case Control Consortium. We find that
+      EMMAX outperforms both principal component analysis and genomic control in
+      correcting for sample structure.
+FAU - Kang, Hyun Min
+AU  - Kang HM
+AD  - Center for Statistical Genetics, Department of Biostatistics, University of
+      Michigan, Ann Arbor, Michigan, USA.
+FAU - Sul, Jae Hoon
+AU  - Sul JH
+FAU - Service, Susan K
+AU  - Service SK
+FAU - Zaitlen, Noah A
+AU  - Zaitlen NA
+FAU - Kong, Sit-Yee
+AU  - Kong SY
+FAU - Freimer, Nelson B
+AU  - Freimer NB
+FAU - Sabatti, Chiara
+AU  - Sabatti C
+FAU - Eskin, Eleazar
+AU  - Eskin E
+LA  - eng
+GR  - 1K25HL080079/HL/NHLBI NIH HHS/United States
+GR  - 5PL1NS062410-03/NS/NINDS NIH HHS/United States
+GR  - 5RL1MH083268-03/MH/NIMH NIH HHS/United States
+GR  - 5UL1DE019580-03/DE/NIDCR NIH HHS/United States
+GR  - 6R01HL087679-03/HL/NHLBI NIH HHS/United States
+GR  - GM053275-14/GM/NIGMS NIH HHS/United States
+GR  - HL087679-01/HL/NHLBI NIH HHS/United States
+GR  - K25 HL080079/HL/NHLBI NIH HHS/United States
+GR  - K25 HL080079-05/HL/NHLBI NIH HHS/United States
+GR  - N01-ES-45530/ES/NIEHS NIH HHS/United States
+GR  - NH084698/NH/NIH HHS/United States
+GR  - P30 1MH083268/MH/NIMH NIH HHS/United States
+GR  - U01-DA024417/DA/NIDA NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+PT  - Research Support, U.S. Gov't, Non-P.H.S.
+DEP - 20100307
+PL  - United States
+TA  - Nat Genet
+JT  - Nature genetics
+JID - 9216904
+SB  - IM
+MH  - *Genome-Wide Association Study
+MH  - Humans
+MH  - Models, Genetic
+MH  - *Models, Statistical
+MH  - Polymorphism, Single Nucleotide
+MH  - Population Groups/*genetics
+MH  - Principal Component Analysis
+MH  - Quantitative Trait Loci
+MH  - Software
+PMC - PMC3092069
+MID - NIHMS196426
+OID - NLM: NIHMS196426
+OID - NLM: PMC3092069
+EDAT- 2010/03/09 06:00
+MHDA- 2010/04/17 06:00
+CRDT- 2010/03/09 06:00
+PHST- 2009/07/23 [received]
+PHST- 2010/02/09 [accepted]
+PHST- 2010/03/07 [aheadofprint]
+AID - ng.548 [pii]
+AID - 10.1038/ng.548 [doi]
+PST - ppublish
+SO  - Nat Genet. 2010 Apr;42(4):348-54. doi: 10.1038/ng.548. Epub 2010 Mar 7.
+
+PMID- 19763151
+OWN - NLM
+STAT- MEDLINE
+DA  - 20090918
+DCOM- 20091008
+IS  - 1471-0064 (Electronic)
+IS  - 1471-0056 (Linking)
+VI  - 10
+IP  - 10
+DP  - 2009 Oct
+TI  - Bayesian statistical methods for genetic association studies.
+PG  - 681-90
+LID - 10.1038/nrg2615 [doi]
+AB  - Bayesian statistical methods have recently made great inroads into many areas of 
+      science, and this advance is now extending to the assessment of association
+      between genetic variants and disease or other phenotypes. We review these
+      methods, focusing on single-SNP tests in genome-wide association studies. We
+      discuss the advantages of the Bayesian approach over classical (frequentist)
+      approaches in this setting and provide a tutorial on basic analysis steps,
+      including practical guidelines for appropriate prior specification. We
+      demonstrate the use of Bayesian methods for fine mapping in candidate regions,
+      discuss meta-analyses and provide guidance for refereeing manuscripts that
+      contain Bayesian analyses.
+FAU - Stephens, Matthew
+AU  - Stephens M
+AD  - Departments of Statistics and Human Genetics, University of Chicago, Chicago, IL 
+      60637, USA. mstephens@uchicago.edu
+FAU - Balding, David J
+AU  - Balding DJ
+LA  - eng
+GR  - EP/C533542/EP/EAPO CDC HHS/United States
+GR  - HL084689/HL/NHLBI NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Review
+PL  - England
+TA  - Nat Rev Genet
+JT  - Nature reviews. Genetics
+JID - 100962779
+SB  - IM
+MH  - *Bayes Theorem
+MH  - *Genome-Wide Association Study
+MH  - Humans
+MH  - Polymorphism, Single Nucleotide/*genetics
+RF  - 47
+EDAT- 2009/09/19 06:00
+MHDA- 2009/10/09 06:00
+CRDT- 2009/09/19 06:00
+AID - nrg2615 [pii]
+AID - 10.1038/nrg2615 [doi]
+PST - ppublish
+SO  - Nat Rev Genet. 2009 Oct;10(10):681-90. doi: 10.1038/nrg2615.
+
+PMID- 19474294
+OWN - NLM
+STAT- MEDLINE
+DA  - 20090610
+DCOM- 20090706
+LR  - 20150813
+IS  - 1091-6490 (Electronic)
+IS  - 0027-8424 (Linking)
+VI  - 106
+IP  - 23
+DP  - 2009 Jun 9
+TI  - Potential etiologic and functional implications of genome-wide association loci
+      for human diseases and traits.
+PG  - 9362-7
+LID - 10.1073/pnas.0903103106 [doi]
+AB  - We have developed an online catalog of SNP-trait associations from published
+      genome-wide association studies for use in investigating genomic characteristics 
+      of trait/disease-associated SNPs (TASs). Reported TASs were common [median risk
+      allele frequency 36%, interquartile range (IQR) 21%-53%] and were associated with
+      modest effect sizes [median odds ratio (OR) 1.33, IQR 1.20-1.61]. Among 20
+      genomic annotation sets, reported TASs were significantly overrepresented only in
+      nonsynonymous sites [OR = 3.9 (2.2-7.0), p = 3.5 x 10(-7)] and 5kb-promoter
+      regions [OR = 2.3 (1.5-3.6), p = 3 x 10(-4)] compared to SNPs randomly selected
+      from genotyping arrays. Although 88% of TASs were intronic (45%) or intergenic
+      (43%), TASs were not overrepresented in introns and were significantly depleted
+      in intergenic regions [OR = 0.44 (0.34-0.58), p = 2.0 x 10(-9)]. Only slightly
+      more TASs than expected by chance were predicted to be in regions under positive 
+      selection [OR = 1.3 (0.8-2.1), p = 0.2]. This new online resource, together with 
+      bioinformatic predictions of the underlying functionality at
+      trait/disease-associated loci, is well-suited to guide future investigations of
+      the role of common variants in complex disease etiology.
+FAU - Hindorff, Lucia A
+AU  - Hindorff LA
+AD  - Office of Population Genomics, Genome Technology Branch, National Human Genome
+      Research Institute, and National Center for Biotechnology Information, National
+      Institutes of Health, Bethesda, MD 20892, USA.
+FAU - Sethupathy, Praveen
+AU  - Sethupathy P
+FAU - Junkins, Heather A
+AU  - Junkins HA
+FAU - Ramos, Erin M
+AU  - Ramos EM
+FAU - Mehta, Jayashri P
+AU  - Mehta JP
+FAU - Collins, Francis S
+AU  - Collins FS
+FAU - Manolio, Teri A
+AU  - Manolio TA
+LA  - eng
+GR  - Intramural NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Intramural
+DEP - 20090527
+PL  - United States
+TA  - Proc Natl Acad Sci U S A
+JT  - Proceedings of the National Academy of Sciences of the United States of America
+JID - 7505876
+SB  - IM
+MH  - Disease/genetics
+MH  - *Genetic Predisposition to Disease
+MH  - *Genome-Wide Association Study
+MH  - Humans
+MH  - Polymorphism, Genetic
+MH  - *Polymorphism, Single Nucleotide
+PMC - PMC2687147
+OID - NLM: PMC2687147
+EDAT- 2009/05/29 09:00
+MHDA- 2009/07/07 09:00
+CRDT- 2009/05/29 09:00
+PHST- 2009/05/27 [aheadofprint]
+AID - 0903103106 [pii]
+AID - 10.1073/pnas.0903103106 [doi]
+PST - ppublish
+SO  - Proc Natl Acad Sci U S A. 2009 Jun 9;106(23):9362-7. doi:
+      10.1073/pnas.0903103106. Epub 2009 May 27.
+
+PMID- 19409523
+OWN - NLM
+STAT- MEDLINE
+DA  - 20090515
+DCOM- 20090609
+LR  - 20160323
+IS  - 1537-6605 (Electronic)
+IS  - 0002-9297 (Linking)
+VI  - 84
+IP  - 5
+DP  - 2009 May
+TI  - Multilocus Bayesian meta-analysis of gene-disease associations.
+PG  - 567-80
+LID - 10.1016/j.ajhg.2009.04.001 [doi]
+AB  - Meta-analysis is a vital tool in genetic epidemiology. However, meta-analyses to 
+      identify gene-disease associations are compromised when contributing studies have
+      typed partially overlapping sets of markers. Currently, only marginal analyses
+      are possible, and these are restricted to the subset of studies typing that
+      marker. This does not allow full use of available data and leads to the
+      confounding of marker effects by closely associated markers. We present a
+      Bayesian approach that exploits prior information on underlying haplotypes to
+      allow multi-marker analysis incorporating data from all relevant studies of a
+      gene or region, irrespective of the markers typed. We present results from
+      application of our approach to data on a possible association between PDE4D and
+      ischemic stroke.
+FAU - Newcombe, Paul J
+AU  - Newcombe PJ
+AD  - Department of Epidemiology and Population Health, London School of Hygiene and
+      Tropical Medicine, WC1E 7HT London, UK.
+FAU - Verzilli, Claudio
+AU  - Verzilli C
+FAU - Casas, Juan P
+AU  - Casas JP
+FAU - Hingorani, Aroon D
+AU  - Hingorani AD
+FAU - Smeeth, Liam
+AU  - Smeeth L
+FAU - Whittaker, John C
+AU  - Whittaker JC
+LA  - eng
+GR  - 082178/Wellcome Trust/United Kingdom
+GR  - G0600580/Medical Research Council/United Kingdom
+GR  - British Heart Foundation/United Kingdom
+GR  - Wellcome Trust/United Kingdom
+PT  - Journal Article
+PT  - Meta-Analysis
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20090430
+PL  - United States
+TA  - Am J Hum Genet
+JT  - American journal of human genetics
+JID - 0370475
+RN  - 0 (Genetic Markers)
+RN  - EC 3.1.4.17 (Cyclic Nucleotide Phosphodiesterases, Type 4)
+SB  - IM
+MH  - Bayes Theorem
+MH  - Computer Simulation
+MH  - Cyclic Nucleotide Phosphodiesterases, Type 4/genetics
+MH  - Genetic Markers
+MH  - *Genetic Predisposition to Disease
+MH  - Haplotypes
+MH  - Humans
+MH  - *Models, Genetic
+MH  - Polymorphism, Single Nucleotide
+MH  - Stroke/genetics
+PMC - PMC2680997
+OID - NLM: PMC2680997
+EDAT- 2009/05/05 09:00
+MHDA- 2009/06/10 09:00
+CRDT- 2009/05/05 09:00
+PHST- 2008/12/23 [received]
+PHST- 2009/02/23 [revised]
+PHST- 2009/04/03 [accepted]
+PHST- 2009/04/30 [aheadofprint]
+AID - S0002-9297(09)00143-8 [pii]
+AID - 10.1016/j.ajhg.2009.04.001 [doi]
+PST - ppublish
+SO  - Am J Hum Genet. 2009 May;84(5):567-80. doi: 10.1016/j.ajhg.2009.04.001. Epub 2009
+      Apr 30.
+
+PMID- 18394581
+OWN - NLM
+STAT- MEDLINE
+DA  - 20080408
+DCOM- 20080513
+LR  - 20151119
+IS  - 1537-6605 (Electronic)
+IS  - 0002-9297 (Linking)
+VI  - 82
+IP  - 4
+DP  - 2008 Apr
+TI  - Bayesian meta-analysis of genetic association studies with different sets of
+      markers.
+PG  - 859-72
+LID - 10.1016/j.ajhg.2008.01.016 [doi]
+AB  - Robust assessment of genetic effects on quantitative traits or complex-disease
+      risk requires synthesis of evidence from multiple studies. Frequently, studies
+      have genotyped partially overlapping sets of SNPs within a gene or region of
+      interest, hampering attempts to combine all the available data. By using the
+      example of C-reactive protein (CRP) as a quantitative trait, we show how linkage 
+      disequilibrium in and around its gene facilitates use of Bayesian hierarchical
+      models to integrate informative data from all available genetic association
+      studies of this trait, irrespective of the SNP typed. A variable selection
+      scheme, followed by contextualization of SNPs exhibiting independent associations
+      within the haplotype structure of the gene, enhanced our ability to infer likely 
+      causal variants in this region with population-scale data. This strategy, based
+      on data from a literature based systematic review and substantial new genotyping,
+      facilitated the most comprehensive evaluation to date of the role of variants
+      governing CRP levels, providing important information on the minimal subset of
+      SNPs necessary for comprehensive evaluation of the likely causal relevance of
+      elevated CRP levels for coronary-heart-disease risk by Mendelian randomization.
+      The same method could be applied to evidence synthesis of other quantitative
+      traits, whenever the typed SNPs vary among studies, and to assist fine mapping of
+      causal variants.
+FAU - Verzilli, Claudio
+AU  - Verzilli C
+AD  - Department of Epidemiology and Population Health, London School of Hygiene and
+      Tropical Medicine, London WC1E 7HT, UK.
+FAU - Shah, Tina
+AU  - Shah T
+FAU - Casas, Juan P
+AU  - Casas JP
+FAU - Chapman, Juliet
+AU  - Chapman J
+FAU - Sandhu, Manjinder
+AU  - Sandhu M
+FAU - Debenham, Sally L
+AU  - Debenham SL
+FAU - Boekholdt, Matthijs S
+AU  - Boekholdt MS
+FAU - Khaw, Kay Tee
+AU  - Khaw KT
+FAU - Wareham, Nicholas J
+AU  - Wareham NJ
+FAU - Judson, Richard
+AU  - Judson R
+FAU - Benjamin, Emelia J
+AU  - Benjamin EJ
+FAU - Kathiresan, Sekar
+AU  - Kathiresan S
+FAU - Larson, Martin G
+AU  - Larson MG
+FAU - Rong, Jian
+AU  - Rong J
+FAU - Sofat, Reecha
+AU  - Sofat R
+FAU - Humphries, Steve E
+AU  - Humphries SE
+FAU - Smeeth, Liam
+AU  - Smeeth L
+FAU - Cavalleri, Gianpiero
+AU  - Cavalleri G
+FAU - Whittaker, John C
+AU  - Whittaker JC
+FAU - Hingorani, Aroon D
+AU  - Hingorani AD
+LA  - eng
+GR  - 082178/Wellcome Trust/United Kingdom
+GR  - AG028321/AG/NIA NIH HHS/United States
+GR  - FS/02/086/14760/British Heart Foundation/United Kingdom
+GR  - FS/05/125/British Heart Foundation/United Kingdom
+GR  - G0401527/Medical Research Council/United Kingdom
+GR  - G0600580/Medical Research Council/United Kingdom
+GR  - G0601942/Medical Research Council/United Kingdom
+GR  - GR076024/PHS HHS/United States
+GR  - HL076784/HL/NHLBI NIH HHS/United States
+GR  - MC_U106179471/Medical Research Council/United Kingdom
+GR  - N01-HC 25195/HC/NHLBI NIH HHS/United States
+GR  - PG2000/015/British Heart Foundation/United Kingdom
+GR  - Wellcome Trust/United Kingdom
+PT  - Journal Article
+PT  - Meta-Analysis
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+PL  - United States
+TA  - Am J Hum Genet
+JT  - American journal of human genetics
+JID - 0370475
+RN  - 0 (Biomarkers)
+RN  - 9007-41-4 (C-Reactive Protein)
+SB  - IM
+MH  - Adolescent
+MH  - Adult
+MH  - Aged
+MH  - Aged, 80 and over
+MH  - Bayes Theorem
+MH  - Biomarkers/analysis
+MH  - C-Reactive Protein/*analysis/*genetics
+MH  - Child
+MH  - Computer Simulation
+MH  - Coronary Disease/*genetics
+MH  - Female
+MH  - *Genetic Predisposition to Disease
+MH  - Haplotypes
+MH  - Humans
+MH  - *Linkage Disequilibrium
+MH  - Male
+MH  - Middle Aged
+MH  - Polymorphism, Single Nucleotide
+MH  - Quantitative Trait, Heritable
+MH  - Risk
+MH  - Software
+PMC - PMC2665011
+OID - NLM: PMC2665011
+EDAT- 2008/04/09 09:00
+MHDA- 2008/05/14 09:00
+CRDT- 2008/04/09 09:00
+PHST- 2007/09/25 [received]
+PHST- 2007/11/29 [revised]
+PHST- 2008/01/22 [accepted]
+AID - S0002-9297(08)00165-1 [pii]
+AID - 10.1016/j.ajhg.2008.01.016 [doi]
+PST - ppublish
+SO  - Am J Hum Genet. 2008 Apr;82(4):859-72. doi: 10.1016/j.ajhg.2008.01.016.
+
+PMID- 18385116
+OWN - NLM
+STAT- MEDLINE
+DA  - 20080403
+DCOM- 20080617
+LR  - 20140904
+IS  - 0016-6731 (Print)
+IS  - 0016-6731 (Linking)
+VI  - 178
+IP  - 3
+DP  - 2008 Mar
+TI  - Efficient control of population structure in model organism association mapping.
+PG  - 1709-23
+LID - 10.1534/genetics.107.080101 [doi]
+AB  - Genomewide association mapping in model organisms such as inbred mouse strains is
+      a promising approach for the identification of risk factors related to human
+      diseases. However, genetic association studies in inbred model organisms are
+      confronted by the problem of complex population structure among strains. This
+      induces inflated false positive rates, which cannot be corrected using standard
+      approaches applied in human association studies such as genomic control or
+      structured association. Recent studies demonstrated that mixed models
+      successfully correct for the genetic relatedness in association mapping in maize 
+      and Arabidopsis panel data sets. However, the currently available mixed-model
+      methods suffer from computational inefficiency. In this article, we propose a new
+      method, efficient mixed-model association (EMMA), which corrects for population
+      structure and genetic relatedness in model organism association mapping. Our
+      method takes advantage of the specific nature of the optimization problem in
+      applying mixed models for association mapping, which allows us to substantially
+      increase the computational speed and reliability of the results. We applied EMMA 
+      to in silico whole-genome association mapping of inbred mouse strains involving
+      hundreds of thousands of SNPs, in addition to Arabidopsis and maize data sets. We
+      also performed extensive simulation studies to estimate the statistical power of 
+      EMMA under various SNP effects, varying degrees of population structure, and
+      differing numbers of multiple measurements per strain. Despite the limited power 
+      of inbred mouse association mapping due to the limited number of available inbred
+      strains, we are able to identify significantly associated SNPs, which fall into
+      known QTL or genes identified through previous studies while avoiding an
+      inflation of false positives. An R package implementation and webserver of our
+      EMMA method are publicly available.
+FAU - Kang, Hyun Min
+AU  - Kang HM
+AD  - Department of Computer Science, University of California, Los Angeles, California
+      90095-1596, USA.
+FAU - Zaitlen, Noah A
+AU  - Zaitlen NA
+FAU - Wade, Claire M
+AU  - Wade CM
+FAU - Kirby, Andrew
+AU  - Kirby A
+FAU - Heckerman, David
+AU  - Heckerman D
+FAU - Daly, Mark J
+AU  - Daly MJ
+FAU - Eskin, Eleazar
+AU  - Eskin E
+LA  - eng
+GR  - 1K25HL080079/HL/NHLBI NIH HHS/United States
+GR  - C06 RR017588/RR/NCRR NIH HHS/United States
+GR  - K25 HL080079/HL/NHLBI NIH HHS/United States
+GR  - P41 RR08605/RR/NCRR NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+PT  - Research Support, U.S. Gov't, Non-P.H.S.
+PL  - United States
+TA  - Genetics
+JT  - Genetics
+JID - 0374636
+RN  - FST467XS7D (Saccharin)
+SB  - IM
+MH  - Animals
+MH  - Arabidopsis/*genetics
+MH  - Body Weight/genetics
+MH  - Chromosome Mapping/*methods
+MH  - Flowers/genetics
+MH  - Genome/genetics
+MH  - Inbreeding
+MH  - Mice
+MH  - Mice, Inbred Strains
+MH  - *Models, Biological
+MH  - Models, Genetic
+MH  - Organ Size/genetics
+MH  - Phenotype
+MH  - Polymorphism, Single Nucleotide/genetics
+MH  - Population Dynamics
+MH  - Quantitative Trait, Heritable
+MH  - Saccharin/metabolism
+MH  - Software
+MH  - Zea mays/*genetics
+PMC - PMC2278096
+OID - NLM: PMC2278096
+EDAT- 2008/04/04 09:00
+MHDA- 2008/06/18 09:00
+CRDT- 2008/04/04 09:00
+AID - 178/3/1709 [pii]
+AID - 10.1534/genetics.107.080101 [doi]
+PST - ppublish
+SO  - Genetics. 2008 Mar;178(3):1709-23. doi: 10.1534/genetics.107.080101.
+
+PMID- 18026754
+OWN - NLM
+STAT- MEDLINE
+DA  - 20080130
+DCOM- 20080425
+LR  - 20091119
+IS  - 1432-1203 (Electronic)
+IS  - 0340-6717 (Linking)
+VI  - 123
+IP  - 1
+DP  - 2008 Feb
+TI  - Methods for meta-analysis in genetic association studies: a review of their
+      potential and pitfalls.
+PG  - 1-14
+AB  - Meta-analysis offers the opportunity to combine evidence from retrospectively
+      accumulated or prospectively generated data. Meta-analyses may provide summary
+      estimates and can help in detecting and addressing potential inconsistency
+      between the combined datasets. Application of meta-analysis in genetic
+      associations presents considerable potential and several pitfalls. In this
+      review, we present basic principles of meta-analytic methods, adapted for human
+      genome epidemiology. We describe issues that arise in the retrospective or the
+      prospective collection of relevant data through various sources, common traps to 
+      consider in the appraisal of evidence and potential biases that may interfere. We
+      describe the relative merits and caveats for common methods used to trace
+      inconsistency across studies along with possible reasons for non-replication of
+      proposed associations. Different statistical models may be employed to combine
+      data and some common misconceptions may arise in the process. Several
+      meta-analysis diagnostics are often applied or misapplied in the literature, and 
+      we comment on their use and limitations. An alternative to overcome limitations
+      arising from retrospective combination of data from published studies is to
+      create networks of research teams working in the same field and perform
+      collaborative meta-analyses of individual participant data, ideally on a
+      prospective basis. We discuss the advantages and the challenges inherent in such 
+      collaborative approaches. Meta-analysis can be a useful tool in dissecting the
+      genetics of complex diseases and traits, provided its methods are properly
+      applied and interpreted.
+FAU - Kavvoura, Fotini K
+AU  - Kavvoura FK
+AD  - Clinical and Molecular Epidemiology Unit, Department of Hygiene and Epidemiology,
+      University of Ioannina School of Medicine, University Campus, Ioannina, 45110,
+      Greece.
+FAU - Ioannidis, John P A
+AU  - Ioannidis JP
+LA  - eng
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+PT  - Review
+DEP - 20071117
+PL  - Germany
+TA  - Hum Genet
+JT  - Human genetics
+JID - 7613873
+SB  - IM
+MH  - Genetics, Population
+MH  - *Genome, Human
+MH  - Humans
+MH  - *Meta-Analysis as Topic
+MH  - Molecular Epidemiology
+RF  - 135
+EDAT- 2007/11/21 09:00
+MHDA- 2008/04/26 09:00
+CRDT- 2007/11/21 09:00
+PHST- 2007/05/27 [received]
+PHST- 2007/10/29 [accepted]
+PHST- 2007/11/17 [aheadofprint]
+AID - 10.1007/s00439-007-0445-9 [doi]
+PST - ppublish
+SO  - Hum Genet. 2008 Feb;123(1):1-14. Epub 2007 Nov 17.

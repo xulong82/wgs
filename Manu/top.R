@@ -13,20 +13,21 @@ gwas$Type[1:4] <- "S"
 
 gwas$MAF[gwas$MAF > 0.5] = 1 - gwas$MAF[gwas$MAF > 0.5]
 
-pdf("./Manu/top2.pdf", width = 7, height = 3)
+pdf("./Manu/top2.pdf", width = 7, height = 4)
 
 ggplot(gwas, aes(x = MAF, y = abs(mean))) + 
   geom_point(data = gwas[1:4, ], colour="green", aes(size = -log10(P)), shape = 1) + 
 # geom_point(aes(colour = Sign, size = -log10(P), shape = Type), alpha = 0.8) +
   geom_point(aes(colour = Sign, size = -log10(P)), alpha = 0.7) +
-  scale_size(range = c(1, 8)) +
+  scale_size(range = c(1, 8), breaks = seq(6, 9, 0.2)) +
   theme_bw() + xlab("MAF") + ylab("Absolute Effect Size") +
-  scale_color_manual(values = c("dodgerblue3", "firebrick1")) + 
   guides(color = F, text = F, shape = F) + 
+  scale_color_manual(values = c("dodgerblue3", "firebrick1")) + 
   theme(axis.text = element_text(size = 15),
         axis.title= element_text(size = 15),
         legend.text = element_text(size = 15),
-        legend.key = element_blank()) 
+#       legend.position = "top", 
+        legend.key = element_blank())
 
 dev.off()
 

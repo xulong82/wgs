@@ -66,6 +66,10 @@ mean = colMeans(sample)
 se1 = apply(sample, 2, function(xx) quantile(xx, 0.05))
 se2 = apply(sample, 2, function(xx) quantile(xx, 0.95))
 
+mcmc$P <- pnorm(abs(unlist(mcmc$mean)), sd = unlist(mcmc$sd), lower.tail = F) * 2
+summary = as.data.frame(summary(fit, pars = beta)$summary)
+summary$P = pnorm(abs(summary$mean), sd = summary$sd, lower.tail = F) * 2
+
 dt = melt(sample)
 ggplot(dt) + geom_density(aes(x = value, fill = variable, color = variable)) + facet_grid(variable ~ .) + ylim(c(0, 3))
   
