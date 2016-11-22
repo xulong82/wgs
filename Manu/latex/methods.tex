@@ -1,10 +1,24 @@
 \documentclass[12pt]{article}
 \usepackage{amsmath,amssymb} 
 \usepackage{geometry} 
+\usepackage{authblk}
+\usepackage{hyperref}
 \geometry{a4paper}
 
-\title{A Bayesian Framework for Generalized Linear Mixed Models in Genome-Wide Association Studies}
-\author{Xulong Wang, Gregory W. Carter}
+\title{A Bayesian framework for generalized linear mixed modeling identifies new loci for late-onset Alzheimer$'$s disease}
+
+\author[1]{Xulong Wang}
+\author[1]{Vivek M. Philip}
+\author[2]{Guruprasad Ananda}
+\author[2]{Ankit Malhotra}
+\author[2]{Paul J. Michalski}
+\author[2]{Krishna R. Murthy Karuturi}
+\author[2]{Michael Sasner}
+\author[1]{Gareth R. Howell}
+\author[1]{Gregory W. Carter\thanks{greg.carter@jax.org}}
+\affil[1]{The Jackson Laboratory, Bar Harbor, ME}\affil[2]{The Jackson Laboratory for Genomic Medicine, Farmington, CT}
+
+\date{}
 
 \begin{document}
 
@@ -14,27 +28,28 @@
 \subsection*{Overview of the statistical models}
 
 \paragraph{}{
-Bayesian models are defined by two parts: (1) a likelihood function that describes the data-generating process, and (2) the prior distributions of model parameters. Bayes-GLMM took logistic regression model (LR) and ordered logistic regression model (OLR) as likelihoods functions of binary and categorical traits. In LR, the 0/1 response variable $Y_i$ followed a binomial distribution with a scalar parameter $\pi$ representing the probability that $Y_i$ equaled 1. $\pi$ was further transformed by the logit function and modeled in the linear model scheme. 
+Bayes-GLMM implemented generalized linear mixed models in the Bayesian framework. Bayesian models are defined by two parts: (1) a likelihood function that describes the data-generating process, and (2) the prior distributions of model parameters. Bayes-GLMM took linear regression model (LM), logistic regression model (logit-LM), and ordered logistic regression model (ordered-logit-LM) as likelihoods functions of numerical, binary, and categorical traits respectively.}
+
+\subsubsection*{Linear mixed models}
+
+\paragraph{}{
+In LM, the numerical response variable $Y_i$ was modeled in the linear mixed model scheme.
 }
 
 \begin{align}
-   \pi & = P(Y_i = 1) \\
-   logit(\pi) & = \bold{X} \beta + g \beta_0 + u \\
-   %log(\frac{\pi}{1-\pi}) & = \bold{X} \beta + g \beta_0 + u \\
-    u & \sim mvN(0, \sigma K) \\
+   Y & = \bold{X} \beta + g \beta_0 + u + e \\
+   u & \sim mvN(0, \sigma K) \\
+   e & \sim N(0, \sigma_e I) \\
    \beta & \sim N(0, 1) \\
-   \beta_0 & \sim N( t * \sigma_0, \sigma_0) \\
-   t & \sim N(prior, 1) \\
-   \sigma_0 & \sim inv\_gamma(2, 1) \\ 
-   \sigma & \sim inv\_gamma(2, 1)
+   \beta_0 & \sim N(0, 1) \\
+   \sigma & \sim inv\_gamma(2, 1) \\
+   \sigma_e & \sim inv\_gamma(2, 1)
 \end{align}
 
 \paragraph{}{
-In the above equations, $X$ was a $n$ by $m$ covariate matrix with $n$ the sample size and $m$ the number of conditional variables. $\beta$ was the corresponding parameter vector in length $m$. $g$ was the numerical genotype of a variant with 0 to 2 representing homozygous reference alleletype, heterozygous, and homozygous alternative alleletype. $\beta_0$ was the variant's effect size. Prior distribution of $\beta_0$ followed $N(t * \sigma_0, \sigma_0)$, with $t$ represented prior information of the given association. $t$ was modeled by a normal distribution with expected mean the standardized effect size $prior$ and unit deviation. $prior$ was defined by the variant's prior effect size divided by its standard error. A standard normal, $N(0, 1)$, was used for $\beta_0$ of variants with no known effects. Further, $\beta$ followed $N(0, 1)$ in prior.
+In the above equations, $X$ was a $n$ by $m$ covariate matrix with $n$ the sample size and $m$ the number of conditional variables. $\beta$ was the corresponding parameter vector in length $m$. $g$ was the numerical genotype of a variant with 0 to 2 representing homozygous reference alleletype, heterozygous, and homozygous alternative alleletype. $\beta_0$ was the variant's effect size. A standard normal, $N(0, 1)$, was used for $\beta_0$ of variants with no known effects. Further, $\beta$ followed $N(0, 1)$ in prior, $\sigma$ and $\sigma_e$ followed inverse gamma distribution in priors.
 }
 
-\paragraph{}{We found this method of using priors appealing in three aspects: (1) it standardized the different interpretations of effect size from different statistical models; (2) it took information on both effect size and its standard error; (3) it softened the strong weight of priors from big sample.
-}
 
 \paragraph{}{
 To model the sample relatedness, $u$ was included as a random term that followed a multivariate normal distribution, $mvN(0, \sigma K)$ in prior, with expected mean vector 0 and covariance matrix $\sigma K$. $\sigma$ was the variance component. $K$ was the kinship matrix of the samples. $mvN(0, K)$ was parameterized by the Cholesky factoring of $K$ and $n$ independent standard normal distributions.
@@ -46,20 +61,56 @@ To model the sample relatedness, $u$ was included as a random term that followed
    z & \sim & mvN(0, \sigma I)
 \end{eqnarray}
 
+\subsubsection*{Generalized linear mixed models for binary variables}
+
 \paragraph{}{
-In OLR, the categorical response variable $Y_i$ with $J$ levels followed a multinomial distribution with a vector of parameters $\bold{\pi}$, where $\pi_{ij}$ represents the probability that the $i$th observation falls in response category $j$. Cumulative distribution of $\pi$ was logit-transformed and modeled in the linear model scheme.
+ In logit-LM, the 0/1 response variable $Y_i$ followed a binomial distribution with a scalar parameter $\pi$ representing the probability that $Y_i$ equaled 1. $\pi$ was further transformed by the logit function and modeled in the linear model scheme. 
 }
 
-\begin{eqnarray}
-  P(Y_i \leq j) & = & \pi_{i1} + ... + \pi_{ij} \\
-  %log(\frac{P(Y_i \leq j) }{1 - P(Y_i \leq j) }) & = & \theta_j - \bold{X} \beta + u \quad j = 1,..., J-1
-  logit(P(Y_i \leq j) ) & = & \theta_j - \bold{X} \beta - g \beta_0 + u \quad j = 1,..., J-1 \\
-  \theta & = & 10 * cumsum(\theta_0) \\
-  \theta_0 & \sim & dirichlet(1)
-\end{eqnarray}
+\begin{align}
+   \pi & = P(Y_i = 1) \\
+   logit(\pi) & = \bold{X} \beta + g \beta_0 + u \\
+   \beta & \sim N(0, 1) \\
+   \beta_0 & \sim N(0, 1) \\
+   u & \sim mvN(0, \sigma K) \\
+   \sigma & \sim inv\_gamma(2, 1)
+\end{align}
+
+\subsubsection*{Generalized linear mixed models for ordered-categorical variables}
+
+\paragraph{}{
+In ordered-logit-LM, the ordered categorical response variable $Y_i$ with $J$ levels followed a multinomial distribution with a vector of parameters $\bold{\pi}$, where $\pi_{ij}$ represents the probability that the $i$th observation falls in response category $j$. Cumulative distribution of $\pi$ was logit-transformed and modeled in the linear model scheme.
+}
+
+\begin{align}
+  P(Y_i \leq j) & = \pi_{i1} + ... + \pi_{ij} \\
+  logit(P(Y_i \leq j) ) & = \theta_j - \bold{X} \beta - g \beta_0 + u \quad j = 1,..., J-1 \\
+  \theta & = 10 * cumsum(\theta_0) \\
+  \theta_0 & \sim dirichlet(1) \\
+   \beta & \sim N(0, 1) \\
+   \beta_0 & \sim N(0, 1) \\
+   u & \sim mvN(0, \sigma K) \\
+   \sigma & \sim inv\_gamma(2, 1)
+\end{align}
 
 \paragraph{}{
 ${\theta_j}$ modeled the distances between the categories by providing each category an unique intercept. $\theta$ was defined as ten times the cumulative sum of a multivariate variable $\theta_0$, where $\theta_0$ followed a $J-1$ dimension Dirichlet distribution in prior. 
+}
+
+\subsubsection*{Modeling the prior information of variant effects}
+
+\paragraph{}{
+To integrate prior information of variant effects, Bayes-GLMM implemented an approach that allowed priors to only modulate information of the data under study. In this method, prior distribution of variant effect was modeled by a hierarchical model, $\beta_0 \sim N(t * \sigma_0, \sigma_0)$, in which $t$ represented prior information of the given variant. $t$ was further modeled by a normal distribution with expected mean the standardized effect size $prior$ and unit deviation. $prior$ was defined by the variant's prior effect size divided by its standard error, which was often reported by published GWAS. A standard normal, $N(0, 1)$, was used for $\beta_0$ of variants with no known effects. Further, $\beta$ followed $N(0, 1)$ in prior.
+}
+
+\begin{align}
+   \beta_0 & \sim N( t * \sigma_0, \sigma_0) \\
+   t & \sim N(prior, 1) \\
+   \sigma_0 & \sim inv\_gamma(2, 1)
+\end{align}
+
+\paragraph{}{
+We found this method of using priors appealing in three aspects: (1) it standardized the different interpretations of effect size from different statistical models; (2) it took information on both effect size and its standard error; (3) it softened the strong weight of priors from big studies.
 }
 
 \subsection*{Model estimations}
@@ -108,7 +159,7 @@ $\theta^n_p$ and $\theta^f_p$ were the MLE of the parameter spaces under the nul
 \subsection*{Kinship matrix}
 
 \paragraph{}{
-We used $u$ as a random term to account for the sample relatedness. $u$ follows $mvNormal(0, \sigma K)$, where K was the kinship matrix of the samples. For each $K$ entry, genotype-based relatedness for the sample pair, or IBS coefficient, was computed using the full spectrum of genomic variants in the ADSP samples.
+We used $u$ as a random term to account for the sample relatedness. $u$ follows $mvNormal(0, \sigma K)$, where K was the kinship matrix of the samples. For each $K$ entry, genotype-based relatedness for the sample pair, or IBS coefficient, was computed using the full spectrum of genomic variants in the ADSP samples. PLINK was used for fast kinship estimation on the massive genotype data.
 }
 
 \begin{equation}
@@ -119,14 +170,14 @@ k_{i, j}  = \frac{1}{M} \sum_{m = 1}^M ({g_{m, i}  \cdot g_{m, j} + (1 - g_{m, i
 $k_{i, j}$ is the IBS relatedness between sample $i$ and $j$. $M$ is the variant number. $g_{m, i}$ and $g_{m, j}$ is the genotype of variant $m$ in sample $i$ and $j$, respectively.
 }
 
-\paragraph{}{
-To avoid over-correction, the kinship matrices were computed by the taking-one-off strategy, in that for any given variant of one chromosome, the corresponding kinship matrix was computed by taking off all variants of the given chromosome. PLINK was used for fast kinship estimation on the massive genotype data.
-}
+%\paragraph{}{
+%To avoid over-correction, the kinship matrices were computed by the taking-one-off strategy, in that for any given variant of one chromosome, the corresponding kinship matrix was computed by taking off all variants of the given chromosome. PLINK was used for fast kinship estimation on the massive genotype data.
+%}
 
-\subsection*{Linear mixed models}
+\subsection*{Linear mixed models in the frequentist scheme}
 
 \paragraph{}{
-To compare the performances of our method to that of a LMM when response variables are categorical, a LMM was constructed as follow: 
+To compare the performances of our method to that of a LMM in the frequentist scheme in analyzing the ADSP dataset, we built a LMM as follow: 
 }
 
 \begin{eqnarray}
@@ -141,5 +192,24 @@ $y_i$ was the numerical transformation of the AD categories: no/0, possible/0.25
 
 \subsection*{Code availability}
 
+\paragraph{}{
+We deployed Bayes-GLMM as a GitHub repository for public use (\url{https://github.com/xulong82/bayes.glmm}).
+
+}
+
+%\begin{align}
+%   \pi & = P(Y_i = 1) \\
+%   logit(\pi) & = \bold{X} \beta + g \beta_0 + u \\
+%   u & \sim mvN(0, \sigma K) \\
+%   \beta & \sim N(0, 1) \\
+%   \beta_0 & \sim N( t * \sigma_0, \sigma_0) \\
+%   t & \sim N(prior, 1) \\
+%   \sigma_0 & \sim inv\_gamma(2, 1) \\ 
+%   \sigma & \sim inv\_gamma(2, 1)
+%\end{align}
+%
+%\paragraph{}{
+%In the above equations, $X$ was a $n$ by $m$ covariate matrix with $n$ the sample size and $m$ the number of conditional variables. $\beta$ was the corresponding parameter vector in length $m$. $g$ was the numerical genotype of a variant with 0 to 2 representing homozygous reference alleletype, heterozygous, and homozygous alternative alleletype. $\beta_0$ was the variant's effect size. Prior distribution of $\beta_0$ followed $N(t * \sigma_0, \sigma_0)$, with $t$ represented prior information of the given association. $t$ was modeled by a normal distribution with expected mean the standardized effect size $prior$ and unit deviation. $prior$ was defined by the variant's prior effect size divided by its standard error. A standard normal, $N(0, 1)$, was used for $\beta_0$ of variants with no known effects. Further, $\beta$ followed $N(0, 1)$ in prior.
+%}
 
 \end{document}

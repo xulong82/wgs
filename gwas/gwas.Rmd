@@ -124,6 +124,31 @@ intron = vep1[grep("intron", vep1$Consequence), ]
 
 ```
 
+# Manuscript consequence graph
+
+```{r}
+
+x = table$Consequence
+x[grep("intron", x)] = "intron_variant"
+x = as.data.frame(table(x))
+
+x = x[order(x$Freq, decreasing = T), ]
+x$feature = factor(x$x, levels = x$x)
+
+pdf("Manu/cons.pdf", width = 8, height = 4)
+
+ggplot(x, aes(x = feature, y = Freq)) + geom_bar(stat = "identity", width = 0.5) + 
+  coord_flip() + geom_label(aes(label = Freq)) +
+  theme_bw() + xlab("") + ylab("Number of annotations") +
+  theme(axis.text = element_text(size = 15),
+        axis.title= element_text(size = 15, face = "bold"),
+        legend.text = element_text(size = 15),
+        legend.key = element_blank())
+
+dev.off()
+
+```
+
 # Manuscript Table 1
 
 ```{r}
@@ -134,12 +159,18 @@ ID = rownames(table1)
 table1 = as.data.frame(apply(table1, 2, as.numeric))
 rownames(table1) = ID
 table1 = table1[order(table1$P), ]
-load("/data/xwang/adsp3/meta.rdt")
 
+load("/data/xwang/adsp3/meta.rdt")
 meta$ID = as.character(meta$ID)
 table1 = cbind(meta[match(rownames(table1), meta$ID), ], table1)
 write.xlsx(table1, file = "/home/xwang/Dropbox/GitHub/wgs/Manu/Table1.xlsx", sheetName = "P(1e-6)")
 save(table1, file = "/home/xwang/Dropbox/GitHub/wgs/Manu/table1.rdt")
+
+table1$UID = gsub(":", "-", gsub("_.*", "", table1$ID))
+table1$RSID = vep$Existing_variation[match(table1$UID, vep$UID)]
+
+table1 = table1[c("RSID", "CHR", "POS", "REF", "ALT", "MAF", "mean", "sd", "P")]
+write.xlsx(table1, file = "/Users/xwang/Dropbox/GitHub/wgs/Manu/Table1.xlsx", sheetName = "P(1e-6)-v2")
 
 ```
 
